@@ -1,12 +1,13 @@
-# Titlu proiect
+# Zelda-ish
 
 ## Descriere proiect
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+A 2D top-down game that is a ripoff of the game "Legend of Zelda". 
 
 ## Milestone #0
 
 - [ ] Nume proiect (poate fi schimbat ulterior)
-- [ ] Scurtă descriere a temei alese, ce v-ați propus să implementați
+- [ ] Scurtă descriere a temei alese, ce v-ați propus să implementați : Propun sa implementez: 
+- [ ] 2-3 locatii/medii in care
 
 ## Milestone #1
 
