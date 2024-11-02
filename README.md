@@ -3,11 +3,12 @@
 ## Descriere proiect
 A 2D top-down game that is a ripoff of the game "Legend of Zelda". 
 
-## Milestone #0
+## Propun sa implementez:
 
-- [ ] Nume proiect (poate fi schimbat ulterior)
-- [ ] Scurtă descriere a temei alese, ce v-ați propus să implementați : Propun sa implementez: 
-- [ ] 2-3 locatii/medii in care
+- [ ] 2-3 locatii/medii in care sa iti poti misca personajul
+- [ ] 2-3 tipuri de inamaici cu care sa te bati
+- [ ] 1-2 NPC cu care sa interactionezi
+- [ ] 2-3 moduri de atac
 
 ## Milestone #1
 
