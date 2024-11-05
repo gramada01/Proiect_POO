@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Zelda.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Zelda.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ZeldaEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\README.md" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Zelda">
+      <UniqueIdentifier>{6623815E-D00E-3755-94A1-ED7084CDA4A8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Zelda\EmergencyRun.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\EmergencyRun.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zelda\Maui.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\Maui.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zelda\MyGameMode.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\MyGameMode.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zelda\Obstacle.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\Obstacle.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zelda\PlayerCharacter.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\PlayerCharacter.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\Zelda\Zelda.Build.cs">
+      <Filter>Source\Zelda</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Zelda\Zelda.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\Zelda.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

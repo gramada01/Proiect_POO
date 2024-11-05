@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Zelda",
+			"Path": "..\\Source\\Zelda.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ZeldaEditor",
+			"Path": "..\\Source\\ZeldaEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
