@@ -13,6 +13,7 @@ A 2D top-down game that is a ripoff of the game "Legend of Zelda".
 ## Milestone #1
 
 #### Cerințe
+- Clasele scrise de mine se afla in Source/Zelda
 - [ ] definirea a minim **3-4 clase** folosind compunere cu clasele definite de voi
 - [ ] constructori de inițializare cu parametri
 - [ ] pentru o aceeași (singură) clasă: constructor de copiere, `operator=` de copiere, destructor
