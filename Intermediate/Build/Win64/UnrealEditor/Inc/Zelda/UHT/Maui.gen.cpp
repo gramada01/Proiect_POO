@@ -199,14 +199,14 @@ AMaui::~AMaui() {}
 // End Class AMaui
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Users_Matei_Desktop_UNIBUC_POO_Zelda_Source_Zelda_Maui_h_Statics
+struct Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_AMaui, AMaui::StaticClass, TEXT("AMaui"), &Z_Registration_Info_UClass_AMaui, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMaui), 3995280963U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Matei_Desktop_UNIBUC_POO_Zelda_Source_Zelda_Maui_h_1003724259(TEXT("/Script/Zelda"),
-	Z_CompiledInDeferFile_FID_Users_Matei_Desktop_UNIBUC_POO_Zelda_Source_Zelda_Maui_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Matei_Desktop_UNIBUC_POO_Zelda_Source_Zelda_Maui_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_1003724259(TEXT("/Script/Zelda"),
+	Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\Matei\\Desktop\\UNIBUC\\POO\\Zelda\\Source\\Zelda\\Zelda.Build.cs",
-		"C:\\Users\\Matei\\Desktop\\UNIBUC\\POO\\Zelda\\Source\\Zelda.Target.cs",
-		"C:\\Users\\Matei\\Desktop\\UNIBUC\\POO\\Zelda\\Source\\ZeldaEditor.Target.cs"
+		"C:\\Users\\matei\\OneDrive\\Bureau\\POO\\Proiect_POO\\Source\\Zelda\\Zelda.Build.cs",
+		"C:\\Users\\matei\\OneDrive\\Bureau\\POO\\Proiect_POO\\Source\\Zelda.Target.cs",
+		"C:\\Users\\matei\\OneDrive\\Bureau\\POO\\Proiect_POO\\Source\\ZeldaEditor.Target.cs"
 	],
 	"EngineVersion": "5.4.4"
 }

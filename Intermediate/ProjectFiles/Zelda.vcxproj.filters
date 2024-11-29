@@ -11,9 +11,16 @@
     <None Include="..\..\Source\ZeldaEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.clang-tidy" />
+    <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <None Include="..\..\.vsconfig" />
+    <None Include="..\..\CMakeLists.txt" />
+    <None Include="..\..\disable_modules.props" />
+    <None Include="..\..\launcher.command" />
+    <ClCompile Include="..\..\main.cpp" />
     <None Include="..\..\README.md" />
+    <None Include="..\..\tastatura.txt" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
