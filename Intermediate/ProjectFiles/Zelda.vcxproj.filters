@@ -45,12 +45,6 @@
     <ClInclude Include="..\..\Source\Zelda\EmergencyRun.h">
       <Filter>Source\Zelda</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Zelda\Maui.cpp">
-      <Filter>Source\Zelda</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Zelda\Maui.h">
-      <Filter>Source\Zelda</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\Zelda\MyGameMode.cpp">
       <Filter>Source\Zelda</Filter>
     </ClCompile>

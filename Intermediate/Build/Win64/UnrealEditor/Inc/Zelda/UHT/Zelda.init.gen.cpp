@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeZelda_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x773C95A8,
-				0x3AD1018D,
+				0x43EC0929,
+				0xB655DBA5,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_Zelda.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_Zelda.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Zelda(Z_Construct_UPackage__Script_Zelda, TEXT("/Script/Zelda"), Z_Registration_Info_UPackage__Script_Zelda, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x773C95A8, 0x3AD1018D));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Zelda(Z_Construct_UPackage__Script_Zelda, TEXT("/Script/Zelda"), Z_Registration_Info_UPackage__Script_Zelda, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x43EC0929, 0xB655DBA5));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

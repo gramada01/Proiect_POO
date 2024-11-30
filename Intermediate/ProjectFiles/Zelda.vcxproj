@@ -67,7 +67,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{AAB97F02-378E-3E5A-9D5A-A4A72F026576}</ProjectGuid>
+    <ProjectGuid>{23AF2AA9-7246-3500-95C7-48ECA25B667F}</ProjectGuid>
     <RootNamespace>Zelda</RootNamespace>
   </PropertyGroup>
   <Import Project="UECommon.props" />
@@ -274,12 +274,6 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\Zelda\EmergencyRun.h"/>
-    <ClCompile Include="..\..\Source\Zelda\Maui.cpp">
-      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
-      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Zelda\Maui.h"/>
     <ClCompile Include="..\..\Source\Zelda\MyGameMode.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
