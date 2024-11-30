@@ -2,9 +2,7 @@
 #include <Math/MathFwd.h>
 #include <stdlib.h>
 
-EmergencyRun::~EmergencyRun()
-{
-}
+
 
 void EmergencyRun::doStep(float deltaTime)const
 {

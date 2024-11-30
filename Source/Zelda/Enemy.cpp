@@ -4,10 +4,19 @@
 #include "Enemy.h"
 
 // Sets default values
-AEnemy::AEnemy()
+AEnemy::AEnemy() : AActor{}
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	CapsuleComp = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CapsuleComp"));
+	SetRootComponent(CapsuleComp);
+
+	EnemySprite = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("EnemySprite"));
+	EnemySprite->SetupAttachment(RootComponent);
+
+	EnemyFlipbook = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("EnemyFlipbook"));
+	EnemyFlipbook->SetupAttachment(RootComponent);
 
 }
 

@@ -9,17 +9,22 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "PaperSpriteComponent.h"
+#include "Components/SceneComponent.h"
 
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "Components/InputComponent.h"
 #include "InputActionValue.h"
 #include "GameFramework/Controller.h"
+#include "Engine/TimerHandle.h"
 #include "EmergencyRun.h"
+#include "Projectile.h"
 #include <iostream>
-
+#include <UObject/ObjectMacros.h>
+#include "Kismet/KismetMathLibrary.h"
 
 #include "PlayerCharacter.generated.h"
+
 
 UCLASS()
 class ZELDA_API APlayerCharacter : public APawn
@@ -29,25 +34,10 @@ class ZELDA_API APlayerCharacter : public APawn
 private:
 	std::string PawnType = "PlayerCharacter";
 	const EmergencyRun _runner;
-	const EmergencyRun _runner1 = _runner;
+	FTimerHandle ShootCooldownTimer;
+	FRotator rotation;
 
 public:
-	const std::string& get_PawnType() const 
-	{
-		return PawnType;
-	}
-
-	void set_PawnType(std::string str)
-	{
-		this->PawnType = str;
-	}
-
-	friend std::ostream& operator<<(std::ostream& out, const APlayerCharacter& player) {
-		out << "PawnType: " << player.PawnType << "\n";
-
-		return out;
-	}
-
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	UCapsuleComponent* CapsuleComp;
 
@@ -60,6 +50,15 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	UPaperSpriteComponent* ArcherSprite;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	USceneComponent* BowParent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	UPaperSpriteComponent* BowSprite;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	USceneComponent* ArrowSpawnPosition;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	UInputMappingContext* InputMappingContext;
 
@@ -68,6 +67,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	UInputAction* ShootAction;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<AProjectile> ProjectileActorToSpawn;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	UInputAction* EmergencyRunAction;
@@ -80,6 +82,12 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	bool CanMove = true;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	bool CanShoot = true;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float ShootCooldownDurationInSeconds = 0.3f;
 
 	// Sets default values for this pawn's properties
 	APlayerCharacter();
@@ -98,4 +106,6 @@ public:
 
 	void Shoot(const FInputActionValue& Value);
 	void Run(const FInputActionValue& Value);
+
+	void OnShootCooldownTimerTimeout();
 };

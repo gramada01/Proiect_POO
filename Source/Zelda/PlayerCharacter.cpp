@@ -2,8 +2,10 @@
 
 
 #include "PlayerCharacter.h"
+
 #include "Obstacle.h"
 #include <iostream>
+
 
 // Sets default values
 APlayerCharacter::APlayerCharacter() : APawn{}, _runner(this, 350, 250)
@@ -23,6 +25,14 @@ APlayerCharacter::APlayerCharacter() : APawn{}, _runner(this, 350, 250)
 	ArcherSprite = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("ArcherSprite"));
 	ArcherSprite->SetupAttachment(RootComponent);
 
+	BowParent = CreateDefaultSubobject<USceneComponent>(TEXT("BowParent"));
+	BowParent->SetupAttachment(RootComponent);
+
+	BowSprite = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("BowSprite"));
+	BowSprite->SetupAttachment(BowParent);
+
+	ArrowSpawnPosition = CreateDefaultSubobject<USceneComponent>(TEXT("ArrowSpawnPosition"));
+	ArrowSpawnPosition->SetupAttachment(BowSprite);
 }
 
 // Called when the game starts or when spawned
@@ -34,6 +44,8 @@ void APlayerCharacter::BeginPlay()
 	APlayerController* PlayerController = Cast<APlayerController>(Controller);
 	if (PlayerController)
 	{
+		PlayerController->SetShowMouseCursor(true);
+
 		UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer());
 		if (Subsystem)
 		{
@@ -46,13 +58,15 @@ void APlayerCharacter::BeginPlay()
 void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	std::cout << "Tick!!!!!\n";
-	if (_runner1.isRunning())
+	
+	//Do steps for Emergency Run ability
+	if (_runner.isRunning())
 	{
-		_runner1.doStep(DeltaTime);
+		_runner.doStep(DeltaTime);
 		return;
 	}
 
+	//Move Player
 	if (CanMove)
 	{
 		if (MovementDirection.Length() > 0.0f)
@@ -68,6 +82,22 @@ void APlayerCharacter::Tick(float DeltaTime)
 			SetActorLocation(NewLocation);
 		}
 	}
+
+	//Rotate the Bow
+	APlayerController* PlayerController = Cast<APlayerController>(Controller);
+	if (PlayerController)
+	{
+		FVector MouseWorldLocation, MouseWorldDirection;
+		PlayerController->DeprojectMousePositionToWorld(MouseWorldLocation, MouseWorldDirection);
+
+		FVector CurrentLocation = GetActorLocation();
+		FVector Start = FVector(CurrentLocation.X, 0.0f, CurrentLocation.Z);
+		FVector Target = FVector(MouseWorldLocation.X, 0.0f, MouseWorldLocation.Z);
+		rotation = UKismetMathLibrary::FindLookAtRotation(Start, Target);
+		
+		BowParent->SetRelativeRotation(rotation);
+	}
+
 }
 
 // Called to bind functionality to input
@@ -108,14 +138,41 @@ void APlayerCharacter::MoveCompleted(const FInputActionValue& Value)
 	MovementDirection = FVector2D(0.0f, 0.0f);
 }
 
-
-void APlayerCharacter::Shoot(const FInputActionValue& Value)
-{
-
-}
-
 void APlayerCharacter::Run(const FInputActionValue& Value)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::White, TEXT("Ai fugit!!!"));
-	_runner1.startRunning();
+	_runner.startRunning();
 }
+
+void APlayerCharacter::Shoot(const FInputActionValue& Value)
+{
+	if (CanShoot)
+	{
+		CanShoot = false;
+
+		//Spawn Arrow
+		AProjectile* Arrow = GetWorld()->SpawnActor<AProjectile>(ProjectileActorToSpawn, ArrowSpawnPosition->GetComponentLocation(), FRotator(rotation.Pitch - 90.0f, rotation.Yaw, rotation.Roll));
+		check(Arrow);
+
+		//Get Mouse Positiopn
+		APlayerController* PlayerController = Cast<APlayerController>(Controller);
+		check(PlayerController);
+		FVector MouseWorldLocation, MouseWorldDirection;
+		PlayerController->DeprojectMousePositionToWorld(MouseWorldLocation, MouseWorldDirection);
+
+		//Get travel direction for Arrow
+		FVector CurrentLocation = GetActorLocation();
+		FVector2D ArrowDirection = FVector2D(MouseWorldLocation.X - CurrentLocation.X, MouseWorldLocation.Z - CurrentLocation.Z);
+
+		float ArrowSpeed = 250.0f;
+		Arrow->Launch(ArrowDirection, ArrowSpeed);
+
+		GetWorldTimerManager().SetTimer(ShootCooldownTimer, this, &APlayerCharacter::OnShootCooldownTimerTimeout, 1.0f, false, ShootCooldownDurationInSeconds);
+	}
+}
+
+void APlayerCharacter::OnShootCooldownTimerTimeout()
+{
+	CanShoot = true;
+}
+//hehe

@@ -45,6 +45,18 @@
     <ClInclude Include="..\..\Source\Zelda\EmergencyRun.h">
       <Filter>Source\Zelda</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Zelda\Enemy.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\Enemy.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zelda\Maui.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\Maui.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Zelda\MyGameMode.cpp">
       <Filter>Source\Zelda</Filter>
     </ClCompile>
@@ -61,6 +73,12 @@
       <Filter>Source\Zelda</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Zelda\PlayerCharacter.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zelda\Projectile.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\Projectile.h">
       <Filter>Source\Zelda</Filter>
     </ClInclude>
     <None Include="..\..\Source\Zelda\Zelda.Build.cs">

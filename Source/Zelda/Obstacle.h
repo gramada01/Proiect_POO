@@ -18,13 +18,6 @@ class ZELDA_API AObstacle : public AActor
 	GENERATED_BODY()
 	
 public:	
-
-	friend std::ostream& operator<<(std::ostream& out, const AObstacle& run) {
-		out <<"This is an Obstacle\n";
-
-		return out;
-	}
-
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	UCapsuleComponent* CapsuleComp;
 

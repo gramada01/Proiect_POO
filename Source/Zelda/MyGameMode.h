@@ -19,11 +19,6 @@ class ZELDA_API AMyGameMode : public AGameModeBase
 	GENERATED_BODY()
 
 public:
-	friend std::ostream& operator<<(std::ostream& out, const AMyGameMode& gm) {
-		out <<"This is MyGameMode\n";
-
-		return out;
-	}
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float LoseResetTime = 1.0f;
 
