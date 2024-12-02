@@ -9,17 +9,10 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class AActor;
-class UPrimitiveComponent;
-struct FHitResult;
 #ifdef ZELDA_Maui_generated_h
 #error "Maui.generated.h already included, missing '#pragma once' in Maui.h"
 #endif
 #define ZELDA_Maui_generated_h
-
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execOverlapBegin);
-
 
 #define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_17_INCLASS_NO_PURE_DECLS \
 private: \
@@ -46,7 +39,6 @@ public: \
 #define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_17_INCLASS_NO_PURE_DECLS \
 	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_17_ENHANCED_CONSTRUCTORS \
 private: \

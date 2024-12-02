@@ -6,12 +6,13 @@
 #include "Enemy.h"
 #include "Ghoul.generated.h"
 
-/**
- * 
- */
+
 UCLASS()
 class ZELDA_API AGhoul : public AEnemy
 {
 	GENERATED_BODY()
-	
+public:
+	AGhoul();
+
+	void attack() override;
 };

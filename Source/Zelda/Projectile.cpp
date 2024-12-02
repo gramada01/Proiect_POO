@@ -24,6 +24,7 @@ void AProjectile::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	CapsuleComp->OnComponentBeginOverlap.AddDynamic(this, &AProjectile::OverlapBegin);
 }
 
 // Called every frame
@@ -46,10 +47,11 @@ void AProjectile::Tick(float DeltaTime)
 
 }
 
-void AProjectile::Launch(FVector2D Direction, float Speed)
+void AProjectile::Launch(FVector2D Direction, float Speed, AActor* Launcher)
 {
 	if (IsLaunched) return;
 
+	WhoLaunchedMe = Launcher;
 	IsLaunched = true;
 	MovementDirection = Direction;
 	MovementSpeed = Speed;
@@ -61,4 +63,9 @@ void AProjectile::Launch(FVector2D Direction, float Speed)
 void AProjectile::OnDeleteTimerTimeout()
 {
 	Destroy();
+}
+
+void AProjectile::OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult& SweepRsult)
+{
+
 }

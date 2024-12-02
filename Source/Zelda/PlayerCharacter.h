@@ -23,6 +23,7 @@
 #include <UObject/ObjectMacros.h>
 #include "Kismet/KismetMathLibrary.h"
 
+
 #include "PlayerCharacter.generated.h"
 
 
@@ -32,12 +33,18 @@ class ZELDA_API APlayerCharacter : public APawn
 	GENERATED_BODY()
 
 private:
-	std::string PawnType = "PlayerCharacter";
 	const EmergencyRun _runner;
 	FTimerHandle ShootCooldownTimer;
 	FRotator rotation;
 
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float Health = 2.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float Damage = 1.0f;
+
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	UCapsuleComponent* CapsuleComp;
 
@@ -108,4 +115,8 @@ public:
 	void Run(const FInputActionValue& Value);
 
 	void OnShootCooldownTimerTimeout();
+
+	UFUNCTION()
+	void OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult& SweepRsult);
+
 };

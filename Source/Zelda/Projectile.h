@@ -10,6 +10,7 @@
 #include "Engine/TimerHandle.h"
 #include "Components/SceneComponent.h"
 
+
 #include "Projectile.generated.h"
 
 UCLASS()
@@ -20,9 +21,12 @@ class ZELDA_API AProjectile : public AActor
 private:
 	FTimerHandle DeleteTimer;
 	
+
 public:	
 	/*UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	USceneComponent* ProjectileParent;*/
+
+	AActor* WhoLaunchedMe = nullptr;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	UCapsuleComponent* CapsuleComp;
@@ -45,14 +49,19 @@ public:
 	// Sets default values for this actor's properties
 	AProjectile();
 
+	AProjectile(AActor* Who) { WhoLaunchedMe = Who; }
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void Launch(FVector2D Direction, float Speed);
+	void Launch(FVector2D Direction, float Speed, AActor* Launcher);
 
 	void OnDeleteTimerTimeout();
+
+	UFUNCTION()
+	void OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult& SweepRsult);
 
 };

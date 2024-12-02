@@ -33,12 +33,16 @@ APlayerCharacter::APlayerCharacter() : APawn{}, _runner(this, 350, 250)
 
 	ArrowSpawnPosition = CreateDefaultSubobject<USceneComponent>(TEXT("ArrowSpawnPosition"));
 	ArrowSpawnPosition->SetupAttachment(BowSprite);
+
+	
 }
 
 // Called when the game starts or when spawned
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	CapsuleComp->OnComponentBeginOverlap.AddDynamic(this, &APlayerCharacter::OverlapBegin);
 
 
 	APlayerController* PlayerController = Cast<APlayerController>(Controller);
@@ -152,21 +156,24 @@ void APlayerCharacter::Shoot(const FInputActionValue& Value)
 
 		//Spawn Arrow
 		AProjectile* Arrow = GetWorld()->SpawnActor<AProjectile>(ProjectileActorToSpawn, ArrowSpawnPosition->GetComponentLocation(), FRotator(rotation.Pitch - 90.0f, rotation.Yaw, rotation.Roll));
-		check(Arrow);
+		if (Arrow)
+		{
+			//Get Mouse Positiopn
+			APlayerController* PlayerController = Cast<APlayerController>(Controller);
+			check(PlayerController);
+			FVector MouseWorldLocation, MouseWorldDirection;
+			PlayerController->DeprojectMousePositionToWorld(MouseWorldLocation, MouseWorldDirection);
 
-		//Get Mouse Positiopn
-		APlayerController* PlayerController = Cast<APlayerController>(Controller);
-		check(PlayerController);
-		FVector MouseWorldLocation, MouseWorldDirection;
-		PlayerController->DeprojectMousePositionToWorld(MouseWorldLocation, MouseWorldDirection);
+			//Get travel direction for Arrow
+			FVector CurrentLocation = GetActorLocation();
+			FVector2D ArrowDirection = FVector2D(MouseWorldLocation.X - CurrentLocation.X, MouseWorldLocation.Z - CurrentLocation.Z);
 
-		//Get travel direction for Arrow
-		FVector CurrentLocation = GetActorLocation();
-		FVector2D ArrowDirection = FVector2D(MouseWorldLocation.X - CurrentLocation.X, MouseWorldLocation.Z - CurrentLocation.Z);
-
-		float ArrowSpeed = 250.0f;
-		Arrow->Launch(ArrowDirection, ArrowSpeed);
-
+			//Launch Arrow
+			float ArrowSpeed = 250.0f;
+			Arrow->Launch(ArrowDirection, ArrowSpeed, this);
+		}
+		else
+			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::White, TEXT("Eroare la Arrow!!!!"));
 		GetWorldTimerManager().SetTimer(ShootCooldownTimer, this, &APlayerCharacter::OnShootCooldownTimerTimeout, 1.0f, false, ShootCooldownDurationInSeconds);
 	}
 }
@@ -175,4 +182,8 @@ void APlayerCharacter::OnShootCooldownTimerTimeout()
 {
 	CanShoot = true;
 }
-//hehe
+
+void APlayerCharacter::OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult& SweepRsult)
+{
+
+}
