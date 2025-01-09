@@ -13,13 +13,14 @@ A 2D top-down game that is a ripoff of the game "Legend of Zelda".
 - Enemies die in 2 shots
 
 ### Lava
-![Alt text](images/lava.png)
+![lava](https://github.com/user-attachments/assets/b7fbb236-cb27-45f1-98ec-47073a4f0f20)
 
 ### Spawner
-![Alt text](images/spawner.png)
+![spawner](https://github.com/user-attachments/assets/0a7a7f20-97a3-4f8a-bd41-468ea019a2c4)
 
 ### Game Screenshot
-![Alt text](images/screenshot.png)
+![screenshot](https://github.com/user-attachments/assets/ec48e5a7-a3ff-4015-a6c4-58f753d48680)
+
 
 ## Milestone #3
 
