@@ -42,8 +42,6 @@ void ASpawner::Tick(float DeltaTime)
 	if (CanSpawn && NumberOfEnemiesToSpawn > 0)
 	{
 		CanSpawn = false;
-		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::White, TEXT("SPAWN!!!!"));
-		
 
 		AEnemy* Enemy = GetWorld()->SpawnActor<AEnemy>(EnemyToSpawn, GetActorLocation(), FRotator::ZeroRotator);
 		check(Enemy);
@@ -51,6 +49,7 @@ void ASpawner::Tick(float DeltaTime)
 
 		AActor* PlayerActor = UGameplayStatics::GetActorOfClass(GetWorld(), APlayerCharacter::StaticClass());
 		APlayerCharacter* player = Cast<APlayerCharacter>(PlayerActor);
+		Enemy->SetEnemySubject(player->GetEnemySubject());
 		Enemy->Spawn(player);
 
 		--NumberOfEnemiesToSpawn;

@@ -13,5 +13,11 @@ UCLASS()
 class ZELDA_API AMyHUD : public AHUD
 {
 	GENERATED_BODY()
+private:
+	int PlayerKills;
+public:
+	virtual void DrawHUD() override;
+
+	void SetPlayerKills(int Kills);
 	
 };

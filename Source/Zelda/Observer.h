@@ -12,4 +12,6 @@ class ZELDA_API Observer
 public:
 	Observer();
 	~Observer();
+
+	virtual void OnEnemyKilled(AActor* KilledActor) = 0;
 };

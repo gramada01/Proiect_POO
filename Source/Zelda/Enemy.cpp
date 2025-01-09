@@ -18,6 +18,12 @@ AEnemy::AEnemy() : AActor{}
 	EnemyFlipbook = CreateDefaultSubobject<UPaperFlipbookComponent>(TEXT("EnemyFlipbook"));
 	EnemyFlipbook->SetupAttachment(RootComponent);
 
+	EnemySubject = MakeShared<Subject>();
+}
+
+AEnemy::~AEnemy()
+{
+	UE_LOG(LogTemp, Warning, TEXT("AEnemy destructor called"));
 }
 
 void AEnemy::attack()
@@ -122,6 +128,11 @@ void AEnemy::CheckIfDead()
 {
 	if (Health <= 0.0f)
 	{
+		if (EnemySubject)
+		{
+			EnemySubject->Notify(this);
+		}
+
 		Destroy();
 	}
 }

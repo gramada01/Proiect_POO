@@ -1,0 +1,84 @@
+\doxysection{AGhoul Class Reference}
+\hypertarget{class_a_ghoul}{}\label{class_a_ghoul}\index{AGhoul@{AGhoul}}
+
+
+{\ttfamily \#include $<$Ghoul.\+h$>$}
+
+Inheritance diagram for AGhoul\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_a_ghoul}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_ghoul_a28c49458ac073e7e06aa9d094f5df507}{AGhoul}} ()
+\item 
+void \mbox{\hyperlink{class_a_ghoul_a280b2e528069d066bd55ff0fe41233bb}{attack}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_a_enemy}{AEnemy}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_enemy_a78162cd7740ff2a86ba73ced9a4ae9be}{AEnemy}} ()
+\item 
+void \mbox{\hyperlink{class_a_enemy_a1fd9b94a1b9c837d8f737616ff452672}{Spawn}} (\mbox{\hyperlink{class_a_player_character}{APlayer\+Character}} \texorpdfstring{$\ast$}{*}What\+To\+Chase)
+\item 
+virtual void \mbox{\hyperlink{class_a_enemy_abd845c5787bc005ae01686635f7f3fba}{Begin\+Play}} () override
+\item 
+virtual void \mbox{\hyperlink{class_a_enemy_a7ad3c69fabaf9310f1966c81c8bbb720}{Tick}} (float Delta\+Time) override
+\item 
+virtual void \mbox{\hyperlink{class_a_enemy_ac74ebef997e4409bacd1ae73b25df61a}{move}} (float Delta\+Time)
+\item 
+void \mbox{\hyperlink{class_a_enemy_a2365e7d242f6fc93ce96d7e31433cda9}{Overlap\+Begin}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool From\+Sweep, const FHit\+Result \&Sweep\+Rsult)
+\item 
+void \mbox{\hyperlink{class_a_enemy_a5b87765978d47e551099d4416f4d9912}{Checkfor\+Projectile\+And\+Launcher}} (AActor \texorpdfstring{$\ast$}{*}Other\+Actor)
+\item 
+void \mbox{\hyperlink{class_a_enemy_a7173f8f02268f382f957f94a01428519}{Check\+If\+Dead}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_a_enemy}{AEnemy}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_a_enemy_ad96a416a1354968806fd021180e30739}{Health}} = 2.\+0f
+\item 
+float \mbox{\hyperlink{class_a_enemy_a1473a0de3e295431bb698e9253e94fdb}{Damage}} = 1.\+0f
+\item 
+UCapsule\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_enemy_a9fbab288297b2fa70489771ad1ff8fd8}{Capsule\+Comp}}
+\item 
+UPaper\+Flipbook\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_enemy_ae7e20f863c2072d18a1596619ee1beba}{Enemy\+Flipbook}}
+\item 
+UPaper\+Sprite\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_enemy_a9892fdc2a74b69bca44aff2079e37a7e}{Enemy\+Sprite}}
+\item 
+float \mbox{\hyperlink{class_a_enemy_abcfae03434fb7d9097780a77043b5b0e}{speed}} = 190.\+0f
+\item 
+float \mbox{\hyperlink{class_a_enemy_aea8eb5e8331c0c2ef7f7ca9156537366}{Distance\+To\+Stop}} = 20.\+0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_a_ghoul_a28c49458ac073e7e06aa9d094f5df507}\index{AGhoul@{AGhoul}!AGhoul@{AGhoul}}
+\index{AGhoul@{AGhoul}!AGhoul@{AGhoul}}
+\doxysubsubsection{\texorpdfstring{AGhoul()}{AGhoul()}}
+{\footnotesize\ttfamily \label{class_a_ghoul_a28c49458ac073e7e06aa9d094f5df507} 
+AGhoul\+::\+AGhoul (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_ghoul_a280b2e528069d066bd55ff0fe41233bb}\index{AGhoul@{AGhoul}!attack@{attack}}
+\index{attack@{attack}!AGhoul@{AGhoul}}
+\doxysubsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily \label{class_a_ghoul_a280b2e528069d066bd55ff0fe41233bb} 
+void AGhoul\+::attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_a_enemy_a767c44a86c16ebbab45c1744fb36f92e}{AEnemy}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_ghoul_8h}{Ghoul.\+h}}\item 
+C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_ghoul_8cpp}{Ghoul.\+cpp}}\end{DoxyCompactItemize}

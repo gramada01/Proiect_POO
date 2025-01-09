@@ -5,10 +5,13 @@
 
 #include "Obstacle.h"
 #include <iostream>
+#include <Kismet/GameplayStatics.h>
+#include "Maui.h"
+#include "Ghoul.h"
 
 
 // Sets default values
-APlayerCharacter::APlayerCharacter() : APawn{}, _runner(this, 350, 250)
+APlayerCharacter::APlayerCharacter() : APawn{}, _runner(this, 350, 250), Observer{}
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -34,7 +37,13 @@ APlayerCharacter::APlayerCharacter() : APawn{}, _runner(this, 350, 250)
 	ArrowSpawnPosition = CreateDefaultSubobject<USceneComponent>(TEXT("ArrowSpawnPosition"));
 	ArrowSpawnPosition->SetupAttachment(BowSprite);
 
-	
+	EnemySubject = MakeShared<Subject>();
+	SetEnemySubject(EnemySubject);
+}
+
+APlayerCharacter::~APlayerCharacter()
+{
+
 }
 
 // Called when the game starts or when spawned
@@ -186,4 +195,48 @@ void APlayerCharacter::OnShootCooldownTimerTimeout()
 void APlayerCharacter::OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult& SweepRsult)
 {
 
+}
+
+void APlayerCharacter::OnEnemyKilled(AActor* KilledActor)
+{
+	kills++;
+	
+	bool IsMaui = EnemyType<AMaui>::IsType(KilledActor);
+	bool IsGhoul = EnemyType<AGhoul>::IsType(KilledActor);
+
+	if (IsMaui)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::White, FString::Printf(TEXT("Maui DISTRUS!!!")));
+	}
+	else if (IsGhoul)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::White, FString::Printf(TEXT("Ghoul DISTRUS!!!")));
+	}
+
+	AMyGameMode* GameMode = Cast<AMyGameMode>(UGameplayStatics::GetGameMode(this));
+	if (GameMode)
+	{
+		GameMode->SetKills(kills);
+	}
+
+	UE_LOG(LogTemp, Warning, TEXT("Kills: %d"), kills);
+	
+}
+
+TSharedPtr<Subject> APlayerCharacter::GetEnemySubject()
+{
+	return EnemySubject;
+}
+
+void APlayerCharacter::SetEnemySubject(TSharedPtr<Subject> InSubject)
+{
+	if (EnemySubject)
+	{
+		EnemySubject->Detach(this);
+	}
+	EnemySubject = InSubject;
+	if (EnemySubject)
+	{
+		EnemySubject->Attach(this);
+	}
 }

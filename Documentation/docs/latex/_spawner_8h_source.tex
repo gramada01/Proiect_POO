@@ -1,0 +1,73 @@
+\doxysection{Spawner.\+h}
+\hypertarget{_spawner_8h_source}{}\label{_spawner_8h_source}\index{C:/Users/matei/OneDrive/Bureau/POO/Proiect\_POO/Source/Zelda/Spawner.h@{C:/Users/matei/OneDrive/Bureau/POO/Proiect\_POO/Source/Zelda/Spawner.h}}
+\mbox{\hyperlink{_spawner_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameFramework/Actor.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Components/CapsuleComponent.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}PaperSpriteComponent.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_player_character_8h}{PlayerCharacter.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Engine/TimerHandle.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_enemy_8h}{Enemy.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_maui_8h}{Maui.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}Kismet/GameplayStatics.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}Components/SceneComponent.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}Spawner.generated.h"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ UCLASS()}
+\DoxyCodeLine{00020\ class\ ZELDA\_API\ \mbox{\hyperlink{class_a_spawner_a6ce089adb38189612d96db67621babbf}{ASpawner}}\ :\ public\ AActor}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ FTimerHandle\ \mbox{\hyperlink{class_a_spawner_ac56e406c7d83de14ce84ec03bd62e571}{SpawnCooldownTimer}};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_a_spawner_a71e8ae72d6f7a8af7ef38133cc1fe823}{Overlapped}}\ =\ 0;}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00029\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00030\ \ \ \ \ UCapsuleComponent*\ \mbox{\hyperlink{class_a_spawner_af9f1528eb25b89aadce2c09858bd3a10}{CapsuleComp}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00033\ \ \ \ \ UPaperSpriteComponent*\ \mbox{\hyperlink{class_a_spawner_a671434dec25274eab384523ae05d654b}{SpawnerSprite}};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly)}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_a_spawner_a914f0d48b2826a6855a2e61e150ce6f0}{NumberOfEnemiesToSpawn}}\ =\ 3;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ UPROPERTY(EditDefaultsOnly)}
+\DoxyCodeLine{00039\ \ \ \ \ TSubclassOf<\mbox{\hyperlink{class_a_enemy}{AEnemy}}>\ \mbox{\hyperlink{class_a_spawner_ab1327bd7e90fd5aecaad27e9810fbb15}{EnemyToSpawn}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00042\ \ \ \ \ USceneComponent*\ \mbox{\hyperlink{class_a_spawner_aa9b1ba67880fee6f133042c5dcf2719c}{EnemySpawnPosition}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_a_spawner_a3e1bdd651b14825e1885afe003dc3d47}{CanSpawn}}\ =\ false;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_a_spawner_a7529712b5fa841507ff6a778be9e38b8}{IsSpawned}}\ =\ false;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_spawner_a655e8d758aaaf9348265e08daf69e2cc}{SpawnCooldownDurationInSeconds}}\ =\ 10.0f;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ Sets\ default\ values\ for\ this\ actor's\ properties}}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_a_spawner_a6ce089adb38189612d96db67621babbf}{ASpawner}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Called\ when\ the\ game\ starts\ or\ when\ spawned}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_spawner_ad2f3ec4c7fbfea9a302fc43959192aea}{BeginPlay}}()\ override;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ Called\ every\ frame}}
+\DoxyCodeLine{00060\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_spawner_a6f67b0457c83789137281750054ff4d8}{Tick}}(\textcolor{keywordtype}{float}\ DeltaTime)\ override;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_spawner_a82fb7649962480b2f7f4f1856b3ddcae}{OverlapBegin}}(UPrimitiveComponent*\ OverlappedComponent,\ AActor*\ OtherActor,\ UPrimitiveComponent*\ OtherComp,\ int32\ OtherBodyIndex,\ \textcolor{keywordtype}{bool}\ FromSweep,\ const\ FHitResult\&\ SweepRsult);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_spawner_a0af198c0471e37bdfa495fe3a991fd5e}{OnSpawnCooldownTimerTimeout}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \};}
+
+\end{DoxyCode}

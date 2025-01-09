@@ -22,13 +22,27 @@
 #include <iostream>
 #include <UObject/ObjectMacros.h>
 #include "Kismet/KismetMathLibrary.h"
+#include "Subject.h"
+#include "Templates/SharedPointer.h"
+#include "GameFramework/Actor.h"
 
 
 #include "PlayerCharacter.generated.h"
 
 
+
+template<typename T>
+class EnemyType
+{
+public:
+	static bool IsType(AActor* Actor)
+	{
+		return Actor && Actor->IsA<T>();
+	}
+};
+
 UCLASS()
-class ZELDA_API APlayerCharacter : public APawn
+class ZELDA_API APlayerCharacter : public APawn, public Observer
 {
 	GENERATED_BODY()
 
@@ -36,8 +50,13 @@ private:
 	const EmergencyRun _runner;
 	FTimerHandle ShootCooldownTimer;
 	FRotator rotation;
+	static inline int kills = 0;
+	static inline int score = 0;
+	TSharedPtr<Subject> EnemySubject;
 
 public:
+	~APlayerCharacter();
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float Health = 2.0f;
 
@@ -119,4 +138,9 @@ public:
 	UFUNCTION()
 	void OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult& SweepRsult);
 
+	virtual void OnEnemyKilled(AActor* KilledActor) override;
+
+	TSharedPtr<Subject> GetEnemySubject();
+
+	void SetEnemySubject(TSharedPtr<Subject> InSubject);
 };

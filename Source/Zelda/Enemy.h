@@ -11,6 +11,7 @@
 #include "PlayerCharacter.h"
 #include "Kismet/GameplayStatics.h"
 #include "Errors.h"
+#include "Templates/SharedPointer.h"
 
 #include <cstdlib>
 
@@ -24,8 +25,16 @@ class ZELDA_API AEnemy : public AActor
 private:
 	bool chase = false;
 	APlayerCharacter* playerToChase;
+	TSharedPtr<Subject> EnemySubject;
 
 public:
+	virtual ~AEnemy();
+
+	void SetEnemySubject(TSharedPtr<Subject> InSubject)
+	{
+		EnemySubject = InSubject;
+	}
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float Health = 2.0f;
 

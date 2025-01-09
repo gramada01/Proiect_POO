@@ -39,6 +39,12 @@
     <Filter Include="Source\Zelda">
       <UniqueIdentifier>{6623815E-D00E-3755-94A1-ED7084CDA4A8}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Zelda\Caretaker.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\Caretaker.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Zelda\EmergencyRun.cpp">
       <Filter>Source\Zelda</Filter>
     </ClCompile>
@@ -69,16 +75,40 @@
     <ClInclude Include="..\..\Source\Zelda\Maui.h">
       <Filter>Source\Zelda</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Zelda\Memento.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\Memento.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Zelda\MyGameMode.cpp">
       <Filter>Source\Zelda</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Zelda\MyGameMode.h">
       <Filter>Source\Zelda</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Zelda\MyHUD.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\MyHUD.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zelda\Observer.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\Observer.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Zelda\Obstacle.cpp">
       <Filter>Source\Zelda</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Zelda\Obstacle.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zelda\Originator.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\Originator.h">
       <Filter>Source\Zelda</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Zelda\PlayerCharacter.cpp">
@@ -97,6 +127,12 @@
       <Filter>Source\Zelda</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Zelda\Spawner.h">
+      <Filter>Source\Zelda</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Zelda\Subject.cpp">
+      <Filter>Source\Zelda</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Zelda\Subject.h">
       <Filter>Source\Zelda</Filter>
     </ClInclude>
     <None Include="..\..\Source\Zelda\Zelda.Build.cs">

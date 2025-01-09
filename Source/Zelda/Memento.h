@@ -13,5 +13,10 @@ UCLASS()
 class ZELDA_API UMemento : public UObject
 {
 	GENERATED_BODY()
-	
+public:
+	UPROPERTY()
+	FVector PlayerPosition;
+
+	UPROPERTY()
+	int PlayerKills;
 };

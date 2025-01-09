@@ -1,0 +1,156 @@
+\doxysection{AProjectile Class Reference}
+\hypertarget{class_a_projectile}{}\label{class_a_projectile}\index{AProjectile@{AProjectile}}
+
+
+{\ttfamily \#include $<$Projectile.\+h$>$}
+
+Inheritance diagram for AProjectile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_projectile}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_projectile_a357ee75c70b57439edc64b3ad0be61ee}{AProjectile}} ()
+\item 
+\mbox{\hyperlink{class_a_projectile_a0d0f5888f78073371d054efb319a4e2f}{AProjectile}} (AActor \texorpdfstring{$\ast$}{*}Who)
+\item 
+virtual void \mbox{\hyperlink{class_a_projectile_a735796a9fca0824e7409cb6bf43d8200}{Begin\+Play}} () override
+\item 
+virtual void \mbox{\hyperlink{class_a_projectile_a538900d88f072783309cfffd743dfc8a}{Tick}} (float Delta\+Time) override
+\item 
+void \mbox{\hyperlink{class_a_projectile_a01cddda28de4b211f2267dac5dc5268b}{Launch}} (FVector2D Direction, float Speed, AActor \texorpdfstring{$\ast$}{*}Launcher)
+\item 
+void \mbox{\hyperlink{class_a_projectile_ad9e765aad95dfe257235cf911f0ffc0b}{On\+Delete\+Timer\+Timeout}} ()
+\item 
+void \mbox{\hyperlink{class_a_projectile_a193a542aee95cf91ae5f6fd65716db97}{Overlap\+Begin}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool From\+Sweep, const FHit\+Result \&Sweep\+Rsult)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+AActor \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_projectile_aecd7cb0a47cd83de4752f3852eefdb20}{Who\+Launched\+Me}} = nullptr
+\item 
+UCapsule\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_projectile_a711b38a801cb5c43f43441db4aa26f88}{Capsule\+Comp}}
+\item 
+UPaper\+Sprite\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_projectile_a72914970a99f504f762480d130847710}{Projectile\+Sprite}}
+\item 
+FVector2D \mbox{\hyperlink{class_a_projectile_a85f66b5116e9e18eab354efff6854a76}{Movement\+Direction}}
+\item 
+float \mbox{\hyperlink{class_a_projectile_a77a8587001b4ec23a3b0335ee5374ec8}{Movement\+Speed}} = 300.\+0f
+\item 
+FVector \mbox{\hyperlink{class_a_projectile_ae4f575ec8547903f163b52003c2292b9}{Rotation}}
+\item 
+bool \mbox{\hyperlink{class_a_projectile_a5da046ab568de6bf1659c3d5a9a8ecf6}{Is\+Launched}} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+FTimer\+Handle \mbox{\hyperlink{class_a_projectile_a0caeb7840b6ca2483bca902bd9f82f5b}{Delete\+Timer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_a_projectile_a357ee75c70b57439edc64b3ad0be61ee}\index{AProjectile@{AProjectile}!AProjectile@{AProjectile}}
+\index{AProjectile@{AProjectile}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{AProjectile()}{AProjectile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_a_projectile_a357ee75c70b57439edc64b3ad0be61ee} 
+AProjectile\+::\+AProjectile (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_a_projectile_a0d0f5888f78073371d054efb319a4e2f}\index{AProjectile@{AProjectile}!AProjectile@{AProjectile}}
+\index{AProjectile@{AProjectile}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{AProjectile()}{AProjectile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_a_projectile_a0d0f5888f78073371d054efb319a4e2f} 
+AProjectile\+::\+AProjectile (\begin{DoxyParamCaption}\item[{AActor \texorpdfstring{$\ast$}{*}}]{Who}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_projectile_a735796a9fca0824e7409cb6bf43d8200}\index{AProjectile@{AProjectile}!BeginPlay@{BeginPlay}}
+\index{BeginPlay@{BeginPlay}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{BeginPlay()}{BeginPlay()}}
+{\footnotesize\ttfamily \label{class_a_projectile_a735796a9fca0824e7409cb6bf43d8200} 
+void AProjectile\+::\+Begin\+Play (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_a_projectile_a01cddda28de4b211f2267dac5dc5268b}\index{AProjectile@{AProjectile}!Launch@{Launch}}
+\index{Launch@{Launch}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{Launch()}{Launch()}}
+{\footnotesize\ttfamily \label{class_a_projectile_a01cddda28de4b211f2267dac5dc5268b} 
+void AProjectile\+::\+Launch (\begin{DoxyParamCaption}\item[{FVector2D}]{Direction}{, }\item[{float}]{Speed}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Launcher}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_a_projectile_ad9e765aad95dfe257235cf911f0ffc0b}\index{AProjectile@{AProjectile}!OnDeleteTimerTimeout@{OnDeleteTimerTimeout}}
+\index{OnDeleteTimerTimeout@{OnDeleteTimerTimeout}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{OnDeleteTimerTimeout()}{OnDeleteTimerTimeout()}}
+{\footnotesize\ttfamily \label{class_a_projectile_ad9e765aad95dfe257235cf911f0ffc0b} 
+void AProjectile\+::\+On\+Delete\+Timer\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_a_projectile_a193a542aee95cf91ae5f6fd65716db97}\index{AProjectile@{AProjectile}!OverlapBegin@{OverlapBegin}}
+\index{OverlapBegin@{OverlapBegin}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{OverlapBegin()}{OverlapBegin()}}
+{\footnotesize\ttfamily \label{class_a_projectile_a193a542aee95cf91ae5f6fd65716db97} 
+void AProjectile\+::\+Overlap\+Begin (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int32}]{Other\+Body\+Index}{, }\item[{bool}]{From\+Sweep}{, }\item[{const FHit\+Result \&}]{Sweep\+Rsult}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_a_projectile_a538900d88f072783309cfffd743dfc8a}\index{AProjectile@{AProjectile}!Tick@{Tick}}
+\index{Tick@{Tick}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily \label{class_a_projectile_a538900d88f072783309cfffd743dfc8a} 
+void AProjectile\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_a_projectile_a711b38a801cb5c43f43441db4aa26f88}\index{AProjectile@{AProjectile}!CapsuleComp@{CapsuleComp}}
+\index{CapsuleComp@{CapsuleComp}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{CapsuleComp}{CapsuleComp}}
+{\footnotesize\ttfamily \label{class_a_projectile_a711b38a801cb5c43f43441db4aa26f88} 
+UCapsule\+Component\texorpdfstring{$\ast$}{*} AProjectile\+::\+Capsule\+Comp}
+
+\Hypertarget{class_a_projectile_a0caeb7840b6ca2483bca902bd9f82f5b}\index{AProjectile@{AProjectile}!DeleteTimer@{DeleteTimer}}
+\index{DeleteTimer@{DeleteTimer}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{DeleteTimer}{DeleteTimer}}
+{\footnotesize\ttfamily \label{class_a_projectile_a0caeb7840b6ca2483bca902bd9f82f5b} 
+FTimer\+Handle AProjectile\+::\+Delete\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_a_projectile_a5da046ab568de6bf1659c3d5a9a8ecf6}\index{AProjectile@{AProjectile}!IsLaunched@{IsLaunched}}
+\index{IsLaunched@{IsLaunched}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{IsLaunched}{IsLaunched}}
+{\footnotesize\ttfamily \label{class_a_projectile_a5da046ab568de6bf1659c3d5a9a8ecf6} 
+bool AProjectile\+::\+Is\+Launched = false}
+
+\Hypertarget{class_a_projectile_a85f66b5116e9e18eab354efff6854a76}\index{AProjectile@{AProjectile}!MovementDirection@{MovementDirection}}
+\index{MovementDirection@{MovementDirection}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{MovementDirection}{MovementDirection}}
+{\footnotesize\ttfamily \label{class_a_projectile_a85f66b5116e9e18eab354efff6854a76} 
+FVector2D AProjectile\+::\+Movement\+Direction}
+
+\Hypertarget{class_a_projectile_a77a8587001b4ec23a3b0335ee5374ec8}\index{AProjectile@{AProjectile}!MovementSpeed@{MovementSpeed}}
+\index{MovementSpeed@{MovementSpeed}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{MovementSpeed}{MovementSpeed}}
+{\footnotesize\ttfamily \label{class_a_projectile_a77a8587001b4ec23a3b0335ee5374ec8} 
+float AProjectile\+::\+Movement\+Speed = 300.\+0f}
+
+\Hypertarget{class_a_projectile_a72914970a99f504f762480d130847710}\index{AProjectile@{AProjectile}!ProjectileSprite@{ProjectileSprite}}
+\index{ProjectileSprite@{ProjectileSprite}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{ProjectileSprite}{ProjectileSprite}}
+{\footnotesize\ttfamily \label{class_a_projectile_a72914970a99f504f762480d130847710} 
+UPaper\+Sprite\+Component\texorpdfstring{$\ast$}{*} AProjectile\+::\+Projectile\+Sprite}
+
+\Hypertarget{class_a_projectile_ae4f575ec8547903f163b52003c2292b9}\index{AProjectile@{AProjectile}!Rotation@{Rotation}}
+\index{Rotation@{Rotation}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{Rotation}{Rotation}}
+{\footnotesize\ttfamily \label{class_a_projectile_ae4f575ec8547903f163b52003c2292b9} 
+FVector AProjectile\+::\+Rotation}
+
+\Hypertarget{class_a_projectile_aecd7cb0a47cd83de4752f3852eefdb20}\index{AProjectile@{AProjectile}!WhoLaunchedMe@{WhoLaunchedMe}}
+\index{WhoLaunchedMe@{WhoLaunchedMe}!AProjectile@{AProjectile}}
+\doxysubsubsection{\texorpdfstring{WhoLaunchedMe}{WhoLaunchedMe}}
+{\footnotesize\ttfamily \label{class_a_projectile_aecd7cb0a47cd83de4752f3852eefdb20} 
+AActor\texorpdfstring{$\ast$}{*} AProjectile\+::\+Who\+Launched\+Me = nullptr}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_projectile_8h}{Projectile.\+h}}\item 
+C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_projectile_8cpp}{Projectile.\+cpp}}\end{DoxyCompactItemize}

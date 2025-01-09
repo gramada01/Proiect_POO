@@ -3,3 +3,12 @@
 
 #include "Caretaker.h"
 
+void UCaretaker::SaveMemento(UMemento* Memento)
+{
+	SavedMemento = Memento;
+}
+
+UMemento* UCaretaker::LoadMemento()
+{
+	return SavedMemento;
+}

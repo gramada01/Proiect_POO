@@ -1,0 +1,57 @@
+\doxysection{Errors.\+h}
+\hypertarget{_errors_8h_source}{}\label{_errors_8h_source}\index{C:/Users/matei/OneDrive/Bureau/POO/Proiect\_POO/Source/Zelda/Errors.h@{C:/Users/matei/OneDrive/Bureau/POO/Proiect\_POO/Source/Zelda/Errors.h}}
+\mbox{\hyperlink{_errors_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }ZELDA\_API\ \mbox{\hyperlink{class_errors_aa266bfe6d658cd3e169b18277b902e56}{Errors}}\ :\ \textcolor{keyword}{public}\ std::exception}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00014\ \ \ \ \ std::string\ \mbox{\hyperlink{class_errors_a501df66cf01ec7aaeaa0fe297937563f}{message}}\ =\ \textcolor{stringliteral}{"{}No\ Launcher!!!"{}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_errors_aa266bfe6d658cd3e169b18277b902e56}{Errors}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_errors_aa266bfe6d658cd3e169b18277b902e56}{Errors}}(std::string\ msg);}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_errors_aa266bfe6d658cd3e169b18277b902e56}{\string~Errors}}();}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ \mbox{\hyperlink{class_errors_afed158318501890c617c04a9ec2aa9f4}{get\_message}}()}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>message;}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_err_actor_type_a4e30c755f4c896782ee7e90872efc715}{ErrActorType}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_errors_aa266bfe6d658cd3e169b18277b902e56}{Errors}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_err_actor_type_a4e30c755f4c896782ee7e90872efc715}{ErrActorType}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_err_actor_type_a4e30c755f4c896782ee7e90872efc715}{ErrActorType}}(std::string\ msg);}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_err_actor_type_a960bdce981e5e83dadd564a5808cf304}{\string~ErrActorType}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_err_no_launcher_aa0b64fccc264186d1d7eee967eb9e82c}{ErrNoLauncher}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_errors_aa266bfe6d658cd3e169b18277b902e56}{Errors}}}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_err_no_launcher_aa0b64fccc264186d1d7eee967eb9e82c}{ErrNoLauncher}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_err_no_launcher_aa0b64fccc264186d1d7eee967eb9e82c}{ErrNoLauncher}}(std::string\ msg);}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_err_no_launcher_a6662f1eedd130bc85592c333f9ddff3d}{\string~ErrNoLauncher}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_err_actor_not_exist_ad0085402d7cb2f75d7b92ab11b289789}{ErrActorNotExist}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_errors_aa266bfe6d658cd3e169b18277b902e56}{Errors}}}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_err_actor_not_exist_ad0085402d7cb2f75d7b92ab11b289789}{ErrActorNotExist}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_err_actor_not_exist_ad0085402d7cb2f75d7b92ab11b289789}{ErrActorNotExist}}(std::string\ msg);}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_err_actor_not_exist_a8151fd362310437761b7a9f41bd0623c}{\string~ErrActorNotExist}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \};}
+
+\end{DoxyCode}

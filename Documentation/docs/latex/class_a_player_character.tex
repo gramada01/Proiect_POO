@@ -1,0 +1,292 @@
+\doxysection{APlayer\+Character Class Reference}
+\hypertarget{class_a_player_character}{}\label{class_a_player_character}\index{APlayerCharacter@{APlayerCharacter}}
+
+
+{\ttfamily \#include $<$Player\+Character.\+h$>$}
+
+Inheritance diagram for APlayer\+Character\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_player_character}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_player_character_ab19145f67d736e3576c328c6ecc80b67}{APlayer\+Character}} ()
+\item 
+virtual void \mbox{\hyperlink{class_a_player_character_aabd1d46483746c34c35da55d816d22f3}{Begin\+Play}} () override
+\item 
+virtual void \mbox{\hyperlink{class_a_player_character_aa004cab44548a13b86956fd2d922160a}{Tick}} (float Delta\+Time) override
+\item 
+virtual void \mbox{\hyperlink{class_a_player_character_a5699d8d499c0ae8364f2c599fae2c9c1}{Setup\+Player\+Input\+Component}} (class UInput\+Component \texorpdfstring{$\ast$}{*}Player\+Input\+Component) override
+\item 
+void \mbox{\hyperlink{class_a_player_character_a15b963b46b4b06ab473efde0478585e1}{Move\+Triggered}} (const FInput\+Action\+Value \&Value)
+\item 
+void \mbox{\hyperlink{class_a_player_character_a869e600d250a50b6adc7c8c476ac3625}{Move\+Completed}} (const FInput\+Action\+Value \&Value)
+\item 
+void \mbox{\hyperlink{class_a_player_character_a0f9c1a9278df6d4a495ae0bd527a1fab}{Shoot}} (const FInput\+Action\+Value \&Value)
+\item 
+void \mbox{\hyperlink{class_a_player_character_a32c6b5bf533496dbb3de3140b0640ef9}{Run}} (const FInput\+Action\+Value \&Value)
+\item 
+void \mbox{\hyperlink{class_a_player_character_adb0ce54bfe331caccd464ff45937acfe}{On\+Shoot\+Cooldown\+Timer\+Timeout}} ()
+\item 
+void \mbox{\hyperlink{class_a_player_character_a12baa20bb1936874e3186ea4992f51a2}{Overlap\+Begin}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool From\+Sweep, const FHit\+Result \&Sweep\+Rsult)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_a_player_character_a3c615efca87f1d2bae4f4e6370b15611}{Health}} = 2.\+0f
+\item 
+float \mbox{\hyperlink{class_a_player_character_a3cb5bb704f0761d48ee3c8aa507af5da}{Damage}} = 1.\+0f
+\item 
+UCapsule\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a895c29020855affbc1331db59fa0c245}{Capsule\+Comp}}
+\item 
+USpring\+Arm\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_ade64fd7fe1a70a74d0964a8d07ca70ae}{Spring\+Arm}}
+\item 
+UCamera\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a09a3ebd30ea8c1cb306cbf3b74ecfdef}{Camera}}
+\item 
+UPaper\+Sprite\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a0461cc6a0b1f2da63593f70f2158cab9}{Archer\+Sprite}}
+\item 
+UScene\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a13a0fc411b439b2e0cb990742ae59142}{Bow\+Parent}}
+\item 
+UPaper\+Sprite\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a3165f87b0ad9a7b8fad0da2a6c4456d6}{Bow\+Sprite}}
+\item 
+UScene\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_ab8d950dc0b236f39d69a5cdb70644266}{Arrow\+Spawn\+Position}}
+\item 
+UInput\+Mapping\+Context \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_ab336af7aab955e2791f566c39f2b438e}{Input\+Mapping\+Context}}
+\item 
+UInput\+Action \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a04b9d51ea846b538c381a0bd53f37c92}{Move\+Action}}
+\item 
+UInput\+Action \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a2c4e209ff6fa042bec1ae28794e348c7}{Shoot\+Action}}
+\item 
+TSubclass\+Of$<$ \mbox{\hyperlink{class_a_projectile}{AProjectile}} $>$ \mbox{\hyperlink{class_a_player_character_a0c28734b018c14467db3444955e83f7c}{Projectile\+Actor\+To\+Spawn}}
+\item 
+UInput\+Action \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a5e8d0e04633a2398c69c0aa1940f10be}{Emergency\+Run\+Action}}
+\item 
+float \mbox{\hyperlink{class_a_player_character_a323d7f529fd4f2235ed09004b89f7f5a}{Movement\+Speed}} = 200.\+0f
+\item 
+FVector2D \mbox{\hyperlink{class_a_player_character_ab75fedbdc4d1f077b37c88f556b149a9}{Movement\+Direction}}
+\item 
+bool \mbox{\hyperlink{class_a_player_character_ac4b72989ecdef24a5b16790cc56eb5dd}{Can\+Move}} = true
+\item 
+bool \mbox{\hyperlink{class_a_player_character_a84bca6e8ebf0dac0cc416090f70b76a3}{Can\+Shoot}} = true
+\item 
+float \mbox{\hyperlink{class_a_player_character_a6adb52f8876e212534dfe01b9ad821c9}{Shoot\+Cooldown\+Duration\+In\+Seconds}} = 0.\+3f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{class_emergency_run}{Emergency\+Run}} \mbox{\hyperlink{class_a_player_character_ab4324af7795a53dca1799383e412311b}{\+\_\+runner}}
+\item 
+FTimer\+Handle \mbox{\hyperlink{class_a_player_character_a856fa13ebbf8c3c4f8b6d21de3b1de42}{Shoot\+Cooldown\+Timer}}
+\item 
+FRotator \mbox{\hyperlink{class_a_player_character_a0c00abe69f9493fd62e227cdd96d9324}{rotation}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_a_player_character_ab19145f67d736e3576c328c6ecc80b67}\index{APlayerCharacter@{APlayerCharacter}!APlayerCharacter@{APlayerCharacter}}
+\index{APlayerCharacter@{APlayerCharacter}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{APlayerCharacter()}{APlayerCharacter()}}
+{\footnotesize\ttfamily \label{class_a_player_character_ab19145f67d736e3576c328c6ecc80b67} 
+APlayer\+Character\+::\+APlayer\+Character (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_player_character_aabd1d46483746c34c35da55d816d22f3}\index{APlayerCharacter@{APlayerCharacter}!BeginPlay@{BeginPlay}}
+\index{BeginPlay@{BeginPlay}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{BeginPlay()}{BeginPlay()}}
+{\footnotesize\ttfamily \label{class_a_player_character_aabd1d46483746c34c35da55d816d22f3} 
+void APlayer\+Character\+::\+Begin\+Play (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_a_player_character_a869e600d250a50b6adc7c8c476ac3625}\index{APlayerCharacter@{APlayerCharacter}!MoveCompleted@{MoveCompleted}}
+\index{MoveCompleted@{MoveCompleted}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{MoveCompleted()}{MoveCompleted()}}
+{\footnotesize\ttfamily \label{class_a_player_character_a869e600d250a50b6adc7c8c476ac3625} 
+void APlayer\+Character\+::\+Move\+Completed (\begin{DoxyParamCaption}\item[{const FInput\+Action\+Value \&}]{Value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_a_player_character_a15b963b46b4b06ab473efde0478585e1}\index{APlayerCharacter@{APlayerCharacter}!MoveTriggered@{MoveTriggered}}
+\index{MoveTriggered@{MoveTriggered}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{MoveTriggered()}{MoveTriggered()}}
+{\footnotesize\ttfamily \label{class_a_player_character_a15b963b46b4b06ab473efde0478585e1} 
+void APlayer\+Character\+::\+Move\+Triggered (\begin{DoxyParamCaption}\item[{const FInput\+Action\+Value \&}]{Value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_a_player_character_adb0ce54bfe331caccd464ff45937acfe}\index{APlayerCharacter@{APlayerCharacter}!OnShootCooldownTimerTimeout@{OnShootCooldownTimerTimeout}}
+\index{OnShootCooldownTimerTimeout@{OnShootCooldownTimerTimeout}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{OnShootCooldownTimerTimeout()}{OnShootCooldownTimerTimeout()}}
+{\footnotesize\ttfamily \label{class_a_player_character_adb0ce54bfe331caccd464ff45937acfe} 
+void APlayer\+Character\+::\+On\+Shoot\+Cooldown\+Timer\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_a_player_character_a12baa20bb1936874e3186ea4992f51a2}\index{APlayerCharacter@{APlayerCharacter}!OverlapBegin@{OverlapBegin}}
+\index{OverlapBegin@{OverlapBegin}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{OverlapBegin()}{OverlapBegin()}}
+{\footnotesize\ttfamily \label{class_a_player_character_a12baa20bb1936874e3186ea4992f51a2} 
+void APlayer\+Character\+::\+Overlap\+Begin (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int32}]{Other\+Body\+Index}{, }\item[{bool}]{From\+Sweep}{, }\item[{const FHit\+Result \&}]{Sweep\+Rsult}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_a_player_character_a32c6b5bf533496dbb3de3140b0640ef9}\index{APlayerCharacter@{APlayerCharacter}!Run@{Run}}
+\index{Run@{Run}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{class_a_player_character_a32c6b5bf533496dbb3de3140b0640ef9} 
+void APlayer\+Character\+::\+Run (\begin{DoxyParamCaption}\item[{const FInput\+Action\+Value \&}]{Value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_a_player_character_a5699d8d499c0ae8364f2c599fae2c9c1}\index{APlayerCharacter@{APlayerCharacter}!SetupPlayerInputComponent@{SetupPlayerInputComponent}}
+\index{SetupPlayerInputComponent@{SetupPlayerInputComponent}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{SetupPlayerInputComponent()}{SetupPlayerInputComponent()}}
+{\footnotesize\ttfamily \label{class_a_player_character_a5699d8d499c0ae8364f2c599fae2c9c1} 
+void APlayer\+Character\+::\+Setup\+Player\+Input\+Component (\begin{DoxyParamCaption}\item[{class UInput\+Component \texorpdfstring{$\ast$}{*}}]{Player\+Input\+Component}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_a_player_character_a0f9c1a9278df6d4a495ae0bd527a1fab}\index{APlayerCharacter@{APlayerCharacter}!Shoot@{Shoot}}
+\index{Shoot@{Shoot}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{Shoot()}{Shoot()}}
+{\footnotesize\ttfamily \label{class_a_player_character_a0f9c1a9278df6d4a495ae0bd527a1fab} 
+void APlayer\+Character\+::\+Shoot (\begin{DoxyParamCaption}\item[{const FInput\+Action\+Value \&}]{Value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_a_player_character_aa004cab44548a13b86956fd2d922160a}\index{APlayerCharacter@{APlayerCharacter}!Tick@{Tick}}
+\index{Tick@{Tick}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily \label{class_a_player_character_aa004cab44548a13b86956fd2d922160a} 
+void APlayer\+Character\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_a_player_character_ab4324af7795a53dca1799383e412311b}\index{APlayerCharacter@{APlayerCharacter}!\_runner@{\_runner}}
+\index{\_runner@{\_runner}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{\_runner}{\_runner}}
+{\footnotesize\ttfamily \label{class_a_player_character_ab4324af7795a53dca1799383e412311b} 
+const \mbox{\hyperlink{class_emergency_run}{Emergency\+Run}} APlayer\+Character\+::\+\_\+runner\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_a_player_character_a0461cc6a0b1f2da63593f70f2158cab9}\index{APlayerCharacter@{APlayerCharacter}!ArcherSprite@{ArcherSprite}}
+\index{ArcherSprite@{ArcherSprite}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{ArcherSprite}{ArcherSprite}}
+{\footnotesize\ttfamily \label{class_a_player_character_a0461cc6a0b1f2da63593f70f2158cab9} 
+UPaper\+Sprite\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Archer\+Sprite}
+
+\Hypertarget{class_a_player_character_ab8d950dc0b236f39d69a5cdb70644266}\index{APlayerCharacter@{APlayerCharacter}!ArrowSpawnPosition@{ArrowSpawnPosition}}
+\index{ArrowSpawnPosition@{ArrowSpawnPosition}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{ArrowSpawnPosition}{ArrowSpawnPosition}}
+{\footnotesize\ttfamily \label{class_a_player_character_ab8d950dc0b236f39d69a5cdb70644266} 
+UScene\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Arrow\+Spawn\+Position}
+
+\Hypertarget{class_a_player_character_a13a0fc411b439b2e0cb990742ae59142}\index{APlayerCharacter@{APlayerCharacter}!BowParent@{BowParent}}
+\index{BowParent@{BowParent}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{BowParent}{BowParent}}
+{\footnotesize\ttfamily \label{class_a_player_character_a13a0fc411b439b2e0cb990742ae59142} 
+UScene\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Bow\+Parent}
+
+\Hypertarget{class_a_player_character_a3165f87b0ad9a7b8fad0da2a6c4456d6}\index{APlayerCharacter@{APlayerCharacter}!BowSprite@{BowSprite}}
+\index{BowSprite@{BowSprite}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{BowSprite}{BowSprite}}
+{\footnotesize\ttfamily \label{class_a_player_character_a3165f87b0ad9a7b8fad0da2a6c4456d6} 
+UPaper\+Sprite\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Bow\+Sprite}
+
+\Hypertarget{class_a_player_character_a09a3ebd30ea8c1cb306cbf3b74ecfdef}\index{APlayerCharacter@{APlayerCharacter}!Camera@{Camera}}
+\index{Camera@{Camera}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{Camera}{Camera}}
+{\footnotesize\ttfamily \label{class_a_player_character_a09a3ebd30ea8c1cb306cbf3b74ecfdef} 
+UCamera\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Camera}
+
+\Hypertarget{class_a_player_character_ac4b72989ecdef24a5b16790cc56eb5dd}\index{APlayerCharacter@{APlayerCharacter}!CanMove@{CanMove}}
+\index{CanMove@{CanMove}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{CanMove}{CanMove}}
+{\footnotesize\ttfamily \label{class_a_player_character_ac4b72989ecdef24a5b16790cc56eb5dd} 
+bool APlayer\+Character\+::\+Can\+Move = true}
+
+\Hypertarget{class_a_player_character_a84bca6e8ebf0dac0cc416090f70b76a3}\index{APlayerCharacter@{APlayerCharacter}!CanShoot@{CanShoot}}
+\index{CanShoot@{CanShoot}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{CanShoot}{CanShoot}}
+{\footnotesize\ttfamily \label{class_a_player_character_a84bca6e8ebf0dac0cc416090f70b76a3} 
+bool APlayer\+Character\+::\+Can\+Shoot = true}
+
+\Hypertarget{class_a_player_character_a895c29020855affbc1331db59fa0c245}\index{APlayerCharacter@{APlayerCharacter}!CapsuleComp@{CapsuleComp}}
+\index{CapsuleComp@{CapsuleComp}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{CapsuleComp}{CapsuleComp}}
+{\footnotesize\ttfamily \label{class_a_player_character_a895c29020855affbc1331db59fa0c245} 
+UCapsule\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Capsule\+Comp}
+
+\Hypertarget{class_a_player_character_a3cb5bb704f0761d48ee3c8aa507af5da}\index{APlayerCharacter@{APlayerCharacter}!Damage@{Damage}}
+\index{Damage@{Damage}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{Damage}{Damage}}
+{\footnotesize\ttfamily \label{class_a_player_character_a3cb5bb704f0761d48ee3c8aa507af5da} 
+float APlayer\+Character\+::\+Damage = 1.\+0f}
+
+\Hypertarget{class_a_player_character_a5e8d0e04633a2398c69c0aa1940f10be}\index{APlayerCharacter@{APlayerCharacter}!EmergencyRunAction@{EmergencyRunAction}}
+\index{EmergencyRunAction@{EmergencyRunAction}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{EmergencyRunAction}{EmergencyRunAction}}
+{\footnotesize\ttfamily \label{class_a_player_character_a5e8d0e04633a2398c69c0aa1940f10be} 
+UInput\+Action\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Emergency\+Run\+Action}
+
+\Hypertarget{class_a_player_character_a3c615efca87f1d2bae4f4e6370b15611}\index{APlayerCharacter@{APlayerCharacter}!Health@{Health}}
+\index{Health@{Health}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{Health}{Health}}
+{\footnotesize\ttfamily \label{class_a_player_character_a3c615efca87f1d2bae4f4e6370b15611} 
+float APlayer\+Character\+::\+Health = 2.\+0f}
+
+\Hypertarget{class_a_player_character_ab336af7aab955e2791f566c39f2b438e}\index{APlayerCharacter@{APlayerCharacter}!InputMappingContext@{InputMappingContext}}
+\index{InputMappingContext@{InputMappingContext}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{InputMappingContext}{InputMappingContext}}
+{\footnotesize\ttfamily \label{class_a_player_character_ab336af7aab955e2791f566c39f2b438e} 
+UInput\+Mapping\+Context\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Input\+Mapping\+Context}
+
+\Hypertarget{class_a_player_character_a04b9d51ea846b538c381a0bd53f37c92}\index{APlayerCharacter@{APlayerCharacter}!MoveAction@{MoveAction}}
+\index{MoveAction@{MoveAction}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{MoveAction}{MoveAction}}
+{\footnotesize\ttfamily \label{class_a_player_character_a04b9d51ea846b538c381a0bd53f37c92} 
+UInput\+Action\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Move\+Action}
+
+\Hypertarget{class_a_player_character_ab75fedbdc4d1f077b37c88f556b149a9}\index{APlayerCharacter@{APlayerCharacter}!MovementDirection@{MovementDirection}}
+\index{MovementDirection@{MovementDirection}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{MovementDirection}{MovementDirection}}
+{\footnotesize\ttfamily \label{class_a_player_character_ab75fedbdc4d1f077b37c88f556b149a9} 
+FVector2D APlayer\+Character\+::\+Movement\+Direction}
+
+\Hypertarget{class_a_player_character_a323d7f529fd4f2235ed09004b89f7f5a}\index{APlayerCharacter@{APlayerCharacter}!MovementSpeed@{MovementSpeed}}
+\index{MovementSpeed@{MovementSpeed}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{MovementSpeed}{MovementSpeed}}
+{\footnotesize\ttfamily \label{class_a_player_character_a323d7f529fd4f2235ed09004b89f7f5a} 
+float APlayer\+Character\+::\+Movement\+Speed = 200.\+0f}
+
+\Hypertarget{class_a_player_character_a0c28734b018c14467db3444955e83f7c}\index{APlayerCharacter@{APlayerCharacter}!ProjectileActorToSpawn@{ProjectileActorToSpawn}}
+\index{ProjectileActorToSpawn@{ProjectileActorToSpawn}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{ProjectileActorToSpawn}{ProjectileActorToSpawn}}
+{\footnotesize\ttfamily \label{class_a_player_character_a0c28734b018c14467db3444955e83f7c} 
+TSubclass\+Of$<$\mbox{\hyperlink{class_a_projectile}{AProjectile}}$>$ APlayer\+Character\+::\+Projectile\+Actor\+To\+Spawn}
+
+\Hypertarget{class_a_player_character_a0c00abe69f9493fd62e227cdd96d9324}\index{APlayerCharacter@{APlayerCharacter}!rotation@{rotation}}
+\index{rotation@{rotation}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{rotation}{rotation}}
+{\footnotesize\ttfamily \label{class_a_player_character_a0c00abe69f9493fd62e227cdd96d9324} 
+FRotator APlayer\+Character\+::rotation\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_a_player_character_a2c4e209ff6fa042bec1ae28794e348c7}\index{APlayerCharacter@{APlayerCharacter}!ShootAction@{ShootAction}}
+\index{ShootAction@{ShootAction}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{ShootAction}{ShootAction}}
+{\footnotesize\ttfamily \label{class_a_player_character_a2c4e209ff6fa042bec1ae28794e348c7} 
+UInput\+Action\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Shoot\+Action}
+
+\Hypertarget{class_a_player_character_a6adb52f8876e212534dfe01b9ad821c9}\index{APlayerCharacter@{APlayerCharacter}!ShootCooldownDurationInSeconds@{ShootCooldownDurationInSeconds}}
+\index{ShootCooldownDurationInSeconds@{ShootCooldownDurationInSeconds}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{ShootCooldownDurationInSeconds}{ShootCooldownDurationInSeconds}}
+{\footnotesize\ttfamily \label{class_a_player_character_a6adb52f8876e212534dfe01b9ad821c9} 
+float APlayer\+Character\+::\+Shoot\+Cooldown\+Duration\+In\+Seconds = 0.\+3f}
+
+\Hypertarget{class_a_player_character_a856fa13ebbf8c3c4f8b6d21de3b1de42}\index{APlayerCharacter@{APlayerCharacter}!ShootCooldownTimer@{ShootCooldownTimer}}
+\index{ShootCooldownTimer@{ShootCooldownTimer}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{ShootCooldownTimer}{ShootCooldownTimer}}
+{\footnotesize\ttfamily \label{class_a_player_character_a856fa13ebbf8c3c4f8b6d21de3b1de42} 
+FTimer\+Handle APlayer\+Character\+::\+Shoot\+Cooldown\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_a_player_character_ade64fd7fe1a70a74d0964a8d07ca70ae}\index{APlayerCharacter@{APlayerCharacter}!SpringArm@{SpringArm}}
+\index{SpringArm@{SpringArm}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{SpringArm}{SpringArm}}
+{\footnotesize\ttfamily \label{class_a_player_character_ade64fd7fe1a70a74d0964a8d07ca70ae} 
+USpring\+Arm\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Spring\+Arm}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_player_character_8h}{Player\+Character.\+h}}\item 
+C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_player_character_8cpp}{Player\+Character.\+cpp}}\end{DoxyCompactItemize}
