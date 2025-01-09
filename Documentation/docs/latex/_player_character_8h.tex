@@ -1,5 +1,10 @@
 \doxysection{C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\+Player\+Character.h File Reference}
 \hypertarget{_player_character_8h}{}\label{_player_character_8h}\index{C:/Users/matei/OneDrive/Bureau/POO/Proiect\_POO/Source/Zelda/PlayerCharacter.h@{C:/Users/matei/OneDrive/Bureau/POO/Proiect\_POO/Source/Zelda/PlayerCharacter.h}}
+
+
+This file contains the declaration of the \doxylink{class_a_player_character}{APlayer\+Character} class which represents the player character in the game.  
+
+
 {\ttfamily \#include "{}Core\+Minimal.\+h"{}}\newline
 {\ttfamily \#include "{}Game\+Framework/\+Pawn.\+h"{}}\newline
 {\ttfamily \#include "{}Components/\+Capsule\+Component.\+h"{}}\newline
@@ -18,9 +23,19 @@
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$UObject/\+Object\+Macros.\+h$>$}\newline
 {\ttfamily \#include "{}Kismet/\+Kismet\+Math\+Library.\+h"{}}\newline
+{\ttfamily \#include "{}Subject.\+h"{}}\newline
+{\ttfamily \#include "{}Templates/\+Shared\+Pointer.\+h"{}}\newline
+{\ttfamily \#include "{}Game\+Framework/\+Actor.\+h"{}}\newline
 {\ttfamily \#include "{}Player\+Character.\+generated.\+h"{}}\newline
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \mbox{\hyperlink{class_enemy_type}{Enemy\+Type$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em A template class to check if an actor is of a specific enemy type. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_a_player_character}{APlayer\+Character}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A class that represents the player character in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the declaration of the \doxylink{class_a_player_character}{APlayer\+Character} class which represents the player character in the game. 
+

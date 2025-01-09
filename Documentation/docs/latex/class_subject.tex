@@ -2,16 +2,35 @@
 \hypertarget{class_subject}{}\label{class_subject}\index{Subject@{Subject}}
 
 
+A class that manages a list of observers and notifies them of events.  
+
+
+
+
 {\ttfamily \#include $<$Subject.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_subject_ab468044832c824c6d6c2f46272655207}{Subject}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_subject_a7c4f522850f718466e5be7eb55ba1969}{\texorpdfstring{$\sim$}{\string~}\+Subject}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_subject_a5e45ff51c8f2916c26e1409dbff97d0f}{Attach}} (\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Attaches an observer to the subject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_subject_a966ba14fc93df8419f0cef3eaa5b4b42}{Detach}} (\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Detaches an observer from the subject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_subject_aa62351e3ba63b05ade897044f96bda49}{Notify}} (AActor \texorpdfstring{$\ast$}{*}Killed\+Actor)
+\begin{DoxyCompactList}\small\item\em Notifies all attached observers of an event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_subject_a39d24e695db0a792799b351dbebde992}{observers}}
+\begin{DoxyCompactList}\small\item\em A list of observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A class that manages a list of observers and notifies them of events. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_subject_ab468044832c824c6d6c2f46272655207}\index{Subject@{Subject}!Subject@{Subject}}
@@ -20,11 +39,80 @@
 {\footnotesize\ttfamily \label{class_subject_ab468044832c824c6d6c2f46272655207} 
 Subject\+::\+Subject (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Default constructor. 
+
 \Hypertarget{class_subject_a7c4f522850f718466e5be7eb55ba1969}\index{Subject@{Subject}!````~Subject@{\texorpdfstring{$\sim$}{\string~}Subject}}
 \index{````~Subject@{\texorpdfstring{$\sim$}{\string~}Subject}!Subject@{Subject}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Subject()}{\string~Subject()}}
 {\footnotesize\ttfamily \label{class_subject_a7c4f522850f718466e5be7eb55ba1969} 
 Subject\+::\texorpdfstring{$\sim$}{\string~}\+Subject (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_subject_a5e45ff51c8f2916c26e1409dbff97d0f}\index{Subject@{Subject}!Attach@{Attach}}
+\index{Attach@{Attach}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{Attach()}{Attach()}}
+{\footnotesize\ttfamily \label{class_subject_a5e45ff51c8f2916c26e1409dbff97d0f} 
+void Subject\+::\+Attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}}]{observer}{}\end{DoxyParamCaption})}
+
+
+
+Attaches an observer to the subject. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The observer to attach. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_subject_a966ba14fc93df8419f0cef3eaa5b4b42}\index{Subject@{Subject}!Detach@{Detach}}
+\index{Detach@{Detach}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{Detach()}{Detach()}}
+{\footnotesize\ttfamily \label{class_subject_a966ba14fc93df8419f0cef3eaa5b4b42} 
+void Subject\+::\+Detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}}]{observer}{}\end{DoxyParamCaption})}
+
+
+
+Detaches an observer from the subject. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The observer to detach. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_subject_aa62351e3ba63b05ade897044f96bda49}\index{Subject@{Subject}!Notify@{Notify}}
+\index{Notify@{Notify}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{Notify()}{Notify()}}
+{\footnotesize\ttfamily \label{class_subject_aa62351e3ba63b05ade897044f96bda49} 
+void Subject\+::\+Notify (\begin{DoxyParamCaption}\item[{AActor \texorpdfstring{$\ast$}{*}}]{Killed\+Actor}{}\end{DoxyParamCaption})}
+
+
+
+Notifies all attached observers of an event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Killed\+Actor} & The actor that was killed. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_subject_a39d24e695db0a792799b351dbebde992}\index{Subject@{Subject}!observers@{observers}}
+\index{observers@{observers}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{observers}{observers}}
+{\footnotesize\ttfamily \label{class_subject_a39d24e695db0a792799b351dbebde992} 
+std\+::vector$<$\mbox{\hyperlink{class_observer}{Observer}}\texorpdfstring{$\ast$}{*}$>$ Subject\+::observers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A list of observers. 
 
 
 

@@ -2,6 +2,11 @@
 \hypertarget{class_err_actor_type}{}\label{class_err_actor_type}\index{ErrActorType@{ErrActorType}}
 
 
+Error class for invalid actor type errors.  
+
+
+
+
 {\ttfamily \#include $<$Errors.\+h$>$}
 
 Inheritance diagram for Err\+Actor\+Type\+:\begin{figure}[H]
@@ -14,29 +19,32 @@ Inheritance diagram for Err\+Actor\+Type\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_err_actor_type_a4e30c755f4c896782ee7e90872efc715}{Err\+Actor\+Type}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_err_actor_type_a2c1c41a8d020e58d7e016f8842134711}{Err\+Actor\+Type}} (std\+::string msg)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor with a custom message. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_err_actor_type_a960bdce981e5e83dadd564a5808cf304}{\texorpdfstring{$\sim$}{\string~}\+Err\+Actor\+Type}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_errors}{Errors}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_errors_aa266bfe6d658cd3e169b18277b902e56}{Errors}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_errors_aee5ec5a7e0529c560e165adc5093fc87}{Errors}} (std\+::string msg)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor with a custom message. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_errors_ae7e127294d7af8814b4141eb82cdf80e}{\texorpdfstring{$\sim$}{\string~}\+Errors}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_errors_afed158318501890c617c04a9ec2aa9f4}{get\+\_\+message}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets the error message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_errors}{Errors}}}
 \begin{DoxyCompactItemize}
 \item 
 std\+::string \mbox{\hyperlink{class_errors_a501df66cf01ec7aaeaa0fe297937563f}{message}} = "{}No Launcher!!!"{}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The error message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Error class for invalid actor type errors. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_err_actor_type_a4e30c755f4c896782ee7e90872efc715}\index{ErrActorType@{ErrActorType}!ErrActorType@{ErrActorType}}
@@ -45,17 +53,34 @@ std\+::string \mbox{\hyperlink{class_errors_a501df66cf01ec7aaeaa0fe297937563f}{m
 {\footnotesize\ttfamily \label{class_err_actor_type_a4e30c755f4c896782ee7e90872efc715} 
 Err\+Actor\+Type\+::\+Err\+Actor\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Default constructor. 
+
 \Hypertarget{class_err_actor_type_a2c1c41a8d020e58d7e016f8842134711}\index{ErrActorType@{ErrActorType}!ErrActorType@{ErrActorType}}
 \index{ErrActorType@{ErrActorType}!ErrActorType@{ErrActorType}}
 \doxysubsubsection{\texorpdfstring{ErrActorType()}{ErrActorType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \label{class_err_actor_type_a2c1c41a8d020e58d7e016f8842134711} 
 Err\+Actor\+Type\+::\+Err\+Actor\+Type (\begin{DoxyParamCaption}\item[{std\+::string}]{msg}{}\end{DoxyParamCaption})}
 
+
+
+Constructor with a custom message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The custom error message. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_err_actor_type_a960bdce981e5e83dadd564a5808cf304}\index{ErrActorType@{ErrActorType}!````~ErrActorType@{\texorpdfstring{$\sim$}{\string~}ErrActorType}}
 \index{````~ErrActorType@{\texorpdfstring{$\sim$}{\string~}ErrActorType}!ErrActorType@{ErrActorType}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ErrActorType()}{\string~ErrActorType()}}
 {\footnotesize\ttfamily \label{class_err_actor_type_a960bdce981e5e83dadd564a5808cf304} 
 Err\+Actor\+Type\+::\texorpdfstring{$\sim$}{\string~}\+Err\+Actor\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor. 
 
 
 

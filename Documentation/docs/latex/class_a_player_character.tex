@@ -2,6 +2,11 @@
 \hypertarget{class_a_player_character}{}\label{class_a_player_character}\index{APlayerCharacter@{APlayerCharacter}}
 
 
+A class that represents the player character in the game.  
+
+
+
+
 {\ttfamily \#include $<$Player\+Character.\+h$>$}
 
 Inheritance diagram for APlayer\+Character\+:\begin{figure}[H]
@@ -13,84 +18,125 @@ Inheritance diagram for APlayer\+Character\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_a_player_character_abb20f8e63afe591271c9f6d07ffb3c32}{\texorpdfstring{$\sim$}{\string~}\+APlayer\+Character}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_a_player_character_ab19145f67d736e3576c328c6ecc80b67}{APlayer\+Character}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_player_character_aabd1d46483746c34c35da55d816d22f3}{Begin\+Play}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the game starts or when spawned. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_player_character_aa004cab44548a13b86956fd2d922160a}{Tick}} (float Delta\+Time) override
-\item 
+\begin{DoxyCompactList}\small\item\em Called every frame. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_player_character_a5699d8d499c0ae8364f2c599fae2c9c1}{Setup\+Player\+Input\+Component}} (class UInput\+Component \texorpdfstring{$\ast$}{*}Player\+Input\+Component) override
-\item 
+\begin{DoxyCompactList}\small\item\em Called to bind functionality to input. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_player_character_a15b963b46b4b06ab473efde0478585e1}{Move\+Triggered}} (const FInput\+Action\+Value \&Value)
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the move action is triggered. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_player_character_a869e600d250a50b6adc7c8c476ac3625}{Move\+Completed}} (const FInput\+Action\+Value \&Value)
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the move action is completed. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_player_character_a0f9c1a9278df6d4a495ae0bd527a1fab}{Shoot}} (const FInput\+Action\+Value \&Value)
-\item 
+\begin{DoxyCompactList}\small\item\em Shoots a projectile. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_player_character_a32c6b5bf533496dbb3de3140b0640ef9}{Run}} (const FInput\+Action\+Value \&Value)
-\item 
+\begin{DoxyCompactList}\small\item\em Performs an emergency run. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_player_character_adb0ce54bfe331caccd464ff45937acfe}{On\+Shoot\+Cooldown\+Timer\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em Called when the shoot cooldown timer times out. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_player_character_ac691d96fefd13e0683105e88bcb6b480}{Overlap\+Begin}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int Other\+Body\+Index, bool From\+Sweep, const FHit\+Result \&Sweep\+Result)
+\begin{DoxyCompactList}\small\item\em Called when an overlap begins. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_a_player_character_a74c0a1e025937e2661d03e0f32efba5d}{On\+Enemy\+Killed}} (AActor \texorpdfstring{$\ast$}{*}Killed\+Actor) override
+\begin{DoxyCompactList}\small\item\em Called when an enemy is killed. \end{DoxyCompactList}\item 
+TShared\+Ptr$<$ \mbox{\hyperlink{class_subject}{Subject}} $>$ \mbox{\hyperlink{class_a_player_character_ad438cca00eea9646b2a16a93c1e3c69a}{Get\+Enemy\+Subject}} ()
+\begin{DoxyCompactList}\small\item\em Gets the enemy subject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_player_character_a391ead7eb16f7b73037a017fed4f4733}{Set\+Enemy\+Subject}} (TShared\+Ptr$<$ \mbox{\hyperlink{class_subject}{Subject}} $>$ In\+Subject)
+\begin{DoxyCompactList}\small\item\em Sets the enemy subject. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_observer}{Observer}}}
+\begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_a_player_character_a12baa20bb1936874e3186ea4992f51a2}{Overlap\+Begin}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool From\+Sweep, const FHit\+Result \&Sweep\+Rsult)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_observer_a19c43f80a38a332a6f694783df3c9835}{Observer}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_observer_a450645e61c136826f09940a1334c7f34}{\texorpdfstring{$\sim$}{\string~}\+Observer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{class_a_player_character_a3c615efca87f1d2bae4f4e6370b15611}{Health}} = 2.\+0f
-\item 
+\begin{DoxyCompactList}\small\item\em The health of the player character. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_a_player_character_a3cb5bb704f0761d48ee3c8aa507af5da}{Damage}} = 1.\+0f
-\item 
+\begin{DoxyCompactList}\small\item\em The damage dealt by the player character. \end{DoxyCompactList}\item 
 UCapsule\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a895c29020855affbc1331db59fa0c245}{Capsule\+Comp}}
-\item 
+\begin{DoxyCompactList}\small\item\em The capsule component of the player character. \end{DoxyCompactList}\item 
 USpring\+Arm\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_ade64fd7fe1a70a74d0964a8d07ca70ae}{Spring\+Arm}}
-\item 
+\begin{DoxyCompactList}\small\item\em The spring arm component of the player character. \end{DoxyCompactList}\item 
 UCamera\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a09a3ebd30ea8c1cb306cbf3b74ecfdef}{Camera}}
-\item 
+\begin{DoxyCompactList}\small\item\em The camera component of the player character. \end{DoxyCompactList}\item 
 UPaper\+Sprite\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a0461cc6a0b1f2da63593f70f2158cab9}{Archer\+Sprite}}
-\item 
+\begin{DoxyCompactList}\small\item\em The sprite component of the player character. \end{DoxyCompactList}\item 
 UScene\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a13a0fc411b439b2e0cb990742ae59142}{Bow\+Parent}}
-\item 
+\begin{DoxyCompactList}\small\item\em The bow parent component of the player character. \end{DoxyCompactList}\item 
 UPaper\+Sprite\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a3165f87b0ad9a7b8fad0da2a6c4456d6}{Bow\+Sprite}}
-\item 
+\begin{DoxyCompactList}\small\item\em The bow sprite component of the player character. \end{DoxyCompactList}\item 
 UScene\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_ab8d950dc0b236f39d69a5cdb70644266}{Arrow\+Spawn\+Position}}
-\item 
+\begin{DoxyCompactList}\small\item\em The arrow spawn position component of the player character. \end{DoxyCompactList}\item 
 UInput\+Mapping\+Context \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_ab336af7aab955e2791f566c39f2b438e}{Input\+Mapping\+Context}}
-\item 
+\begin{DoxyCompactList}\small\item\em The input mapping context. \end{DoxyCompactList}\item 
 UInput\+Action \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a04b9d51ea846b538c381a0bd53f37c92}{Move\+Action}}
-\item 
+\begin{DoxyCompactList}\small\item\em The move action input. \end{DoxyCompactList}\item 
 UInput\+Action \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a2c4e209ff6fa042bec1ae28794e348c7}{Shoot\+Action}}
-\item 
+\begin{DoxyCompactList}\small\item\em The shoot action input. \end{DoxyCompactList}\item 
 TSubclass\+Of$<$ \mbox{\hyperlink{class_a_projectile}{AProjectile}} $>$ \mbox{\hyperlink{class_a_player_character_a0c28734b018c14467db3444955e83f7c}{Projectile\+Actor\+To\+Spawn}}
-\item 
+\begin{DoxyCompactList}\small\item\em The projectile actor to spawn. \end{DoxyCompactList}\item 
 UInput\+Action \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_player_character_a5e8d0e04633a2398c69c0aa1940f10be}{Emergency\+Run\+Action}}
-\item 
+\begin{DoxyCompactList}\small\item\em The emergency run action input. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_a_player_character_a323d7f529fd4f2235ed09004b89f7f5a}{Movement\+Speed}} = 200.\+0f
-\item 
+\begin{DoxyCompactList}\small\item\em The movement speed of the player character. \end{DoxyCompactList}\item 
 FVector2D \mbox{\hyperlink{class_a_player_character_ab75fedbdc4d1f077b37c88f556b149a9}{Movement\+Direction}}
-\item 
+\begin{DoxyCompactList}\small\item\em The movement direction of the player character. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_a_player_character_ac4b72989ecdef24a5b16790cc56eb5dd}{Can\+Move}} = true
-\item 
+\begin{DoxyCompactList}\small\item\em Indicates whether the player character can move. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_a_player_character_a84bca6e8ebf0dac0cc416090f70b76a3}{Can\+Shoot}} = true
-\item 
+\begin{DoxyCompactList}\small\item\em Indicates whether the player character can shoot. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_a_player_character_a6adb52f8876e212534dfe01b9ad821c9}{Shoot\+Cooldown\+Duration\+In\+Seconds}} = 0.\+3f
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The shoot cooldown duration in seconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 const \mbox{\hyperlink{class_emergency_run}{Emergency\+Run}} \mbox{\hyperlink{class_a_player_character_ab4324af7795a53dca1799383e412311b}{\+\_\+runner}}
-\item 
+\begin{DoxyCompactList}\small\item\em The emergency run instance. \end{DoxyCompactList}\item 
 FTimer\+Handle \mbox{\hyperlink{class_a_player_character_a856fa13ebbf8c3c4f8b6d21de3b1de42}{Shoot\+Cooldown\+Timer}}
-\item 
+\begin{DoxyCompactList}\small\item\em Timer handle for shoot cooldown. \end{DoxyCompactList}\item 
 FRotator \mbox{\hyperlink{class_a_player_character_a0c00abe69f9493fd62e227cdd96d9324}{rotation}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The rotation of the player character. \end{DoxyCompactList}\item 
+TShared\+Ptr$<$ \mbox{\hyperlink{class_subject}{Subject}} $>$ \mbox{\hyperlink{class_a_player_character_a6abcead90d0716b9d6f00bc471d8e2bf}{Enemy\+Subject}}
+\begin{DoxyCompactList}\small\item\em The enemy subject associated with the player character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_a_player_character_a5358cccda8e1202d565022bb65cb1b60}{kills}} = 0
+\begin{DoxyCompactList}\small\item\em The number of kills by the player. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_a_player_character_afaab650ff731ffb8c488ce8783d0dc21}{score}} = 0
+\begin{DoxyCompactList}\small\item\em The score of the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A class that represents the player character in the game. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_a_player_character_abb20f8e63afe591271c9f6d07ffb3c32}\index{APlayerCharacter@{APlayerCharacter}!````~APlayerCharacter@{\texorpdfstring{$\sim$}{\string~}APlayerCharacter}}
+\index{````~APlayerCharacter@{\texorpdfstring{$\sim$}{\string~}APlayerCharacter}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}APlayerCharacter()}{\string~APlayerCharacter()}}
+{\footnotesize\ttfamily \label{class_a_player_character_abb20f8e63afe591271c9f6d07ffb3c32} 
+APlayer\+Character\+::\texorpdfstring{$\sim$}{\string~}\+APlayer\+Character (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
 \Hypertarget{class_a_player_character_ab19145f67d736e3576c328c6ecc80b67}\index{APlayerCharacter@{APlayerCharacter}!APlayerCharacter@{APlayerCharacter}}
 \index{APlayerCharacter@{APlayerCharacter}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{APlayerCharacter()}{APlayerCharacter()}}
 {\footnotesize\ttfamily \label{class_a_player_character_ab19145f67d736e3576c328c6ecc80b67} 
 APlayer\+Character\+::\+APlayer\+Character (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
 
 
 
@@ -101,17 +147,71 @@ APlayer\+Character\+::\+APlayer\+Character (\begin{DoxyParamCaption}{}{}\end{Dox
 {\footnotesize\ttfamily \label{class_a_player_character_aabd1d46483746c34c35da55d816d22f3} 
 void APlayer\+Character\+::\+Begin\+Play (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Called when the game starts or when spawned. 
+
+\Hypertarget{class_a_player_character_ad438cca00eea9646b2a16a93c1e3c69a}\index{APlayerCharacter@{APlayerCharacter}!GetEnemySubject@{GetEnemySubject}}
+\index{GetEnemySubject@{GetEnemySubject}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{GetEnemySubject()}{GetEnemySubject()}}
+{\footnotesize\ttfamily \label{class_a_player_character_ad438cca00eea9646b2a16a93c1e3c69a} 
+TShared\+Ptr$<$ \mbox{\hyperlink{class_subject}{Subject}} $>$ APlayer\+Character\+::\+Get\+Enemy\+Subject (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the enemy subject. 
+
+\begin{DoxyReturn}{Returns}
+The enemy subject. 
+\end{DoxyReturn}
 \Hypertarget{class_a_player_character_a869e600d250a50b6adc7c8c476ac3625}\index{APlayerCharacter@{APlayerCharacter}!MoveCompleted@{MoveCompleted}}
 \index{MoveCompleted@{MoveCompleted}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{MoveCompleted()}{MoveCompleted()}}
 {\footnotesize\ttfamily \label{class_a_player_character_a869e600d250a50b6adc7c8c476ac3625} 
 void APlayer\+Character\+::\+Move\+Completed (\begin{DoxyParamCaption}\item[{const FInput\+Action\+Value \&}]{Value}{}\end{DoxyParamCaption})}
 
+
+
+Called when the move action is completed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Value} & The input action value. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_a_player_character_a15b963b46b4b06ab473efde0478585e1}\index{APlayerCharacter@{APlayerCharacter}!MoveTriggered@{MoveTriggered}}
 \index{MoveTriggered@{MoveTriggered}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{MoveTriggered()}{MoveTriggered()}}
 {\footnotesize\ttfamily \label{class_a_player_character_a15b963b46b4b06ab473efde0478585e1} 
 void APlayer\+Character\+::\+Move\+Triggered (\begin{DoxyParamCaption}\item[{const FInput\+Action\+Value \&}]{Value}{}\end{DoxyParamCaption})}
+
+
+
+Called when the move action is triggered. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Value} & The input action value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_player_character_a74c0a1e025937e2661d03e0f32efba5d}\index{APlayerCharacter@{APlayerCharacter}!OnEnemyKilled@{OnEnemyKilled}}
+\index{OnEnemyKilled@{OnEnemyKilled}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{OnEnemyKilled()}{OnEnemyKilled()}}
+{\footnotesize\ttfamily \label{class_a_player_character_a74c0a1e025937e2661d03e0f32efba5d} 
+void APlayer\+Character\+::\+On\+Enemy\+Killed (\begin{DoxyParamCaption}\item[{AActor \texorpdfstring{$\ast$}{*}}]{Killed\+Actor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when an enemy is killed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Killed\+Actor} & The actor that was killed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_observer_ad81edf4bc04bf80449e73abfed4458ed}{Observer}}.
 
 \Hypertarget{class_a_player_character_adb0ce54bfe331caccd464ff45937acfe}\index{APlayerCharacter@{APlayerCharacter}!OnShootCooldownTimerTimeout@{OnShootCooldownTimerTimeout}}
 \index{OnShootCooldownTimerTimeout@{OnShootCooldownTimerTimeout}!APlayerCharacter@{APlayerCharacter}}
@@ -119,36 +219,110 @@ void APlayer\+Character\+::\+Move\+Triggered (\begin{DoxyParamCaption}\item[{con
 {\footnotesize\ttfamily \label{class_a_player_character_adb0ce54bfe331caccd464ff45937acfe} 
 void APlayer\+Character\+::\+On\+Shoot\+Cooldown\+Timer\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-\Hypertarget{class_a_player_character_a12baa20bb1936874e3186ea4992f51a2}\index{APlayerCharacter@{APlayerCharacter}!OverlapBegin@{OverlapBegin}}
+
+
+Called when the shoot cooldown timer times out. 
+
+\Hypertarget{class_a_player_character_ac691d96fefd13e0683105e88bcb6b480}\index{APlayerCharacter@{APlayerCharacter}!OverlapBegin@{OverlapBegin}}
 \index{OverlapBegin@{OverlapBegin}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{OverlapBegin()}{OverlapBegin()}}
-{\footnotesize\ttfamily \label{class_a_player_character_a12baa20bb1936874e3186ea4992f51a2} 
-void APlayer\+Character\+::\+Overlap\+Begin (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int32}]{Other\+Body\+Index}{, }\item[{bool}]{From\+Sweep}{, }\item[{const FHit\+Result \&}]{Sweep\+Rsult}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_a_player_character_ac691d96fefd13e0683105e88bcb6b480} 
+void APlayer\+Character\+::\+Overlap\+Begin (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int}]{Other\+Body\+Index}{, }\item[{bool}]{From\+Sweep}{, }\item[{const FHit\+Result \&}]{Sweep\+Result}{}\end{DoxyParamCaption})}
 
+
+
+Called when an overlap begins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Overlapped\+Component} & The component that was overlapped. \\
+\hline
+{\em Other\+Actor} & The other actor involved in the overlap. \\
+\hline
+{\em Other\+Comp} & The other component involved in the overlap. \\
+\hline
+{\em Other\+Body\+Index} & The body index of the other component. \\
+\hline
+{\em From\+Sweep} & Whether the overlap was from a sweep. \\
+\hline
+{\em Sweep\+Result} & The result of the sweep. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_a_player_character_a32c6b5bf533496dbb3de3140b0640ef9}\index{APlayerCharacter@{APlayerCharacter}!Run@{Run}}
 \index{Run@{Run}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{Run()}{Run()}}
 {\footnotesize\ttfamily \label{class_a_player_character_a32c6b5bf533496dbb3de3140b0640ef9} 
 void APlayer\+Character\+::\+Run (\begin{DoxyParamCaption}\item[{const FInput\+Action\+Value \&}]{Value}{}\end{DoxyParamCaption})}
 
+
+
+Performs an emergency run. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Value} & The input action value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_player_character_a391ead7eb16f7b73037a017fed4f4733}\index{APlayerCharacter@{APlayerCharacter}!SetEnemySubject@{SetEnemySubject}}
+\index{SetEnemySubject@{SetEnemySubject}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{SetEnemySubject()}{SetEnemySubject()}}
+{\footnotesize\ttfamily \label{class_a_player_character_a391ead7eb16f7b73037a017fed4f4733} 
+void APlayer\+Character\+::\+Set\+Enemy\+Subject (\begin{DoxyParamCaption}\item[{TShared\+Ptr$<$ \mbox{\hyperlink{class_subject}{Subject}} $>$}]{In\+Subject}{}\end{DoxyParamCaption})}
+
+
+
+Sets the enemy subject. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Subject} & The enemy subject to set. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_a_player_character_a5699d8d499c0ae8364f2c599fae2c9c1}\index{APlayerCharacter@{APlayerCharacter}!SetupPlayerInputComponent@{SetupPlayerInputComponent}}
 \index{SetupPlayerInputComponent@{SetupPlayerInputComponent}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{SetupPlayerInputComponent()}{SetupPlayerInputComponent()}}
 {\footnotesize\ttfamily \label{class_a_player_character_a5699d8d499c0ae8364f2c599fae2c9c1} 
 void APlayer\+Character\+::\+Setup\+Player\+Input\+Component (\begin{DoxyParamCaption}\item[{class UInput\+Component \texorpdfstring{$\ast$}{*}}]{Player\+Input\+Component}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Called to bind functionality to input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Player\+Input\+Component} & The input component to bind functionality to. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_a_player_character_a0f9c1a9278df6d4a495ae0bd527a1fab}\index{APlayerCharacter@{APlayerCharacter}!Shoot@{Shoot}}
 \index{Shoot@{Shoot}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{Shoot()}{Shoot()}}
 {\footnotesize\ttfamily \label{class_a_player_character_a0f9c1a9278df6d4a495ae0bd527a1fab} 
 void APlayer\+Character\+::\+Shoot (\begin{DoxyParamCaption}\item[{const FInput\+Action\+Value \&}]{Value}{}\end{DoxyParamCaption})}
 
+
+
+Shoots a projectile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Value} & The input action value. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_a_player_character_aa004cab44548a13b86956fd2d922160a}\index{APlayerCharacter@{APlayerCharacter}!Tick@{Tick}}
 \index{Tick@{Tick}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
 {\footnotesize\ttfamily \label{class_a_player_character_aa004cab44548a13b86956fd2d922160a} 
 void APlayer\+Character\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Called every frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Time} & The time elapsed since the last frame. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}
@@ -158,11 +332,19 @@ void APlayer\+Character\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\
 {\footnotesize\ttfamily \label{class_a_player_character_ab4324af7795a53dca1799383e412311b} 
 const \mbox{\hyperlink{class_emergency_run}{Emergency\+Run}} APlayer\+Character\+::\+\_\+runner\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+The emergency run instance. 
+
 \Hypertarget{class_a_player_character_a0461cc6a0b1f2da63593f70f2158cab9}\index{APlayerCharacter@{APlayerCharacter}!ArcherSprite@{ArcherSprite}}
 \index{ArcherSprite@{ArcherSprite}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{ArcherSprite}{ArcherSprite}}
 {\footnotesize\ttfamily \label{class_a_player_character_a0461cc6a0b1f2da63593f70f2158cab9} 
 UPaper\+Sprite\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Archer\+Sprite}
+
+
+
+The sprite component of the player character. 
 
 \Hypertarget{class_a_player_character_ab8d950dc0b236f39d69a5cdb70644266}\index{APlayerCharacter@{APlayerCharacter}!ArrowSpawnPosition@{ArrowSpawnPosition}}
 \index{ArrowSpawnPosition@{ArrowSpawnPosition}!APlayerCharacter@{APlayerCharacter}}
@@ -170,11 +352,19 @@ UPaper\+Sprite\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Arch
 {\footnotesize\ttfamily \label{class_a_player_character_ab8d950dc0b236f39d69a5cdb70644266} 
 UScene\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Arrow\+Spawn\+Position}
 
+
+
+The arrow spawn position component of the player character. 
+
 \Hypertarget{class_a_player_character_a13a0fc411b439b2e0cb990742ae59142}\index{APlayerCharacter@{APlayerCharacter}!BowParent@{BowParent}}
 \index{BowParent@{BowParent}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{BowParent}{BowParent}}
 {\footnotesize\ttfamily \label{class_a_player_character_a13a0fc411b439b2e0cb990742ae59142} 
 UScene\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Bow\+Parent}
+
+
+
+The bow parent component of the player character. 
 
 \Hypertarget{class_a_player_character_a3165f87b0ad9a7b8fad0da2a6c4456d6}\index{APlayerCharacter@{APlayerCharacter}!BowSprite@{BowSprite}}
 \index{BowSprite@{BowSprite}!APlayerCharacter@{APlayerCharacter}}
@@ -182,11 +372,19 @@ UScene\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Bow\+Parent}
 {\footnotesize\ttfamily \label{class_a_player_character_a3165f87b0ad9a7b8fad0da2a6c4456d6} 
 UPaper\+Sprite\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Bow\+Sprite}
 
+
+
+The bow sprite component of the player character. 
+
 \Hypertarget{class_a_player_character_a09a3ebd30ea8c1cb306cbf3b74ecfdef}\index{APlayerCharacter@{APlayerCharacter}!Camera@{Camera}}
 \index{Camera@{Camera}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{Camera}{Camera}}
 {\footnotesize\ttfamily \label{class_a_player_character_a09a3ebd30ea8c1cb306cbf3b74ecfdef} 
 UCamera\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Camera}
+
+
+
+The camera component of the player character. 
 
 \Hypertarget{class_a_player_character_ac4b72989ecdef24a5b16790cc56eb5dd}\index{APlayerCharacter@{APlayerCharacter}!CanMove@{CanMove}}
 \index{CanMove@{CanMove}!APlayerCharacter@{APlayerCharacter}}
@@ -194,11 +392,19 @@ UCamera\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Camera}
 {\footnotesize\ttfamily \label{class_a_player_character_ac4b72989ecdef24a5b16790cc56eb5dd} 
 bool APlayer\+Character\+::\+Can\+Move = true}
 
+
+
+Indicates whether the player character can move. 
+
 \Hypertarget{class_a_player_character_a84bca6e8ebf0dac0cc416090f70b76a3}\index{APlayerCharacter@{APlayerCharacter}!CanShoot@{CanShoot}}
 \index{CanShoot@{CanShoot}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{CanShoot}{CanShoot}}
 {\footnotesize\ttfamily \label{class_a_player_character_a84bca6e8ebf0dac0cc416090f70b76a3} 
 bool APlayer\+Character\+::\+Can\+Shoot = true}
+
+
+
+Indicates whether the player character can shoot. 
 
 \Hypertarget{class_a_player_character_a895c29020855affbc1331db59fa0c245}\index{APlayerCharacter@{APlayerCharacter}!CapsuleComp@{CapsuleComp}}
 \index{CapsuleComp@{CapsuleComp}!APlayerCharacter@{APlayerCharacter}}
@@ -206,11 +412,19 @@ bool APlayer\+Character\+::\+Can\+Shoot = true}
 {\footnotesize\ttfamily \label{class_a_player_character_a895c29020855affbc1331db59fa0c245} 
 UCapsule\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Capsule\+Comp}
 
+
+
+The capsule component of the player character. 
+
 \Hypertarget{class_a_player_character_a3cb5bb704f0761d48ee3c8aa507af5da}\index{APlayerCharacter@{APlayerCharacter}!Damage@{Damage}}
 \index{Damage@{Damage}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{Damage}{Damage}}
 {\footnotesize\ttfamily \label{class_a_player_character_a3cb5bb704f0761d48ee3c8aa507af5da} 
 float APlayer\+Character\+::\+Damage = 1.\+0f}
+
+
+
+The damage dealt by the player character. 
 
 \Hypertarget{class_a_player_character_a5e8d0e04633a2398c69c0aa1940f10be}\index{APlayerCharacter@{APlayerCharacter}!EmergencyRunAction@{EmergencyRunAction}}
 \index{EmergencyRunAction@{EmergencyRunAction}!APlayerCharacter@{APlayerCharacter}}
@@ -218,11 +432,29 @@ float APlayer\+Character\+::\+Damage = 1.\+0f}
 {\footnotesize\ttfamily \label{class_a_player_character_a5e8d0e04633a2398c69c0aa1940f10be} 
 UInput\+Action\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Emergency\+Run\+Action}
 
+
+
+The emergency run action input. 
+
+\Hypertarget{class_a_player_character_a6abcead90d0716b9d6f00bc471d8e2bf}\index{APlayerCharacter@{APlayerCharacter}!EnemySubject@{EnemySubject}}
+\index{EnemySubject@{EnemySubject}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{EnemySubject}{EnemySubject}}
+{\footnotesize\ttfamily \label{class_a_player_character_a6abcead90d0716b9d6f00bc471d8e2bf} 
+TShared\+Ptr$<$\mbox{\hyperlink{class_subject}{Subject}}$>$ APlayer\+Character\+::\+Enemy\+Subject\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The enemy subject associated with the player character. 
+
 \Hypertarget{class_a_player_character_a3c615efca87f1d2bae4f4e6370b15611}\index{APlayerCharacter@{APlayerCharacter}!Health@{Health}}
 \index{Health@{Health}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{Health}{Health}}
 {\footnotesize\ttfamily \label{class_a_player_character_a3c615efca87f1d2bae4f4e6370b15611} 
 float APlayer\+Character\+::\+Health = 2.\+0f}
+
+
+
+The health of the player character. 
 
 \Hypertarget{class_a_player_character_ab336af7aab955e2791f566c39f2b438e}\index{APlayerCharacter@{APlayerCharacter}!InputMappingContext@{InputMappingContext}}
 \index{InputMappingContext@{InputMappingContext}!APlayerCharacter@{APlayerCharacter}}
@@ -230,11 +462,29 @@ float APlayer\+Character\+::\+Health = 2.\+0f}
 {\footnotesize\ttfamily \label{class_a_player_character_ab336af7aab955e2791f566c39f2b438e} 
 UInput\+Mapping\+Context\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Input\+Mapping\+Context}
 
+
+
+The input mapping context. 
+
+\Hypertarget{class_a_player_character_a5358cccda8e1202d565022bb65cb1b60}\index{APlayerCharacter@{APlayerCharacter}!kills@{kills}}
+\index{kills@{kills}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{kills}{kills}}
+{\footnotesize\ttfamily \label{class_a_player_character_a5358cccda8e1202d565022bb65cb1b60} 
+int APlayer\+Character\+::kills = 0\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The number of kills by the player. 
+
 \Hypertarget{class_a_player_character_a04b9d51ea846b538c381a0bd53f37c92}\index{APlayerCharacter@{APlayerCharacter}!MoveAction@{MoveAction}}
 \index{MoveAction@{MoveAction}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{MoveAction}{MoveAction}}
 {\footnotesize\ttfamily \label{class_a_player_character_a04b9d51ea846b538c381a0bd53f37c92} 
 UInput\+Action\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Move\+Action}
+
+
+
+The move action input. 
 
 \Hypertarget{class_a_player_character_ab75fedbdc4d1f077b37c88f556b149a9}\index{APlayerCharacter@{APlayerCharacter}!MovementDirection@{MovementDirection}}
 \index{MovementDirection@{MovementDirection}!APlayerCharacter@{APlayerCharacter}}
@@ -242,11 +492,19 @@ UInput\+Action\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Move\+Action}
 {\footnotesize\ttfamily \label{class_a_player_character_ab75fedbdc4d1f077b37c88f556b149a9} 
 FVector2D APlayer\+Character\+::\+Movement\+Direction}
 
+
+
+The movement direction of the player character. 
+
 \Hypertarget{class_a_player_character_a323d7f529fd4f2235ed09004b89f7f5a}\index{APlayerCharacter@{APlayerCharacter}!MovementSpeed@{MovementSpeed}}
 \index{MovementSpeed@{MovementSpeed}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{MovementSpeed}{MovementSpeed}}
 {\footnotesize\ttfamily \label{class_a_player_character_a323d7f529fd4f2235ed09004b89f7f5a} 
 float APlayer\+Character\+::\+Movement\+Speed = 200.\+0f}
+
+
+
+The movement speed of the player character. 
 
 \Hypertarget{class_a_player_character_a0c28734b018c14467db3444955e83f7c}\index{APlayerCharacter@{APlayerCharacter}!ProjectileActorToSpawn@{ProjectileActorToSpawn}}
 \index{ProjectileActorToSpawn@{ProjectileActorToSpawn}!APlayerCharacter@{APlayerCharacter}}
@@ -254,11 +512,29 @@ float APlayer\+Character\+::\+Movement\+Speed = 200.\+0f}
 {\footnotesize\ttfamily \label{class_a_player_character_a0c28734b018c14467db3444955e83f7c} 
 TSubclass\+Of$<$\mbox{\hyperlink{class_a_projectile}{AProjectile}}$>$ APlayer\+Character\+::\+Projectile\+Actor\+To\+Spawn}
 
+
+
+The projectile actor to spawn. 
+
 \Hypertarget{class_a_player_character_a0c00abe69f9493fd62e227cdd96d9324}\index{APlayerCharacter@{APlayerCharacter}!rotation@{rotation}}
 \index{rotation@{rotation}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{rotation}{rotation}}
 {\footnotesize\ttfamily \label{class_a_player_character_a0c00abe69f9493fd62e227cdd96d9324} 
 FRotator APlayer\+Character\+::rotation\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The rotation of the player character. 
+
+\Hypertarget{class_a_player_character_afaab650ff731ffb8c488ce8783d0dc21}\index{APlayerCharacter@{APlayerCharacter}!score@{score}}
+\index{score@{score}!APlayerCharacter@{APlayerCharacter}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily \label{class_a_player_character_afaab650ff731ffb8c488ce8783d0dc21} 
+int APlayer\+Character\+::score = 0\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The score of the player. 
 
 \Hypertarget{class_a_player_character_a2c4e209ff6fa042bec1ae28794e348c7}\index{APlayerCharacter@{APlayerCharacter}!ShootAction@{ShootAction}}
 \index{ShootAction@{ShootAction}!APlayerCharacter@{APlayerCharacter}}
@@ -266,11 +542,19 @@ FRotator APlayer\+Character\+::rotation\hspace{0.3cm}{\ttfamily [private]}}
 {\footnotesize\ttfamily \label{class_a_player_character_a2c4e209ff6fa042bec1ae28794e348c7} 
 UInput\+Action\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Shoot\+Action}
 
+
+
+The shoot action input. 
+
 \Hypertarget{class_a_player_character_a6adb52f8876e212534dfe01b9ad821c9}\index{APlayerCharacter@{APlayerCharacter}!ShootCooldownDurationInSeconds@{ShootCooldownDurationInSeconds}}
 \index{ShootCooldownDurationInSeconds@{ShootCooldownDurationInSeconds}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{ShootCooldownDurationInSeconds}{ShootCooldownDurationInSeconds}}
 {\footnotesize\ttfamily \label{class_a_player_character_a6adb52f8876e212534dfe01b9ad821c9} 
 float APlayer\+Character\+::\+Shoot\+Cooldown\+Duration\+In\+Seconds = 0.\+3f}
+
+
+
+The shoot cooldown duration in seconds. 
 
 \Hypertarget{class_a_player_character_a856fa13ebbf8c3c4f8b6d21de3b1de42}\index{APlayerCharacter@{APlayerCharacter}!ShootCooldownTimer@{ShootCooldownTimer}}
 \index{ShootCooldownTimer@{ShootCooldownTimer}!APlayerCharacter@{APlayerCharacter}}
@@ -278,11 +562,19 @@ float APlayer\+Character\+::\+Shoot\+Cooldown\+Duration\+In\+Seconds = 0.\+3f}
 {\footnotesize\ttfamily \label{class_a_player_character_a856fa13ebbf8c3c4f8b6d21de3b1de42} 
 FTimer\+Handle APlayer\+Character\+::\+Shoot\+Cooldown\+Timer\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Timer handle for shoot cooldown. 
+
 \Hypertarget{class_a_player_character_ade64fd7fe1a70a74d0964a8d07ca70ae}\index{APlayerCharacter@{APlayerCharacter}!SpringArm@{SpringArm}}
 \index{SpringArm@{SpringArm}!APlayerCharacter@{APlayerCharacter}}
 \doxysubsubsection{\texorpdfstring{SpringArm}{SpringArm}}
 {\footnotesize\ttfamily \label{class_a_player_character_ade64fd7fe1a70a74d0964a8d07ca70ae} 
 USpring\+Arm\+Component\texorpdfstring{$\ast$}{*} APlayer\+Character\+::\+Spring\+Arm}
+
+
+
+The spring arm component of the player character. 
 
 
 

@@ -106,20 +106,39 @@ $(function(){initNavTree('class_observer.html',''); initResizable(true); });
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_observer-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Observer Class Reference</div></div>
+  <div class="headertitle"><div class="title">Observer Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
+<p>A class that defines an interface for observing enemy kills.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_observer_8h_source.html">Observer.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Observer:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_observer.png" usemap="#Observer_map" alt=""/>
+  <map id="Observer_map" name="Observer_map">
+<area href="class_a_player_character.html" title="A class that represents the player character in the game." alt="APlayerCharacter" shape="rect" coords="0,56,115,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a19c43f80a38a332a6f694783df3c9835" id="r_a19c43f80a38a332a6f694783df3c9835"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19c43f80a38a332a6f694783df3c9835">Observer</a> ()</td></tr>
+<tr class="memdesc:a19c43f80a38a332a6f694783df3c9835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
 <tr class="separator:a19c43f80a38a332a6f694783df3c9835"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a450645e61c136826f09940a1334c7f34" id="r_a450645e61c136826f09940a1334c7f34"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a450645e61c136826f09940a1334c7f34">~Observer</a> ()</td></tr>
+<tr class="memitem:a450645e61c136826f09940a1334c7f34" id="r_a450645e61c136826f09940a1334c7f34"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a450645e61c136826f09940a1334c7f34">~Observer</a> ()</td></tr>
+<tr class="memdesc:a450645e61c136826f09940a1334c7f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="separator:a450645e61c136826f09940a1334c7f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad81edf4bc04bf80449e73abfed4458ed" id="r_ad81edf4bc04bf80449e73abfed4458ed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad81edf4bc04bf80449e73abfed4458ed">OnEnemyKilled</a> (AActor *KilledActor)=0</td></tr>
+<tr class="memdesc:ad81edf4bc04bf80449e73abfed4458ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an enemy is killed.  <br /></td></tr>
+<tr class="separator:ad81edf4bc04bf80449e73abfed4458ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class that defines an interface for observing enemy kills. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a19c43f80a38a332a6f694783df3c9835" name="a19c43f80a38a332a6f694783df3c9835"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a19c43f80a38a332a6f694783df3c9835">&#9670;&#160;</a></span>Observer()</h2>
 
@@ -135,6 +154,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Default constructor. </p>
+
 </div>
 </div>
 <a id="a450645e61c136826f09940a1334c7f34" name="a450645e61c136826f09940a1334c7f34"></a>
@@ -142,6 +163,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Observer::~Observer </td>
@@ -150,7 +174,50 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad81edf4bc04bf80449e73abfed4458ed" name="ad81edf4bc04bf80449e73abfed4458ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad81edf4bc04bf80449e73abfed4458ed">&#9670;&#160;</a></span>OnEnemyKilled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Observer::OnEnemyKilled </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>KilledActor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when an enemy is killed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">KilledActor</td><td>The actor that was killed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="class_a_player_character.html#a74c0a1e025937e2661d03e0f32efba5d">APlayerCharacter</a>.</p>
 
 </div>
 </div>

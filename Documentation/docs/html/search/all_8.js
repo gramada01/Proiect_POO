@@ -5,5 +5,6 @@ var searchData=
   ['islaunched_2',['IsLaunched',['../class_a_projectile.html#a5da046ab568de6bf1659c3d5a9a8ecf6',1,'AProjectile']]],
   ['isrunning_3',['isRunning',['../class_emergency_run.html#a58689441a478f0899b62a86f76106e78',1,'EmergencyRun']]],
   ['isspawned_4',['IsSpawned',['../class_a_spawner.html#a7529712b5fa841507ff6a778be9e38b8',1,'ASpawner']]],
-  ['iswall_5',['IsWall',['../class_a_obstacle.html#a6055a7a819836edce1da89762b412937',1,'AObstacle']]]
+  ['istype_5',['IsType',['../class_enemy_type.html#a7aa46a27251363218d103ecd4743a5b4',1,'EnemyType']]],
+  ['iswall_6',['IsWall',['../class_a_obstacle.html#a6055a7a819836edce1da89762b412937',1,'AObstacle']]]
 ];

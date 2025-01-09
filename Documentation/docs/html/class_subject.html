@@ -105,21 +105,44 @@ $(function(){initNavTree('class_subject.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_subject-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Subject Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class that manages a list of observers and notifies them of events.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_subject_8h_source.html">Subject.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab468044832c824c6d6c2f46272655207" id="r_ab468044832c824c6d6c2f46272655207"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab468044832c824c6d6c2f46272655207">Subject</a> ()</td></tr>
+<tr class="memdesc:ab468044832c824c6d6c2f46272655207"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
 <tr class="separator:ab468044832c824c6d6c2f46272655207"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c4f522850f718466e5be7eb55ba1969" id="r_a7c4f522850f718466e5be7eb55ba1969"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c4f522850f718466e5be7eb55ba1969">~Subject</a> ()</td></tr>
+<tr class="memdesc:a7c4f522850f718466e5be7eb55ba1969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="separator:a7c4f522850f718466e5be7eb55ba1969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e45ff51c8f2916c26e1409dbff97d0f" id="r_a5e45ff51c8f2916c26e1409dbff97d0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e45ff51c8f2916c26e1409dbff97d0f">Attach</a> (<a class="el" href="class_observer.html">Observer</a> *observer)</td></tr>
+<tr class="memdesc:a5e45ff51c8f2916c26e1409dbff97d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attaches an observer to the subject.  <br /></td></tr>
+<tr class="separator:a5e45ff51c8f2916c26e1409dbff97d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966ba14fc93df8419f0cef3eaa5b4b42" id="r_a966ba14fc93df8419f0cef3eaa5b4b42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a966ba14fc93df8419f0cef3eaa5b4b42">Detach</a> (<a class="el" href="class_observer.html">Observer</a> *observer)</td></tr>
+<tr class="memdesc:a966ba14fc93df8419f0cef3eaa5b4b42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detaches an observer from the subject.  <br /></td></tr>
+<tr class="separator:a966ba14fc93df8419f0cef3eaa5b4b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62351e3ba63b05ade897044f96bda49" id="r_aa62351e3ba63b05ade897044f96bda49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa62351e3ba63b05ade897044f96bda49">Notify</a> (AActor *KilledActor)</td></tr>
+<tr class="memdesc:aa62351e3ba63b05ade897044f96bda49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies all attached observers of an event.  <br /></td></tr>
+<tr class="separator:aa62351e3ba63b05ade897044f96bda49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a39d24e695db0a792799b351dbebde992" id="r_a39d24e695db0a792799b351dbebde992"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_observer.html">Observer</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39d24e695db0a792799b351dbebde992">observers</a></td></tr>
+<tr class="memdesc:a39d24e695db0a792799b351dbebde992"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of observers.  <br /></td></tr>
+<tr class="separator:a39d24e695db0a792799b351dbebde992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class that manages a list of observers and notifies them of events. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab468044832c824c6d6c2f46272655207" name="ab468044832c824c6d6c2f46272655207"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab468044832c824c6d6c2f46272655207">&#9670;&#160;</a></span>Subject()</h2>
 
@@ -134,6 +157,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Default constructor. </p>
 
 </div>
 </div>
@@ -151,6 +176,109 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5e45ff51c8f2916c26e1409dbff97d0f" name="a5e45ff51c8f2916c26e1409dbff97d0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e45ff51c8f2916c26e1409dbff97d0f">&#9670;&#160;</a></span>Attach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Subject::Attach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_observer.html">Observer</a> *</td>          <td class="paramname"><span class="paramname"><em>observer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attaches an observer to the subject. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">observer</td><td>The observer to attach. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a966ba14fc93df8419f0cef3eaa5b4b42" name="a966ba14fc93df8419f0cef3eaa5b4b42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a966ba14fc93df8419f0cef3eaa5b4b42">&#9670;&#160;</a></span>Detach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Subject::Detach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_observer.html">Observer</a> *</td>          <td class="paramname"><span class="paramname"><em>observer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Detaches an observer from the subject. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">observer</td><td>The observer to detach. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa62351e3ba63b05ade897044f96bda49" name="aa62351e3ba63b05ade897044f96bda49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa62351e3ba63b05ade897044f96bda49">&#9670;&#160;</a></span>Notify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Subject::Notify </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>KilledActor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Notifies all attached observers of an event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">KilledActor</td><td>The actor that was killed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a39d24e695db0a792799b351dbebde992" name="a39d24e695db0a792799b351dbebde992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39d24e695db0a792799b351dbebde992">&#9670;&#160;</a></span>observers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_observer.html">Observer</a>*&gt; Subject::observers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A list of observers. </p>
 
 </div>
 </div>

@@ -30,12 +30,15 @@ struct Z_Construct_UClass_AMyHUD_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/// @class AMyHUD\n/// @brief A class that manages the HUD display.\n" },
 #endif
 		{ "HideCategories", "Rendering Actor Input Replication" },
 		{ "IncludePath", "MyHUD.h" },
 		{ "ModuleRelativePath", "MyHUD.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "@class AMyHUD\n@brief A class that manages the HUD display." },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -85,10 +88,10 @@ AMyHUD::~AMyHUD() {}
 struct Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_MyHUD_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyHUD, AMyHUD::StaticClass, TEXT("AMyHUD"), &Z_Registration_Info_UClass_AMyHUD, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyHUD), 936234504U) },
+		{ Z_Construct_UClass_AMyHUD, AMyHUD::StaticClass, TEXT("AMyHUD"), &Z_Registration_Info_UClass_AMyHUD, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyHUD), 4286466111U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_MyHUD_h_4228764983(TEXT("/Script/Zelda"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_MyHUD_h_4260767191(TEXT("/Script/Zelda"),
 	Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_MyHUD_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_MyHUD_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

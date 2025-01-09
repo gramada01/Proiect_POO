@@ -2,6 +2,11 @@
 \hypertarget{class_a_maui}{}\label{class_a_maui}\index{AMaui@{AMaui}}
 
 
+A class that represents a Maui enemy in the game.  
+
+
+
+
 {\ttfamily \#include $<$Maui.\+h$>$}
 
 Inheritance diagram for AMaui\+:\begin{figure}[H]
@@ -14,47 +19,54 @@ Inheritance diagram for AMaui\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_a_maui_afe8e73bdf8fd14167a50726227ea0961}{AMaui}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_maui_a067939a3965adaacfbb9c9c5a470f29e}{attack}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Attacks the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_a_enemy}{AEnemy}}}
 \begin{DoxyCompactItemize}
 \item 
+virtual \mbox{\hyperlink{class_a_enemy_a919ea252218c21ff208181e53771b8ab}{\texorpdfstring{$\sim$}{\string~}\+AEnemy}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_enemy_aff3919e4994bb63f89d1a78343e0ab60}{Set\+Enemy\+Subject}} (TShared\+Ptr$<$ \mbox{\hyperlink{class_subject}{Subject}} $>$ In\+Subject)
+\begin{DoxyCompactList}\small\item\em Sets the enemy subject. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_a_enemy_a78162cd7740ff2a86ba73ced9a4ae9be}{AEnemy}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_enemy_a1fd9b94a1b9c837d8f737616ff452672}{Spawn}} (\mbox{\hyperlink{class_a_player_character}{APlayer\+Character}} \texorpdfstring{$\ast$}{*}What\+To\+Chase)
-\item 
+\begin{DoxyCompactList}\small\item\em Spawns the enemy and sets the player to chase. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_enemy_abd845c5787bc005ae01686635f7f3fba}{Begin\+Play}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the game starts or when spawned. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_enemy_a7ad3c69fabaf9310f1966c81c8bbb720}{Tick}} (float Delta\+Time) override
-\item 
+\begin{DoxyCompactList}\small\item\em Called every frame. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_enemy_ac74ebef997e4409bacd1ae73b25df61a}{move}} (float Delta\+Time)
-\item 
-void \mbox{\hyperlink{class_a_enemy_a2365e7d242f6fc93ce96d7e31433cda9}{Overlap\+Begin}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool From\+Sweep, const FHit\+Result \&Sweep\+Rsult)
-\item 
+\begin{DoxyCompactList}\small\item\em Moves the enemy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_enemy_a7db9c526ec2147de4b452e7d70e79e8b}{Overlap\+Begin}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool From\+Sweep, const FHit\+Result \&Sweep\+Result)
+\begin{DoxyCompactList}\small\item\em Called when an overlap begins. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_enemy_a5b87765978d47e551099d4416f4d9912}{Checkfor\+Projectile\+And\+Launcher}} (AActor \texorpdfstring{$\ast$}{*}Other\+Actor)
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if the other actor is a projectile or launcher. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_enemy_a7173f8f02268f382f957f94a01428519}{Check\+If\+Dead}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if the enemy is dead. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_a_enemy}{AEnemy}}}
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{class_a_enemy_ad96a416a1354968806fd021180e30739}{Health}} = 2.\+0f
-\item 
+\begin{DoxyCompactList}\small\item\em The health of the enemy. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_a_enemy_a1473a0de3e295431bb698e9253e94fdb}{Damage}} = 1.\+0f
-\item 
+\begin{DoxyCompactList}\small\item\em The damage dealt by the enemy. \end{DoxyCompactList}\item 
 UCapsule\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_enemy_a9fbab288297b2fa70489771ad1ff8fd8}{Capsule\+Comp}}
-\item 
+\begin{DoxyCompactList}\small\item\em The capsule component of the enemy. \end{DoxyCompactList}\item 
 UPaper\+Flipbook\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_enemy_ae7e20f863c2072d18a1596619ee1beba}{Enemy\+Flipbook}}
-\item 
+\begin{DoxyCompactList}\small\item\em The flipbook component of the enemy. \end{DoxyCompactList}\item 
 UPaper\+Sprite\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_enemy_a9892fdc2a74b69bca44aff2079e37a7e}{Enemy\+Sprite}}
-\item 
+\begin{DoxyCompactList}\small\item\em The sprite component of the enemy. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_a_enemy_abcfae03434fb7d9097780a77043b5b0e}{speed}} = 190.\+0f
-\item 
+\begin{DoxyCompactList}\small\item\em The speed of the enemy. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_a_enemy_aea8eb5e8331c0c2ef7f7ca9156537366}{Distance\+To\+Stop}} = 20.\+0f
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The distance at which the enemy stops chasing the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A class that represents a Maui enemy in the game. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_a_maui_afe8e73bdf8fd14167a50726227ea0961}\index{AMaui@{AMaui}!AMaui@{AMaui}}
@@ -65,12 +77,20 @@ AMaui\+::\+AMaui (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
+Default constructor. 
+
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_a_maui_a067939a3965adaacfbb9c9c5a470f29e}\index{AMaui@{AMaui}!attack@{attack}}
 \index{attack@{attack}!AMaui@{AMaui}}
 \doxysubsubsection{\texorpdfstring{attack()}{attack()}}
 {\footnotesize\ttfamily \label{class_a_maui_a067939a3965adaacfbb9c9c5a470f29e} 
 void AMaui\+::attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Attacks the player. 
 
 
 

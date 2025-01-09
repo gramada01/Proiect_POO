@@ -17,11 +17,11 @@ struct FHitResult;
 #endif
 #define ZELDA_Spawner_generated_h
 
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOverlapBegin);
 
 
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_22_INCLASS_NO_PURE_DECLS \
+#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASpawner(); \
 	friend struct Z_Construct_UClass_ASpawner_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ASpawner)
 
 
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_22_ENHANCED_CONSTRUCTORS \
+#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ASpawner(ASpawner&&); \
@@ -42,13 +42,13 @@ public: \
 	NO_API virtual ~ASpawner();
 
 
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_19_PROLOG
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_22_GENERATED_BODY \
+#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_20_PROLOG
+#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_22_INCLASS_NO_PURE_DECLS \
-	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_22_ENHANCED_CONSTRUCTORS \
+	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_23_INCLASS_NO_PURE_DECLS \
+	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

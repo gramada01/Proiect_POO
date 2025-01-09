@@ -111,6 +111,9 @@ $(function(){initNavTree('class_a_obstacle.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 
+<p>A class that represents an obstacle in the game.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_obstacle_8h_source.html">Obstacle.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for AObstacle:</div>
@@ -122,26 +125,36 @@ Inheritance diagram for AObstacle:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a27b59c9d989163408cb02ab52d82f482" id="r_a27b59c9d989163408cb02ab52d82f482"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27b59c9d989163408cb02ab52d82f482">AObstacle</a> ()</td></tr>
+<tr class="memdesc:a27b59c9d989163408cb02ab52d82f482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
 <tr class="separator:a27b59c9d989163408cb02ab52d82f482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6476e839e425d2c8f49befbb6565d9fe" id="r_a6476e839e425d2c8f49befbb6565d9fe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6476e839e425d2c8f49befbb6565d9fe">BeginPlay</a> () override</td></tr>
+<tr class="memdesc:a6476e839e425d2c8f49befbb6565d9fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the game starts or when spawned.  <br /></td></tr>
 <tr class="separator:a6476e839e425d2c8f49befbb6565d9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8bf5085986e4e0adeae8092c3dab5bd" id="r_af8bf5085986e4e0adeae8092c3dab5bd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8bf5085986e4e0adeae8092c3dab5bd">Tick</a> (float DeltaTime) override</td></tr>
+<tr class="memdesc:af8bf5085986e4e0adeae8092c3dab5bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called every frame.  <br /></td></tr>
 <tr class="separator:af8bf5085986e4e0adeae8092c3dab5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b561f58c583e8946cdde5105b78e20c" id="r_a4b561f58c583e8946cdde5105b78e20c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b561f58c583e8946cdde5105b78e20c">OverlapBegin</a> (UPrimitiveComponent *OverlappedComponent, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult &amp;SweepRsult)</td></tr>
-<tr class="separator:a4b561f58c583e8946cdde5105b78e20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2bc46fd55993ff1a49b1ea09c1b9d4" id="r_aec2bc46fd55993ff1a49b1ea09c1b9d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec2bc46fd55993ff1a49b1ea09c1b9d4">OverlapBegin</a> (UPrimitiveComponent *OverlappedComponent, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult &amp;SweepResult)</td></tr>
+<tr class="memdesc:aec2bc46fd55993ff1a49b1ea09c1b9d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an overlap begins.  <br /></td></tr>
+<tr class="separator:aec2bc46fd55993ff1a49b1ea09c1b9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a20f5b6b1bd7d6fbadb1c9481f8bdb61c" id="r_a20f5b6b1bd7d6fbadb1c9481f8bdb61c"><td class="memItemLeft" align="right" valign="top">UCapsuleComponent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20f5b6b1bd7d6fbadb1c9481f8bdb61c">CapsuleComp</a></td></tr>
+<tr class="memdesc:a20f5b6b1bd7d6fbadb1c9481f8bdb61c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The capsule component of the obstacle.  <br /></td></tr>
 <tr class="separator:a20f5b6b1bd7d6fbadb1c9481f8bdb61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ef2decf3e7e0c2984bd311a57a32fcb" id="r_a2ef2decf3e7e0c2984bd311a57a32fcb"><td class="memItemLeft" align="right" valign="top">UPaperSpriteComponent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ef2decf3e7e0c2984bd311a57a32fcb">ObstacleSprite</a></td></tr>
+<tr class="memdesc:a2ef2decf3e7e0c2984bd311a57a32fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sprite component of the obstacle.  <br /></td></tr>
 <tr class="separator:a2ef2decf3e7e0c2984bd311a57a32fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47b0330d101ccd16e5e3d0c55f9af50f" id="r_a47b0330d101ccd16e5e3d0c55f9af50f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_my_game_mode.html">AMyGameMode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47b0330d101ccd16e5e3d0c55f9af50f">MyGameMode</a></td></tr>
+<tr class="memdesc:a47b0330d101ccd16e5e3d0c55f9af50f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The game mode instance.  <br /></td></tr>
 <tr class="separator:a47b0330d101ccd16e5e3d0c55f9af50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6055a7a819836edce1da89762b412937" id="r_a6055a7a819836edce1da89762b412937"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6055a7a819836edce1da89762b412937">IsWall</a> = false</td></tr>
+<tr class="memdesc:a6055a7a819836edce1da89762b412937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the obstacle is a wall.  <br /></td></tr>
 <tr class="separator:a6055a7a819836edce1da89762b412937"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class that represents an obstacle in the game. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a27b59c9d989163408cb02ab52d82f482" name="a27b59c9d989163408cb02ab52d82f482"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a27b59c9d989163408cb02ab52d82f482">&#9670;&#160;</a></span>AObstacle()</h2>
 
@@ -156,6 +169,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Default constructor. </p>
 
 </div>
 </div>
@@ -183,10 +198,12 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called when the game starts or when spawned. </p>
+
 </div>
 </div>
-<a id="a4b561f58c583e8946cdde5105b78e20c" name="a4b561f58c583e8946cdde5105b78e20c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b561f58c583e8946cdde5105b78e20c">&#9670;&#160;</a></span>OverlapBegin()</h2>
+<a id="aec2bc46fd55993ff1a49b1ea09c1b9d4" name="aec2bc46fd55993ff1a49b1ea09c1b9d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2bc46fd55993ff1a49b1ea09c1b9d4">&#9670;&#160;</a></span>OverlapBegin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,10 +236,23 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const FHitResult &amp;</td>          <td class="paramname"><span class="paramname"><em>SweepRsult</em></span>&#160;)</td>
+          <td class="paramtype">const FHitResult &amp;</td>          <td class="paramname"><span class="paramname"><em>SweepResult</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Called when an overlap begins. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">OverlappedComponent</td><td>The component that was overlapped. </td></tr>
+    <tr><td class="paramname">OtherActor</td><td>The other actor involved in the overlap. </td></tr>
+    <tr><td class="paramname">OtherComp</td><td>The other component involved in the overlap. </td></tr>
+    <tr><td class="paramname">OtherBodyIndex</td><td>The body index of the other component. </td></tr>
+    <tr><td class="paramname">FromSweep</td><td>Whether the overlap was from a sweep. </td></tr>
+    <tr><td class="paramname">SweepResult</td><td>The result of the sweep. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -249,6 +279,14 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called every frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DeltaTime</td><td>The time elapsed since the last frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -264,6 +302,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The capsule component of the obstacle. </p>
+
 </div>
 </div>
 <a id="a6055a7a819836edce1da89762b412937" name="a6055a7a819836edce1da89762b412937"></a>
@@ -277,6 +317,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Indicates whether the obstacle is a wall. </p>
 
 </div>
 </div>
@@ -292,6 +334,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The game mode instance. </p>
+
 </div>
 </div>
 <a id="a2ef2decf3e7e0c2984bd311a57a32fcb" name="a2ef2decf3e7e0c2984bd311a57a32fcb"></a>
@@ -305,6 +349,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The sprite component of the obstacle. </p>
 
 </div>
 </div>

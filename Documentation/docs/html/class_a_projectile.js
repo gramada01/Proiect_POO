@@ -5,7 +5,7 @@ var class_a_projectile =
     [ "BeginPlay", "class_a_projectile.html#a735796a9fca0824e7409cb6bf43d8200", null ],
     [ "Launch", "class_a_projectile.html#a01cddda28de4b211f2267dac5dc5268b", null ],
     [ "OnDeleteTimerTimeout", "class_a_projectile.html#ad9e765aad95dfe257235cf911f0ffc0b", null ],
-    [ "OverlapBegin", "class_a_projectile.html#a193a542aee95cf91ae5f6fd65716db97", null ],
+    [ "OverlapBegin", "class_a_projectile.html#a4bb83e393a3c01049bef8260a658c4e8", null ],
     [ "Tick", "class_a_projectile.html#a538900d88f072783309cfffd743dfc8a", null ],
     [ "CapsuleComp", "class_a_projectile.html#a711b38a801cb5c43f43441db4aa26f88", null ],
     [ "DeleteTimer", "class_a_projectile.html#a0caeb7840b6ca2483bca902bd9f82f5b", null ],

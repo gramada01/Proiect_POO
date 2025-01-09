@@ -2,6 +2,11 @@
 \hypertarget{class_u_originator}{}\label{class_u_originator}\index{UOriginator@{UOriginator}}
 
 
+A class that is responsible for creating and restoring mementos.  
+
+
+
+
 {\ttfamily \#include $<$Originator.\+h$>$}
 
 Inheritance diagram for UOriginator\+:\begin{figure}[H]
@@ -10,8 +15,61 @@ Inheritance diagram for UOriginator\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_u_originator}
 \end{center}
 \end{figure}
-
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_originator_8h}{Originator.\+h}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_u_memento}{UMemento}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_originator_ad07552630af5c6c1a826329168b5f74c}{Create\+Memento}} (APawn \texorpdfstring{$\ast$}{*}Player\+Pawn, int32 Player\+Kills)
+\begin{DoxyCompactList}\small\item\em Creates a memento of the current game state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_originator_ab915d135fb7140177efbbc211abdf68c}{Restore\+From\+Memento}} (\mbox{\hyperlink{class_u_memento}{UMemento}} \texorpdfstring{$\ast$}{*}Memento, APawn \texorpdfstring{$\ast$}{*}Player\+Pawn, int32 \&Player\+Kills)
+\begin{DoxyCompactList}\small\item\em Restores the game state from a memento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that is responsible for creating and restoring mementos. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_originator_ad07552630af5c6c1a826329168b5f74c}\index{UOriginator@{UOriginator}!CreateMemento@{CreateMemento}}
+\index{CreateMemento@{CreateMemento}!UOriginator@{UOriginator}}
+\doxysubsubsection{\texorpdfstring{CreateMemento()}{CreateMemento()}}
+{\footnotesize\ttfamily \label{class_u_originator_ad07552630af5c6c1a826329168b5f74c} 
+\mbox{\hyperlink{class_u_memento}{UMemento}} \texorpdfstring{$\ast$}{*} UOriginator\+::\+Create\+Memento (\begin{DoxyParamCaption}\item[{APawn \texorpdfstring{$\ast$}{*}}]{Player\+Pawn}{, }\item[{int32}]{Player\+Kills}{}\end{DoxyParamCaption})}
+
+
+
+Creates a memento of the current game state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Player\+Pawn} & The player pawn whose state is to be saved. \\
+\hline
+{\em Player\+Kills} & The number of player kills to be saved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A memento containing the saved state. 
+\end{DoxyReturn}
+\Hypertarget{class_u_originator_ab915d135fb7140177efbbc211abdf68c}\index{UOriginator@{UOriginator}!RestoreFromMemento@{RestoreFromMemento}}
+\index{RestoreFromMemento@{RestoreFromMemento}!UOriginator@{UOriginator}}
+\doxysubsubsection{\texorpdfstring{RestoreFromMemento()}{RestoreFromMemento()}}
+{\footnotesize\ttfamily \label{class_u_originator_ab915d135fb7140177efbbc211abdf68c} 
+void UOriginator\+::\+Restore\+From\+Memento (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_u_memento}{UMemento}} \texorpdfstring{$\ast$}{*}}]{Memento}{, }\item[{APawn \texorpdfstring{$\ast$}{*}}]{Player\+Pawn}{, }\item[{int32 \&}]{Player\+Kills}{}\end{DoxyParamCaption})}
+
+
+
+Restores the game state from a memento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Memento} & The memento containing the saved state. \\
+\hline
+{\em Player\+Pawn} & The player pawn whose state is to be restored. \\
+\hline
+{\em Player\+Kills} & The number of player kills to be restored. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_originator_8h}{Originator.\+h}}\item 
+C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_originator_8cpp}{Originator.\+cpp}}\end{DoxyCompactItemize}

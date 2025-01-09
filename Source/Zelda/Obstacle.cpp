@@ -1,14 +1,14 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+/// @file Obstacle.cpp
+/// @brief This file contains the implementation of the AObstacle class methods.
 
 #include "Obstacle.h"
 #include "PlayerCharacter.h"
 #include "Kismet/GameplayStatics.h"
 
-// Sets default values
+/// @brief Default constructor.
 AObstacle::AObstacle() : AActor{}
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	CapsuleComp = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CapsuleComp"));
@@ -18,7 +18,7 @@ AObstacle::AObstacle() : AActor{}
 	ObstacleSprite->SetupAttachment(RootComponent);
 }
 
-// Called when the game starts or when spawned
+/// @brief Called when the game starts or when spawned.
 void AObstacle::BeginPlay()
 {
 	Super::BeginPlay();
@@ -29,14 +29,21 @@ void AObstacle::BeginPlay()
 	MyGameMode = Cast<AMyGameMode>(GameMode);
 }
 
-// Called every frame
+/// @brief Called every frame.
+/// @param DeltaTime The time elapsed since the last frame.
 void AObstacle::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
-void AObstacle::OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult& SweepRsult)
+/// @brief Called when an overlap begins.
+/// @param OverlappedComponent The component that was overlapped.
+/// @param OtherActor The other actor involved in the overlap.
+/// @param OtherComp The other component involved in the overlap.
+/// @param OtherBodyIndex The body index of the other component.
+/// @param FromSweep Whether the overlap was from a sweep.
+/// @param SweepResult The result of the sweep.
+void AObstacle::OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult& SweepResult)
 {
 	APlayerCharacter* Player = Cast<APlayerCharacter>(OtherActor);
 	if (Player)
@@ -46,12 +53,8 @@ void AObstacle::OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* O
 			if (!IsWall)
 			{
 				Player->CanMove = false;
-
 				MyGameMode->ResetLevel(IsWall);
 			}
 		}
 	}
 }
-
-
-

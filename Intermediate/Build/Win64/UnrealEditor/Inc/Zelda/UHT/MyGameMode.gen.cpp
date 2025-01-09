@@ -30,20 +30,35 @@ struct Z_Construct_UClass_AMyGameMode_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/// @class AMyGameMode\n/// @brief A class that manages the game mode logic.\n" },
 #endif
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering HLOD WorldPartition DataLayers Transformation" },
 		{ "IncludePath", "MyGameMode.h" },
 		{ "ModuleRelativePath", "MyGameMode.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "@class AMyGameMode\n@brief A class that manages the game mode logic." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LoseResetTime_MetaData[] = {
 		{ "Category", "MyGameMode" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/// The time to reset the game after losing.\n" },
+#endif
 		{ "ModuleRelativePath", "MyGameMode.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The time to reset the game after losing." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WinResetTime_MetaData[] = {
 		{ "Category", "MyGameMode" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/// The time to reset the game after winning.\n" },
+#endif
 		{ "ModuleRelativePath", "MyGameMode.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The time to reset the game after winning." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_LoseResetTime;
@@ -94,7 +109,6 @@ template<> ZELDA_API UClass* StaticClass<AMyGameMode>()
 {
 	return AMyGameMode::StaticClass();
 }
-AMyGameMode::AMyGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(AMyGameMode);
 AMyGameMode::~AMyGameMode() {}
 // End Class AMyGameMode
@@ -103,10 +117,10 @@ AMyGameMode::~AMyGameMode() {}
 struct Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_MyGameMode_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyGameMode, AMyGameMode::StaticClass, TEXT("AMyGameMode"), &Z_Registration_Info_UClass_AMyGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyGameMode), 610803239U) },
+		{ Z_Construct_UClass_AMyGameMode, AMyGameMode::StaticClass, TEXT("AMyGameMode"), &Z_Registration_Info_UClass_AMyGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyGameMode), 3800468295U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_MyGameMode_h_3277089612(TEXT("/Script/Zelda"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_MyGameMode_h_1597792141(TEXT("/Script/Zelda"),
 	Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_MyGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_MyGameMode_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

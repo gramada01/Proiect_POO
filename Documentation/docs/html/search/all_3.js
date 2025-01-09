@@ -9,5 +9,6 @@ var searchData=
   ['caretaker_2eh_6',['Caretaker.h',['../_caretaker_8h.html',1,'']]],
   ['chase_7',['chase',['../class_a_enemy.html#a7a73e92a46f4ceaead0a972c3339a1df',1,'AEnemy']]],
   ['checkforprojectileandlauncher_8',['CheckforProjectileAndLauncher',['../class_a_enemy.html#a5b87765978d47e551099d4416f4d9912',1,'AEnemy']]],
-  ['checkifdead_9',['CheckIfDead',['../class_a_enemy.html#a7173f8f02268f382f957f94a01428519',1,'AEnemy']]]
+  ['checkifdead_9',['CheckIfDead',['../class_a_enemy.html#a7173f8f02268f382f957f94a01428519',1,'AEnemy']]],
+  ['creatememento_10',['CreateMemento',['../class_u_originator.html#ad07552630af5c6c1a826329168b5f74c',1,'UOriginator']]]
 ];

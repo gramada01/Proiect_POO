@@ -2,6 +2,11 @@
 \hypertarget{class_u_caretaker}{}\label{class_u_caretaker}\index{UCaretaker@{UCaretaker}}
 
 
+A class that acts as a caretaker for mementos, allowing them to be saved and loaded.  
+
+
+
+
 {\ttfamily \#include $<$Caretaker.\+h$>$}
 
 Inheritance diagram for UCaretaker\+:\begin{figure}[H]
@@ -10,8 +15,68 @@ Inheritance diagram for UCaretaker\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_u_caretaker}
 \end{center}
 \end{figure}
-
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_caretaker_8h}{Caretaker.\+h}}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_u_caretaker_a7f2e5b25af72aa1369efd4fcee5e5536}{Save\+Memento}} (\mbox{\hyperlink{class_u_memento}{UMemento}} \texorpdfstring{$\ast$}{*}Memento)
+\begin{DoxyCompactList}\small\item\em Saves a memento. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_u_memento}{UMemento}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_caretaker_a828a54151336924efac704516c45ac72}{Load\+Memento}} ()
+\begin{DoxyCompactList}\small\item\em Loads the saved memento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_memento}{UMemento}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_caretaker_aabfb022ffc1c11eeb317a654c322c914}{Saved\+Memento}}
+\begin{DoxyCompactList}\small\item\em The saved memento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that acts as a caretaker for mementos, allowing them to be saved and loaded. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_caretaker_a828a54151336924efac704516c45ac72}\index{UCaretaker@{UCaretaker}!LoadMemento@{LoadMemento}}
+\index{LoadMemento@{LoadMemento}!UCaretaker@{UCaretaker}}
+\doxysubsubsection{\texorpdfstring{LoadMemento()}{LoadMemento()}}
+{\footnotesize\ttfamily \label{class_u_caretaker_a828a54151336924efac704516c45ac72} 
+\mbox{\hyperlink{class_u_memento}{UMemento}} \texorpdfstring{$\ast$}{*} UCaretaker\+::\+Load\+Memento (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loads the saved memento. 
+
+\begin{DoxyReturn}{Returns}
+The saved memento. 
+\end{DoxyReturn}
+\Hypertarget{class_u_caretaker_a7f2e5b25af72aa1369efd4fcee5e5536}\index{UCaretaker@{UCaretaker}!SaveMemento@{SaveMemento}}
+\index{SaveMemento@{SaveMemento}!UCaretaker@{UCaretaker}}
+\doxysubsubsection{\texorpdfstring{SaveMemento()}{SaveMemento()}}
+{\footnotesize\ttfamily \label{class_u_caretaker_a7f2e5b25af72aa1369efd4fcee5e5536} 
+void UCaretaker\+::\+Save\+Memento (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_u_memento}{UMemento}} \texorpdfstring{$\ast$}{*}}]{Memento}{}\end{DoxyParamCaption})}
+
+
+
+Saves a memento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Memento} & The memento to be saved. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_u_caretaker_aabfb022ffc1c11eeb317a654c322c914}\index{UCaretaker@{UCaretaker}!SavedMemento@{SavedMemento}}
+\index{SavedMemento@{SavedMemento}!UCaretaker@{UCaretaker}}
+\doxysubsubsection{\texorpdfstring{SavedMemento}{SavedMemento}}
+{\footnotesize\ttfamily \label{class_u_caretaker_aabfb022ffc1c11eeb317a654c322c914} 
+\mbox{\hyperlink{class_u_memento}{UMemento}}\texorpdfstring{$\ast$}{*} UCaretaker\+::\+Saved\+Memento}
+
+
+
+The saved memento. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_caretaker_8h}{Caretaker.\+h}}\item 
+C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_caretaker_8cpp}{Caretaker.\+cpp}}\end{DoxyCompactItemize}

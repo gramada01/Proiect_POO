@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ZELDA_Ghoul_generated_h
 
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGhoul(); \
 	friend struct Z_Construct_UClass_AGhoul_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(AGhoul)
 
 
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AGhoul(AGhoul&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~AGhoul();
 
 
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_10_PROLOG
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_13_GENERATED_BODY \
+#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_12_PROLOG
+#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_13_INCLASS_NO_PURE_DECLS \
-	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_13_ENHANCED_CONSTRUCTORS \
+	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

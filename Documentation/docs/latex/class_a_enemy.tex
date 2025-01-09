@@ -2,6 +2,11 @@
 \hypertarget{class_a_enemy}{}\label{class_a_enemy}\index{AEnemy@{AEnemy}}
 
 
+A class that represents an enemy actor in the game.  
+
+
+
+
 {\ttfamily \#include $<$Enemy.\+h$>$}
 
 Inheritance diagram for AEnemy\+:\begin{figure}[H]
@@ -13,56 +18,79 @@ Inheritance diagram for AEnemy\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+virtual \mbox{\hyperlink{class_a_enemy_a919ea252218c21ff208181e53771b8ab}{\texorpdfstring{$\sim$}{\string~}\+AEnemy}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_enemy_aff3919e4994bb63f89d1a78343e0ab60}{Set\+Enemy\+Subject}} (TShared\+Ptr$<$ \mbox{\hyperlink{class_subject}{Subject}} $>$ In\+Subject)
+\begin{DoxyCompactList}\small\item\em Sets the enemy subject. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_a_enemy_a78162cd7740ff2a86ba73ced9a4ae9be}{AEnemy}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_enemy_a767c44a86c16ebbab45c1744fb36f92e}{attack}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Attacks the player. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_enemy_a1fd9b94a1b9c837d8f737616ff452672}{Spawn}} (\mbox{\hyperlink{class_a_player_character}{APlayer\+Character}} \texorpdfstring{$\ast$}{*}What\+To\+Chase)
-\item 
+\begin{DoxyCompactList}\small\item\em Spawns the enemy and sets the player to chase. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_enemy_abd845c5787bc005ae01686635f7f3fba}{Begin\+Play}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the game starts or when spawned. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_enemy_a7ad3c69fabaf9310f1966c81c8bbb720}{Tick}} (float Delta\+Time) override
-\item 
+\begin{DoxyCompactList}\small\item\em Called every frame. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_enemy_ac74ebef997e4409bacd1ae73b25df61a}{move}} (float Delta\+Time)
-\item 
-void \mbox{\hyperlink{class_a_enemy_a2365e7d242f6fc93ce96d7e31433cda9}{Overlap\+Begin}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool From\+Sweep, const FHit\+Result \&Sweep\+Rsult)
-\item 
+\begin{DoxyCompactList}\small\item\em Moves the enemy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_enemy_a7db9c526ec2147de4b452e7d70e79e8b}{Overlap\+Begin}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool From\+Sweep, const FHit\+Result \&Sweep\+Result)
+\begin{DoxyCompactList}\small\item\em Called when an overlap begins. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_enemy_a5b87765978d47e551099d4416f4d9912}{Checkfor\+Projectile\+And\+Launcher}} (AActor \texorpdfstring{$\ast$}{*}Other\+Actor)
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if the other actor is a projectile or launcher. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_enemy_a7173f8f02268f382f957f94a01428519}{Check\+If\+Dead}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if the enemy is dead. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{class_a_enemy_ad96a416a1354968806fd021180e30739}{Health}} = 2.\+0f
-\item 
+\begin{DoxyCompactList}\small\item\em The health of the enemy. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_a_enemy_a1473a0de3e295431bb698e9253e94fdb}{Damage}} = 1.\+0f
-\item 
+\begin{DoxyCompactList}\small\item\em The damage dealt by the enemy. \end{DoxyCompactList}\item 
 UCapsule\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_enemy_a9fbab288297b2fa70489771ad1ff8fd8}{Capsule\+Comp}}
-\item 
+\begin{DoxyCompactList}\small\item\em The capsule component of the enemy. \end{DoxyCompactList}\item 
 UPaper\+Flipbook\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_enemy_ae7e20f863c2072d18a1596619ee1beba}{Enemy\+Flipbook}}
-\item 
+\begin{DoxyCompactList}\small\item\em The flipbook component of the enemy. \end{DoxyCompactList}\item 
 UPaper\+Sprite\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_enemy_a9892fdc2a74b69bca44aff2079e37a7e}{Enemy\+Sprite}}
-\item 
+\begin{DoxyCompactList}\small\item\em The sprite component of the enemy. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_a_enemy_abcfae03434fb7d9097780a77043b5b0e}{speed}} = 190.\+0f
-\item 
+\begin{DoxyCompactList}\small\item\em The speed of the enemy. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_a_enemy_aea8eb5e8331c0c2ef7f7ca9156537366}{Distance\+To\+Stop}} = 20.\+0f
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The distance at which the enemy stops chasing the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_a_enemy_a7a73e92a46f4ceaead0a972c3339a1df}{chase}} = false
-\item 
+\begin{DoxyCompactList}\small\item\em Indicates whether the enemy is chasing the player. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_a_player_character}{APlayer\+Character}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_enemy_aff013ffb417699ffe184f8a20a5ca275}{player\+To\+Chase}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The player character that the enemy is chasing. \end{DoxyCompactList}\item 
+TShared\+Ptr$<$ \mbox{\hyperlink{class_subject}{Subject}} $>$ \mbox{\hyperlink{class_a_enemy_a4aab914f9bff9b3ddf26f8e5fc348ddd}{Enemy\+Subject}}
+\begin{DoxyCompactList}\small\item\em The subject associated with the enemy. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A class that represents an enemy actor in the game. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_a_enemy_a919ea252218c21ff208181e53771b8ab}\index{AEnemy@{AEnemy}!````~AEnemy@{\texorpdfstring{$\sim$}{\string~}AEnemy}}
+\index{````~AEnemy@{\texorpdfstring{$\sim$}{\string~}AEnemy}!AEnemy@{AEnemy}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AEnemy()}{\string~AEnemy()}}
+{\footnotesize\ttfamily \label{class_a_enemy_a919ea252218c21ff208181e53771b8ab} 
+AEnemy\+::\texorpdfstring{$\sim$}{\string~}\+AEnemy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
 \Hypertarget{class_a_enemy_a78162cd7740ff2a86ba73ced9a4ae9be}\index{AEnemy@{AEnemy}!AEnemy@{AEnemy}}
 \index{AEnemy@{AEnemy}!AEnemy@{AEnemy}}
 \doxysubsubsection{\texorpdfstring{AEnemy()}{AEnemy()}}
 {\footnotesize\ttfamily \label{class_a_enemy_a78162cd7740ff2a86ba73ced9a4ae9be} 
 AEnemy\+::\+AEnemy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
 
 
 
@@ -75,6 +103,10 @@ void AEnemy\+::attack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspac
 
 
 
+Attacks the player. 
+
+
+
 Reimplemented in \mbox{\hyperlink{class_a_ghoul_a280b2e528069d066bd55ff0fe41233bb}{AGhoul}}, and \mbox{\hyperlink{class_a_maui_a067939a3965adaacfbb9c9c5a470f29e}{AMaui}}.
 
 \Hypertarget{class_a_enemy_abd845c5787bc005ae01686635f7f3fba}\index{AEnemy@{AEnemy}!BeginPlay@{BeginPlay}}
@@ -83,17 +115,34 @@ Reimplemented in \mbox{\hyperlink{class_a_ghoul_a280b2e528069d066bd55ff0fe41233b
 {\footnotesize\ttfamily \label{class_a_enemy_abd845c5787bc005ae01686635f7f3fba} 
 void AEnemy\+::\+Begin\+Play (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Called when the game starts or when spawned. 
+
 \Hypertarget{class_a_enemy_a5b87765978d47e551099d4416f4d9912}\index{AEnemy@{AEnemy}!CheckforProjectileAndLauncher@{CheckforProjectileAndLauncher}}
 \index{CheckforProjectileAndLauncher@{CheckforProjectileAndLauncher}!AEnemy@{AEnemy}}
 \doxysubsubsection{\texorpdfstring{CheckforProjectileAndLauncher()}{CheckforProjectileAndLauncher()}}
 {\footnotesize\ttfamily \label{class_a_enemy_a5b87765978d47e551099d4416f4d9912} 
 void AEnemy\+::\+Checkfor\+Projectile\+And\+Launcher (\begin{DoxyParamCaption}\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{}\end{DoxyParamCaption})}
 
+
+
+Checks if the other actor is a projectile or launcher. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Other\+Actor} & The other actor to check. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_a_enemy_a7173f8f02268f382f957f94a01428519}\index{AEnemy@{AEnemy}!CheckIfDead@{CheckIfDead}}
 \index{CheckIfDead@{CheckIfDead}!AEnemy@{AEnemy}}
 \doxysubsubsection{\texorpdfstring{CheckIfDead()}{CheckIfDead()}}
 {\footnotesize\ttfamily \label{class_a_enemy_a7173f8f02268f382f957f94a01428519} 
 void AEnemy\+::\+Check\+If\+Dead (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the enemy is dead. 
 
 \Hypertarget{class_a_enemy_ac74ebef997e4409bacd1ae73b25df61a}\index{AEnemy@{AEnemy}!move@{move}}
 \index{move@{move}!AEnemy@{AEnemy}}
@@ -101,24 +150,85 @@ void AEnemy\+::\+Check\+If\+Dead (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapt
 {\footnotesize\ttfamily \label{class_a_enemy_ac74ebef997e4409bacd1ae73b25df61a} 
 void AEnemy\+::move (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\Hypertarget{class_a_enemy_a2365e7d242f6fc93ce96d7e31433cda9}\index{AEnemy@{AEnemy}!OverlapBegin@{OverlapBegin}}
+
+
+Moves the enemy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Time} & The time elapsed since the last frame. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_enemy_a7db9c526ec2147de4b452e7d70e79e8b}\index{AEnemy@{AEnemy}!OverlapBegin@{OverlapBegin}}
 \index{OverlapBegin@{OverlapBegin}!AEnemy@{AEnemy}}
 \doxysubsubsection{\texorpdfstring{OverlapBegin()}{OverlapBegin()}}
-{\footnotesize\ttfamily \label{class_a_enemy_a2365e7d242f6fc93ce96d7e31433cda9} 
-void AEnemy\+::\+Overlap\+Begin (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int32}]{Other\+Body\+Index}{, }\item[{bool}]{From\+Sweep}{, }\item[{const FHit\+Result \&}]{Sweep\+Rsult}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_a_enemy_a7db9c526ec2147de4b452e7d70e79e8b} 
+void AEnemy\+::\+Overlap\+Begin (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int32}]{Other\+Body\+Index}{, }\item[{bool}]{From\+Sweep}{, }\item[{const FHit\+Result \&}]{Sweep\+Result}{}\end{DoxyParamCaption})}
 
+
+
+Called when an overlap begins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Overlapped\+Component} & The component that was overlapped. \\
+\hline
+{\em Other\+Actor} & The other actor involved in the overlap. \\
+\hline
+{\em Other\+Comp} & The other component involved in the overlap. \\
+\hline
+{\em Other\+Body\+Index} & The body index of the other component. \\
+\hline
+{\em From\+Sweep} & Whether the overlap was from a sweep. \\
+\hline
+{\em Sweep\+Result} & The result of the sweep. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_enemy_aff3919e4994bb63f89d1a78343e0ab60}\index{AEnemy@{AEnemy}!SetEnemySubject@{SetEnemySubject}}
+\index{SetEnemySubject@{SetEnemySubject}!AEnemy@{AEnemy}}
+\doxysubsubsection{\texorpdfstring{SetEnemySubject()}{SetEnemySubject()}}
+{\footnotesize\ttfamily \label{class_a_enemy_aff3919e4994bb63f89d1a78343e0ab60} 
+void AEnemy\+::\+Set\+Enemy\+Subject (\begin{DoxyParamCaption}\item[{TShared\+Ptr$<$ \mbox{\hyperlink{class_subject}{Subject}} $>$}]{In\+Subject}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the enemy subject. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em In\+Subject} & The subject to be set. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_a_enemy_a1fd9b94a1b9c837d8f737616ff452672}\index{AEnemy@{AEnemy}!Spawn@{Spawn}}
 \index{Spawn@{Spawn}!AEnemy@{AEnemy}}
 \doxysubsubsection{\texorpdfstring{Spawn()}{Spawn()}}
 {\footnotesize\ttfamily \label{class_a_enemy_a1fd9b94a1b9c837d8f737616ff452672} 
 void AEnemy\+::\+Spawn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_player_character}{APlayer\+Character}} \texorpdfstring{$\ast$}{*}}]{What\+To\+Chase}{}\end{DoxyParamCaption})}
 
+
+
+Spawns the enemy and sets the player to chase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em What\+To\+Chase} & The player character to chase. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_a_enemy_a7ad3c69fabaf9310f1966c81c8bbb720}\index{AEnemy@{AEnemy}!Tick@{Tick}}
 \index{Tick@{Tick}!AEnemy@{AEnemy}}
 \doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
 {\footnotesize\ttfamily \label{class_a_enemy_a7ad3c69fabaf9310f1966c81c8bbb720} 
 void AEnemy\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Called every frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Time} & The time elapsed since the last frame. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}
@@ -128,11 +238,19 @@ void AEnemy\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time}{}\end
 {\footnotesize\ttfamily \label{class_a_enemy_a9fbab288297b2fa70489771ad1ff8fd8} 
 UCapsule\+Component\texorpdfstring{$\ast$}{*} AEnemy\+::\+Capsule\+Comp}
 
+
+
+The capsule component of the enemy. 
+
 \Hypertarget{class_a_enemy_a7a73e92a46f4ceaead0a972c3339a1df}\index{AEnemy@{AEnemy}!chase@{chase}}
 \index{chase@{chase}!AEnemy@{AEnemy}}
 \doxysubsubsection{\texorpdfstring{chase}{chase}}
 {\footnotesize\ttfamily \label{class_a_enemy_a7a73e92a46f4ceaead0a972c3339a1df} 
 bool AEnemy\+::chase = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indicates whether the enemy is chasing the player. 
 
 \Hypertarget{class_a_enemy_a1473a0de3e295431bb698e9253e94fdb}\index{AEnemy@{AEnemy}!Damage@{Damage}}
 \index{Damage@{Damage}!AEnemy@{AEnemy}}
@@ -140,11 +258,19 @@ bool AEnemy\+::chase = false\hspace{0.3cm}{\ttfamily [private]}}
 {\footnotesize\ttfamily \label{class_a_enemy_a1473a0de3e295431bb698e9253e94fdb} 
 float AEnemy\+::\+Damage = 1.\+0f}
 
+
+
+The damage dealt by the enemy. 
+
 \Hypertarget{class_a_enemy_aea8eb5e8331c0c2ef7f7ca9156537366}\index{AEnemy@{AEnemy}!DistanceToStop@{DistanceToStop}}
 \index{DistanceToStop@{DistanceToStop}!AEnemy@{AEnemy}}
 \doxysubsubsection{\texorpdfstring{DistanceToStop}{DistanceToStop}}
 {\footnotesize\ttfamily \label{class_a_enemy_aea8eb5e8331c0c2ef7f7ca9156537366} 
 float AEnemy\+::\+Distance\+To\+Stop = 20.\+0f}
+
+
+
+The distance at which the enemy stops chasing the player. 
 
 \Hypertarget{class_a_enemy_ae7e20f863c2072d18a1596619ee1beba}\index{AEnemy@{AEnemy}!EnemyFlipbook@{EnemyFlipbook}}
 \index{EnemyFlipbook@{EnemyFlipbook}!AEnemy@{AEnemy}}
@@ -152,11 +278,29 @@ float AEnemy\+::\+Distance\+To\+Stop = 20.\+0f}
 {\footnotesize\ttfamily \label{class_a_enemy_ae7e20f863c2072d18a1596619ee1beba} 
 UPaper\+Flipbook\+Component\texorpdfstring{$\ast$}{*} AEnemy\+::\+Enemy\+Flipbook}
 
+
+
+The flipbook component of the enemy. 
+
 \Hypertarget{class_a_enemy_a9892fdc2a74b69bca44aff2079e37a7e}\index{AEnemy@{AEnemy}!EnemySprite@{EnemySprite}}
 \index{EnemySprite@{EnemySprite}!AEnemy@{AEnemy}}
 \doxysubsubsection{\texorpdfstring{EnemySprite}{EnemySprite}}
 {\footnotesize\ttfamily \label{class_a_enemy_a9892fdc2a74b69bca44aff2079e37a7e} 
 UPaper\+Sprite\+Component\texorpdfstring{$\ast$}{*} AEnemy\+::\+Enemy\+Sprite}
+
+
+
+The sprite component of the enemy. 
+
+\Hypertarget{class_a_enemy_a4aab914f9bff9b3ddf26f8e5fc348ddd}\index{AEnemy@{AEnemy}!EnemySubject@{EnemySubject}}
+\index{EnemySubject@{EnemySubject}!AEnemy@{AEnemy}}
+\doxysubsubsection{\texorpdfstring{EnemySubject}{EnemySubject}}
+{\footnotesize\ttfamily \label{class_a_enemy_a4aab914f9bff9b3ddf26f8e5fc348ddd} 
+TShared\+Ptr$<$\mbox{\hyperlink{class_subject}{Subject}}$>$ AEnemy\+::\+Enemy\+Subject\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The subject associated with the enemy. 
 
 \Hypertarget{class_a_enemy_ad96a416a1354968806fd021180e30739}\index{AEnemy@{AEnemy}!Health@{Health}}
 \index{Health@{Health}!AEnemy@{AEnemy}}
@@ -164,17 +308,29 @@ UPaper\+Sprite\+Component\texorpdfstring{$\ast$}{*} AEnemy\+::\+Enemy\+Sprite}
 {\footnotesize\ttfamily \label{class_a_enemy_ad96a416a1354968806fd021180e30739} 
 float AEnemy\+::\+Health = 2.\+0f}
 
+
+
+The health of the enemy. 
+
 \Hypertarget{class_a_enemy_aff013ffb417699ffe184f8a20a5ca275}\index{AEnemy@{AEnemy}!playerToChase@{playerToChase}}
 \index{playerToChase@{playerToChase}!AEnemy@{AEnemy}}
 \doxysubsubsection{\texorpdfstring{playerToChase}{playerToChase}}
 {\footnotesize\ttfamily \label{class_a_enemy_aff013ffb417699ffe184f8a20a5ca275} 
 \mbox{\hyperlink{class_a_player_character}{APlayer\+Character}}\texorpdfstring{$\ast$}{*} AEnemy\+::player\+To\+Chase\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+The player character that the enemy is chasing. 
+
 \Hypertarget{class_a_enemy_abcfae03434fb7d9097780a77043b5b0e}\index{AEnemy@{AEnemy}!speed@{speed}}
 \index{speed@{speed}!AEnemy@{AEnemy}}
 \doxysubsubsection{\texorpdfstring{speed}{speed}}
 {\footnotesize\ttfamily \label{class_a_enemy_abcfae03434fb7d9097780a77043b5b0e} 
 float AEnemy\+::speed = 190.\+0f}
+
+
+
+The speed of the enemy. 
 
 
 

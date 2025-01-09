@@ -106,21 +106,39 @@ $(function(){initNavTree('_subject_8h_source.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">Subject.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_subject_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_subject.html">   10</a></span><span class="keyword">class </span>ZELDA_API <a class="code hl_function" href="class_subject.html#ab468044832c824c6d6c2f46272655207">Subject</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_function" href="class_subject.html#ab468044832c824c6d6c2f46272655207">Subject</a>();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_function" href="class_subject.html#ab468044832c824c6d6c2f46272655207">~Subject</a>();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
+<a href="_subject_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_observer_8h.html">Observer.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_subject.html">   12</a></span><span class="keyword">class </span>ZELDA_API <a class="code hl_function" href="class_subject.html#ab468044832c824c6d6c2f46272655207">Subject</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_subject.html#a39d24e695db0a792799b351dbebde992">   16</a></span>    std::vector&lt;Observer*&gt; <a class="code hl_variable" href="class_subject.html#a39d24e695db0a792799b351dbebde992">observers</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_function" href="class_subject.html#ab468044832c824c6d6c2f46272655207">Subject</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="class_subject.html#ab468044832c824c6d6c2f46272655207">~Subject</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_subject.html#a5e45ff51c8f2916c26e1409dbff97d0f">Attach</a>(<a class="code hl_class" href="class_observer.html">Observer</a>* observer);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_subject.html#a966ba14fc93df8419f0cef3eaa5b4b42">Detach</a>(<a class="code hl_class" href="class_observer.html">Observer</a>* observer);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_subject.html#aa62351e3ba63b05ade897044f96bda49">Notify</a>(AActor* KilledActor);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
 </div>
-<div class="ttc" id="aclass_subject_html_ab468044832c824c6d6c2f46272655207"><div class="ttname"><a href="class_subject.html#ab468044832c824c6d6c2f46272655207">Subject::Subject</a></div><div class="ttdeci">Subject()</div><div class="ttdef"><b>Definition</b> Subject.cpp:6</div></div>
+<div class="ttc" id="a_observer_8h_html"><div class="ttname"><a href="_observer_8h.html">Observer.h</a></div><div class="ttdoc">This file contains the declaration of the Observer class which defines an interface for observing ene...</div></div>
+<div class="ttc" id="aclass_observer_html"><div class="ttname"><a href="class_observer.html">Observer</a></div><div class="ttdoc">A class that defines an interface for observing enemy kills.</div><div class="ttdef"><b>Definition</b> Observer.h:11</div></div>
+<div class="ttc" id="aclass_subject_html_a39d24e695db0a792799b351dbebde992"><div class="ttname"><a href="class_subject.html#a39d24e695db0a792799b351dbebde992">Subject::observers</a></div><div class="ttdeci">std::vector&lt; Observer * &gt; observers</div><div class="ttdoc">A list of observers.</div><div class="ttdef"><b>Definition</b> Subject.h:16</div></div>
+<div class="ttc" id="aclass_subject_html_a5e45ff51c8f2916c26e1409dbff97d0f"><div class="ttname"><a href="class_subject.html#a5e45ff51c8f2916c26e1409dbff97d0f">Subject::Attach</a></div><div class="ttdeci">void Attach(Observer *observer)</div><div class="ttdoc">Attaches an observer to the subject.</div><div class="ttdef"><b>Definition</b> Subject.cpp:23</div></div>
+<div class="ttc" id="aclass_subject_html_a966ba14fc93df8419f0cef3eaa5b4b42"><div class="ttname"><a href="class_subject.html#a966ba14fc93df8419f0cef3eaa5b4b42">Subject::Detach</a></div><div class="ttdeci">void Detach(Observer *observer)</div><div class="ttdoc">Detaches an observer from the subject.</div><div class="ttdef"><b>Definition</b> Subject.cpp:30</div></div>
+<div class="ttc" id="aclass_subject_html_aa62351e3ba63b05ade897044f96bda49"><div class="ttname"><a href="class_subject.html#aa62351e3ba63b05ade897044f96bda49">Subject::Notify</a></div><div class="ttdeci">void Notify(AActor *KilledActor)</div><div class="ttdoc">Notifies all attached observers of an event.</div><div class="ttdef"><b>Definition</b> Subject.cpp:37</div></div>
+<div class="ttc" id="aclass_subject_html_ab468044832c824c6d6c2f46272655207"><div class="ttname"><a href="class_subject.html#ab468044832c824c6d6c2f46272655207">Subject::Subject</a></div><div class="ttdeci">Subject()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> Subject.cpp:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

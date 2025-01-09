@@ -1,20 +1,9 @@
 var searchData=
 [
-  ['setupplayerinputcomponent_0',['SetupPlayerInputComponent',['../class_a_player_character.html#a5699d8d499c0ae8364f2c599fae2c9c1',1,'APlayerCharacter']]],
-  ['shoot_1',['Shoot',['../class_a_player_character.html#a0f9c1a9278df6d4a495ae0bd527a1fab',1,'APlayerCharacter']]],
-  ['shootaction_2',['ShootAction',['../class_a_player_character.html#a2c4e209ff6fa042bec1ae28794e348c7',1,'APlayerCharacter']]],
-  ['shootcooldowndurationinseconds_3',['ShootCooldownDurationInSeconds',['../class_a_player_character.html#a6adb52f8876e212534dfe01b9ad821c9',1,'APlayerCharacter']]],
-  ['shootcooldowntimer_4',['ShootCooldownTimer',['../class_a_player_character.html#a856fa13ebbf8c3c4f8b6d21de3b1de42',1,'APlayerCharacter']]],
-  ['spawn_5',['Spawn',['../class_a_enemy.html#a1fd9b94a1b9c837d8f737616ff452672',1,'AEnemy']]],
-  ['spawncooldowndurationinseconds_6',['SpawnCooldownDurationInSeconds',['../class_a_spawner.html#a655e8d758aaaf9348265e08daf69e2cc',1,'ASpawner']]],
-  ['spawncooldowntimer_7',['SpawnCooldownTimer',['../class_a_spawner.html#ac56e406c7d83de14ce84ec03bd62e571',1,'ASpawner']]],
-  ['spawner_2ecpp_8',['Spawner.cpp',['../_spawner_8cpp.html',1,'']]],
-  ['spawner_2eh_9',['Spawner.h',['../_spawner_8h.html',1,'']]],
-  ['spawnersprite_10',['SpawnerSprite',['../class_a_spawner.html#a671434dec25274eab384523ae05d654b',1,'ASpawner']]],
-  ['speed_11',['speed',['../class_a_enemy.html#abcfae03434fb7d9097780a77043b5b0e',1,'AEnemy']]],
-  ['springarm_12',['SpringArm',['../class_a_player_character.html#ade64fd7fe1a70a74d0964a8d07ca70ae',1,'APlayerCharacter']]],
-  ['startrunning_13',['startRunning',['../class_emergency_run.html#ac3b5e2df7a7dd234d1e7ccae7ab3a182',1,'EmergencyRun']]],
-  ['subject_14',['Subject',['../class_subject.html',1,'Subject'],['../class_subject.html#ab468044832c824c6d6c2f46272655207',1,'Subject::Subject()']]],
-  ['subject_2ecpp_15',['Subject.cpp',['../_subject_8cpp.html',1,'']]],
-  ['subject_2eh_16',['Subject.h',['../_subject_8h.html',1,'']]]
+  ['resetgametimer_0',['ResetGameTimer',['../class_a_my_game_mode.html#a97421eda2ab19b356ada80f7982fce9d',1,'AMyGameMode']]],
+  ['resetlevel_1',['ResetLevel',['../class_a_my_game_mode.html#ab2c25c3d6318750c63010ac0faf2956e',1,'AMyGameMode']]],
+  ['restorefrommemento_2',['RestoreFromMemento',['../class_u_originator.html#ab915d135fb7140177efbbc211abdf68c',1,'UOriginator']]],
+  ['rotation_3',['Rotation',['../class_a_projectile.html#ae4f575ec8547903f163b52003c2292b9',1,'AProjectile']]],
+  ['rotation_4',['rotation',['../class_a_player_character.html#a0c00abe69f9493fd62e227cdd96d9324',1,'APlayerCharacter']]],
+  ['run_5',['Run',['../class_a_player_character.html#a32c6b5bf533496dbb3de3140b0640ef9',1,'APlayerCharacter']]]
 ];

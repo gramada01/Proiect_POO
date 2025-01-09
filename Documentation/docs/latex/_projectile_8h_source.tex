@@ -2,72 +2,61 @@
 \hypertarget{_projectile_8h_source}{}\label{_projectile_8h_source}\index{C:/Users/matei/OneDrive/Bureau/POO/Proiect\_POO/Source/Zelda/Projectile.h@{C:/Users/matei/OneDrive/Bureau/POO/Proiect\_POO/Source/Zelda/Projectile.h}}
 \mbox{\hyperlink{_projectile_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameFramework/Actor.h"{}}}
-\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameFramework/Actor.h"{}}}
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}PaperSpriteComponent.h"{}}}
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Components/CapsuleComponent.h"{}}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Engine/TimerHandle.h"{}}}
 \DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Components/SceneComponent.h"{}}}
-\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Projectile.generated.h"{}}}
 \DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}Projectile.generated.h"{}}}
-\DoxyCodeLine{00015\ }
 \DoxyCodeLine{00016\ UCLASS()}
 \DoxyCodeLine{00017\ class\ ZELDA\_API\ \mbox{\hyperlink{class_a_projectile_a357ee75c70b57439edc64b3ad0be61ee}{AProjectile}}\ :\ public\ AActor}
 \DoxyCodeLine{00018\ \{}
 \DoxyCodeLine{00019\ \ \ \ \ GENERATED\_BODY()}
 \DoxyCodeLine{00020\ }
 \DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00022\ \ \ \ \ FTimerHandle\ \mbox{\hyperlink{class_a_projectile_a0caeb7840b6ca2483bca902bd9f82f5b}{DeleteTimer}};}
-\DoxyCodeLine{00023\ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ FTimerHandle\ \mbox{\hyperlink{class_a_projectile_a0caeb7840b6ca2483bca902bd9f82f5b}{DeleteTimer}};}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{keyword}{public}:\ }
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{/*UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}}
-\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ USceneComponent*\ ProjectileParent;*/}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ AActor*\ \mbox{\hyperlink{class_a_projectile_aecd7cb0a47cd83de4752f3852eefdb20}{WhoLaunchedMe}}\ =\ \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \ \ \ \ AActor*\ \mbox{\hyperlink{class_a_projectile_aecd7cb0a47cd83de4752f3852eefdb20}{WhoLaunchedMe}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00032\ \ \ \ \ UCapsuleComponent*\ \mbox{\hyperlink{class_a_projectile_a711b38a801cb5c43f43441db4aa26f88}{CapsuleComp}};}
-\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00030\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00031\ \ \ \ \ UCapsuleComponent*\ \mbox{\hyperlink{class_a_projectile_a711b38a801cb5c43f43441db4aa26f88}{CapsuleComp}};}
+\DoxyCodeLine{00032\ }
 \DoxyCodeLine{00034\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
 \DoxyCodeLine{00035\ \ \ \ \ UPaperSpriteComponent*\ \mbox{\hyperlink{class_a_projectile_a72914970a99f504f762480d130847710}{ProjectileSprite}};}
 \DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \ \ UPROPERTY(BlueprintReadWrite)}
-\DoxyCodeLine{00038\ \ \ \ \ FVector2D\ \mbox{\hyperlink{class_a_projectile_a85f66b5116e9e18eab354efff6854a76}{MovementDirection}};}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_projectile_a77a8587001b4ec23a3b0335ee5374ec8}{MovementSpeed}}\ =\ 300.0f;}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \ \ \ \ UPROPERTY(BlueprintReadWrite)}
-\DoxyCodeLine{00044\ \ \ \ \ FVector\ \mbox{\hyperlink{class_a_projectile_ae4f575ec8547903f163b52003c2292b9}{Rotation}};}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_a_projectile_a5da046ab568de6bf1659c3d5a9a8ecf6}{IsLaunched}}\ =\ false;}
+\DoxyCodeLine{00038\ \ \ \ \ UPROPERTY(BlueprintReadWrite)}
+\DoxyCodeLine{00039\ \ \ \ \ FVector2D\ \mbox{\hyperlink{class_a_projectile_a85f66b5116e9e18eab354efff6854a76}{MovementDirection}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00042\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_projectile_a77a8587001b4ec23a3b0335ee5374ec8}{MovementSpeed}}\ =\ 300.0f;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \ \ UPROPERTY(BlueprintReadWrite)}
+\DoxyCodeLine{00047\ \ \ \ \ FVector\ \mbox{\hyperlink{class_a_projectile_ae4f575ec8547903f163b52003c2292b9}{Rotation}};}
 \DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Sets\ default\ values\ for\ this\ actor's\ properties}}
-\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_a_projectile_a357ee75c70b57439edc64b3ad0be61ee}{AProjectile}}();}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_a_projectile_a357ee75c70b57439edc64b3ad0be61ee}{AProjectile}}(AActor*\ Who)\ \{\ \mbox{\hyperlink{class_a_projectile_aecd7cb0a47cd83de4752f3852eefdb20}{WhoLaunchedMe}}\ =\ Who;\ \}}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ Called\ when\ the\ game\ starts\ or\ when\ spawned}}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BeginPlay()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//\ Called\ every\ frame}}
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Tick(\textcolor{keywordtype}{float}\ DeltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_a_projectile_a5da046ab568de6bf1659c3d5a9a8ecf6}{IsLaunched}}\ =\ false;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_a_projectile_a357ee75c70b57439edc64b3ad0be61ee}{AProjectile}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_a_projectile_a357ee75c70b57439edc64b3ad0be61ee}{AProjectile}}(AActor*\ Who)\ \{\ \mbox{\hyperlink{class_a_projectile_aecd7cb0a47cd83de4752f3852eefdb20}{WhoLaunchedMe}}\ =\ Who;\ \}}
 \DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ Launch(FVector2D\ Direction,\ \textcolor{keywordtype}{float}\ Speed,\ AActor*\ Launcher);}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ OnDeleteTimerTimeout();}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ \ \ \ \ UFUNCTION()}
-\DoxyCodeLine{00065\ \ \ \ \ void\ OverlapBegin(UPrimitiveComponent*\ OverlappedComponent,\ AActor*\ OtherActor,\ UPrimitiveComponent*\ OtherComp,\ int32\ OtherBodyIndex,\ \textcolor{keywordtype}{bool}\ FromSweep,\ const\ FHitResult\&\ SweepRsult);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ BeginPlay()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Tick(\textcolor{keywordtype}{float}\ DeltaTime)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00066\ }
-\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ Launch(FVector2D\ Direction,\ \textcolor{keywordtype}{float}\ Speed,\ AActor*\ Launcher);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ OnDeleteTimerTimeout();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00083\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00084\ \ \ \ \ void\ OverlapBegin(UPrimitiveComponent*\ OverlappedComponent,\ AActor*\ OtherActor,\ UPrimitiveComponent*\ OtherComp,\ int32\ OtherBodyIndex,\ \textcolor{keywordtype}{bool}\ FromSweep,\ const\ FHitResult\&\ SweepResult);}
+\DoxyCodeLine{00085\ \};}
 
 \end{DoxyCode}

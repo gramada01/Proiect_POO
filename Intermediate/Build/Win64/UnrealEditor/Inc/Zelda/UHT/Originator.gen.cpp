@@ -30,10 +30,13 @@ struct Z_Construct_UClass_UOriginator_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/// @class UOriginator\n/// @brief A class that is responsible for creating and restoring mementos.\n" },
 #endif
 		{ "IncludePath", "Originator.h" },
 		{ "ModuleRelativePath", "Originator.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "@class UOriginator\n@brief A class that is responsible for creating and restoring mementos." },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -83,10 +86,10 @@ UOriginator::~UOriginator() {}
 struct Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Originator_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UOriginator, UOriginator::StaticClass, TEXT("UOriginator"), &Z_Registration_Info_UClass_UOriginator, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOriginator), 3584676401U) },
+		{ Z_Construct_UClass_UOriginator, UOriginator::StaticClass, TEXT("UOriginator"), &Z_Registration_Info_UClass_UOriginator, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UOriginator), 3674984379U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Originator_h_3460163186(TEXT("/Script/Zelda"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Originator_h_985182591(TEXT("/Script/Zelda"),
 	Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Originator_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Originator_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

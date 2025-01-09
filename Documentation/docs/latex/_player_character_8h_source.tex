@@ -2,127 +2,147 @@
 \hypertarget{_player_character_8h_source}{}\label{_player_character_8h_source}\index{C:/Users/matei/OneDrive/Bureau/POO/Proiect\_POO/Source/Zelda/PlayerCharacter.h@{C:/Users/matei/OneDrive/Bureau/POO/Proiect\_POO/Source/Zelda/PlayerCharacter.h}}
 \mbox{\hyperlink{_player_character_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameFramework/Pawn.h"{}}}
-\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GameFramework/Pawn.h"{}}}
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Components/CapsuleComponent.h"{}}}
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}GameFramework/SpringArmComponent.h"{}}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Camera/CameraComponent.h"{}}}
 \DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}PaperSpriteComponent.h"{}}}
 \DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Components/SceneComponent.h"{}}}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}EnhancedInputComponent.h"{}}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}EnhancedInputSubsystems.h"{}}}
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}Components/InputComponent.h"{}}}
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}InputActionValue.h"{}}}
-\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}GameFramework/Controller.h"{}}}
-\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}Engine/TimerHandle.h"{}}}
-\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_emergency_run_8h}{EmergencyRun.h}}"{}}}
-\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_projectile_8h}{Projectile.h}}"{}}}
-\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <UObject/ObjectMacros.h>}}
-\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}Kismet/KismetMathLibrary.h"{}}}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}EnhancedInputComponent.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}EnhancedInputSubsystems.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}Components/InputComponent.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}InputActionValue.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}GameFramework/Controller.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}Engine/TimerHandle.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_emergency_run_8h}{EmergencyRun.h}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_projectile_8h}{Projectile.h}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <UObject/ObjectMacros.h>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}Kismet/KismetMathLibrary.h"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_subject_8h}{Subject.h}}"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}Templates/SharedPointer.h"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}GameFramework/Actor.h"{}}}
 \DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}PlayerCharacter.generated.h"{}}}
 \DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ UCLASS()}
-\DoxyCodeLine{00031\ class\ ZELDA\_API\ \mbox{\hyperlink{class_a_player_character_ab19145f67d736e3576c328c6ecc80b67}{APlayerCharacter}}\ :\ public\ APawn}
-\DoxyCodeLine{00032\ \{}
-\DoxyCodeLine{00033\ \ \ \ \ GENERATED\_BODY()}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_emergency_run}{EmergencyRun}}\ \mbox{\hyperlink{class_a_player_character_ab4324af7795a53dca1799383e412311b}{\_runner}};}
-\DoxyCodeLine{00037\ \ \ \ \ FTimerHandle\ \mbox{\hyperlink{class_a_player_character_a856fa13ebbf8c3c4f8b6d21de3b1de42}{ShootCooldownTimer}};}
-\DoxyCodeLine{00038\ \ \ \ \ FRotator\ \mbox{\hyperlink{class_a_player_character_a0c00abe69f9493fd62e227cdd96d9324}{rotation}};}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00041\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00042\ \ \ \ \ float\ \mbox{\hyperlink{class_a_player_character_a3c615efca87f1d2bae4f4e6370b15611}{Health}}\ =\ 2.0f;}
+\DoxyCodeLine{00031\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_enemy_type}{EnemyType}}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_enemy_type_a7aa46a27251363218d103ecd4743a5b4}{IsType}}(AActor*\ Actor)}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Actor\ \&\&\ Actor-\/>IsA<T>();}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \};}
 \DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_player_character_a3cb5bb704f0761d48ee3c8aa507af5da}{Damage}}\ =\ 1.0f;}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00049\ \ \ \ \ UCapsuleComponent*\ \mbox{\hyperlink{class_a_player_character_a895c29020855affbc1331db59fa0c245}{CapsuleComp}};}
+\DoxyCodeLine{00046\ UCLASS()}
+\DoxyCodeLine{00047\ class\ ZELDA\_API\ \mbox{\hyperlink{class_a_player_character_ab19145f67d736e3576c328c6ecc80b67}{APlayerCharacter}}\ :\ public\ APawn,\ public\ \mbox{\hyperlink{class_observer_a19c43f80a38a332a6f694783df3c9835}{Observer}}}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ GENERATED\_BODY()}
 \DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00052\ \ \ \ \ USpringArmComponent*\ \mbox{\hyperlink{class_a_player_character_ade64fd7fe1a70a74d0964a8d07ca70ae}{SpringArm}};}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00055\ \ \ \ \ UCameraComponent*\ \mbox{\hyperlink{class_a_player_character_a09a3ebd30ea8c1cb306cbf3b74ecfdef}{Camera}};}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00058\ \ \ \ \ UPaperSpriteComponent*\ \mbox{\hyperlink{class_a_player_character_a0461cc6a0b1f2da63593f70f2158cab9}{ArcherSprite}};}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00061\ \ \ \ \ USceneComponent*\ \mbox{\hyperlink{class_a_player_character_a13a0fc411b439b2e0cb990742ae59142}{BowParent}};}
-\DoxyCodeLine{00062\ }
-\DoxyCodeLine{00063\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00064\ \ \ \ \ UPaperSpriteComponent*\ \mbox{\hyperlink{class_a_player_character_a3165f87b0ad9a7b8fad0da2a6c4456d6}{BowSprite}};}
-\DoxyCodeLine{00065\ }
-\DoxyCodeLine{00066\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00067\ \ \ \ \ USceneComponent*\ \mbox{\hyperlink{class_a_player_character_ab8d950dc0b236f39d69a5cdb70644266}{ArrowSpawnPosition}};}
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00069\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly)}
-\DoxyCodeLine{00070\ \ \ \ \ UInputMappingContext*\ \mbox{\hyperlink{class_a_player_character_ab336af7aab955e2791f566c39f2b438e}{InputMappingContext}};}
-\DoxyCodeLine{00071\ }
-\DoxyCodeLine{00072\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly)}
-\DoxyCodeLine{00073\ \ \ \ \ UInputAction*\ \mbox{\hyperlink{class_a_player_character_a04b9d51ea846b538c381a0bd53f37c92}{MoveAction}};}
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly)}
-\DoxyCodeLine{00076\ \ \ \ \ UInputAction*\ \mbox{\hyperlink{class_a_player_character_a2c4e209ff6fa042bec1ae28794e348c7}{ShootAction}};}
+\DoxyCodeLine{00051\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_emergency_run}{EmergencyRun}}\ \mbox{\hyperlink{class_a_player_character_ab4324af7795a53dca1799383e412311b}{\_runner}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \ \ \ \ FTimerHandle\ \mbox{\hyperlink{class_a_player_character_a856fa13ebbf8c3c4f8b6d21de3b1de42}{ShootCooldownTimer}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ \ \ FRotator\ \mbox{\hyperlink{class_a_player_character_a0c00abe69f9493fd62e227cdd96d9324}{rotation}};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_a_player_character_a5358cccda8e1202d565022bb65cb1b60}{kills}}\ =\ 0;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_a_player_character_afaab650ff731ffb8c488ce8783d0dc21}{score}}\ =\ 0;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ \ \ \ \ TSharedPtr<Subject>\ \mbox{\hyperlink{class_a_player_character_a6abcead90d0716b9d6f00bc471d8e2bf}{EnemySubject}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_a_player_character_ab19145f67d736e3576c328c6ecc80b67}{\string~APlayerCharacter}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00075\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00076\ \ \ \ \ float\ \mbox{\hyperlink{class_a_player_character_a3c615efca87f1d2bae4f4e6370b15611}{Health}}\ =\ 2.0f;}
 \DoxyCodeLine{00077\ }
-\DoxyCodeLine{00078\ \ \ \ \ UPROPERTY(EditDefaultsOnly)}
-\DoxyCodeLine{00079\ \ \ \ \ TSubclassOf<\mbox{\hyperlink{class_a_projectile}{AProjectile}}>\ \mbox{\hyperlink{class_a_player_character_a0c28734b018c14467db3444955e83f7c}{ProjectileActorToSpawn}};}
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00081\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly)}
-\DoxyCodeLine{00082\ \ \ \ \ UInputAction*\ \mbox{\hyperlink{class_a_player_character_a5e8d0e04633a2398c69c0aa1940f10be}{EmergencyRunAction}};}
-\DoxyCodeLine{00083\ }
-\DoxyCodeLine{00084\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_player_character_a323d7f529fd4f2235ed09004b89f7f5a}{MovementSpeed}}\ =\ 200.0f;}
-\DoxyCodeLine{00086\ }
-\DoxyCodeLine{00087\ \ \ \ \ UPROPERTY(BlueprintReadWrite)}
-\DoxyCodeLine{00088\ \ \ \ \ FVector2D\ \mbox{\hyperlink{class_a_player_character_ab75fedbdc4d1f077b37c88f556b149a9}{MovementDirection}};}
+\DoxyCodeLine{00079\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_player_character_a3cb5bb704f0761d48ee3c8aa507af5da}{Damage}}\ =\ 1.0f;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00083\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00084\ \ \ \ \ UCapsuleComponent*\ \mbox{\hyperlink{class_a_player_character_a895c29020855affbc1331db59fa0c245}{CapsuleComp}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00087\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00088\ \ \ \ \ USpringArmComponent*\ \mbox{\hyperlink{class_a_player_character_ade64fd7fe1a70a74d0964a8d07ca70ae}{SpringArm}};}
 \DoxyCodeLine{00089\ }
-\DoxyCodeLine{00090\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_a_player_character_ac4b72989ecdef24a5b16790cc56eb5dd}{CanMove}}\ =\ true;}
-\DoxyCodeLine{00092\ }
-\DoxyCodeLine{00093\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_a_player_character_a84bca6e8ebf0dac0cc416090f70b76a3}{CanShoot}}\ =\ true;}
-\DoxyCodeLine{00095\ }
-\DoxyCodeLine{00096\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadWrite)}
-\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_player_character_a6adb52f8876e212534dfe01b9ad821c9}{ShootCooldownDurationInSeconds}}\ =\ 0.3f;}
-\DoxyCodeLine{00098\ }
-\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//\ Sets\ default\ values\ for\ this\ pawn's\ properties}}
-\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{class_a_player_character_ab19145f67d736e3576c328c6ecc80b67}{APlayerCharacter}}();}
+\DoxyCodeLine{00091\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00092\ \ \ \ \ UCameraComponent*\ \mbox{\hyperlink{class_a_player_character_a09a3ebd30ea8c1cb306cbf3b74ecfdef}{Camera}};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00095\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00096\ \ \ \ \ UPaperSpriteComponent*\ \mbox{\hyperlink{class_a_player_character_a0461cc6a0b1f2da63593f70f2158cab9}{ArcherSprite}};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00099\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00100\ \ \ \ \ USceneComponent*\ \mbox{\hyperlink{class_a_player_character_a13a0fc411b439b2e0cb990742ae59142}{BowParent}};}
 \DoxyCodeLine{00101\ }
-\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//\ Called\ when\ the\ game\ starts\ or\ when\ spawned}}
-\DoxyCodeLine{00103\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_aabd1d46483746c34c35da55d816d22f3}{BeginPlay}}()\ override;}
-\DoxyCodeLine{00104\ }
-\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//\ Called\ every\ frame}}
-\DoxyCodeLine{00106\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_aa004cab44548a13b86956fd2d922160a}{Tick}}(\textcolor{keywordtype}{float}\ DeltaTime)\ override;}
-\DoxyCodeLine{00107\ }
-\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//\ Called\ to\ bind\ functionality\ to\ input}}
-\DoxyCodeLine{00109\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_a5699d8d499c0ae8364f2c599fae2c9c1}{SetupPlayerInputComponent}}(class\ UInputComponent*\ PlayerInputComponent)\ override;}
-\DoxyCodeLine{00110\ }
-\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_a15b963b46b4b06ab473efde0478585e1}{MoveTriggered}}(const\ FInputActionValue\&\ Value);}
-\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_a869e600d250a50b6adc7c8c476ac3625}{MoveCompleted}}(const\ FInputActionValue\&\ Value);}
+\DoxyCodeLine{00103\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00104\ \ \ \ \ UPaperSpriteComponent*\ \mbox{\hyperlink{class_a_player_character_a3165f87b0ad9a7b8fad0da2a6c4456d6}{BowSprite}};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00107\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00108\ \ \ \ \ USceneComponent*\ \mbox{\hyperlink{class_a_player_character_ab8d950dc0b236f39d69a5cdb70644266}{ArrowSpawnPosition}};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00111\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly)}
+\DoxyCodeLine{00112\ \ \ \ \ UInputMappingContext*\ \mbox{\hyperlink{class_a_player_character_ab336af7aab955e2791f566c39f2b438e}{InputMappingContext}};}
 \DoxyCodeLine{00113\ }
-\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_a0f9c1a9278df6d4a495ae0bd527a1fab}{Shoot}}(const\ FInputActionValue\&\ Value);}
-\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_a32c6b5bf533496dbb3de3140b0640ef9}{Run}}(const\ FInputActionValue\&\ Value);}
-\DoxyCodeLine{00116\ }
-\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_adb0ce54bfe331caccd464ff45937acfe}{OnShootCooldownTimerTimeout}}();}
-\DoxyCodeLine{00118\ }
-\DoxyCodeLine{00119\ \ \ \ \ UFUNCTION()}
-\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_a12baa20bb1936874e3186ea4992f51a2}{OverlapBegin}}(UPrimitiveComponent*\ OverlappedComponent,\ AActor*\ OtherActor,\ UPrimitiveComponent*\ OtherComp,\ int32\ OtherBodyIndex,\ \textcolor{keywordtype}{bool}\ FromSweep,\ const\ FHitResult\&\ SweepRsult);}
+\DoxyCodeLine{00115\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly)}
+\DoxyCodeLine{00116\ \ \ \ \ UInputAction*\ \mbox{\hyperlink{class_a_player_character_a04b9d51ea846b538c381a0bd53f37c92}{MoveAction}};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00119\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly)}
+\DoxyCodeLine{00120\ \ \ \ \ UInputAction*\ \mbox{\hyperlink{class_a_player_character_a2c4e209ff6fa042bec1ae28794e348c7}{ShootAction}};}
 \DoxyCodeLine{00121\ }
-\DoxyCodeLine{00122\ \};}
+\DoxyCodeLine{00123\ \ \ \ \ UPROPERTY(EditDefaultsOnly)}
+\DoxyCodeLine{00124\ \ \ \ \ TSubclassOf<\mbox{\hyperlink{class_a_projectile}{AProjectile}}>\ \mbox{\hyperlink{class_a_player_character_a0c28734b018c14467db3444955e83f7c}{ProjectileActorToSpawn}};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00127\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadOnly)}
+\DoxyCodeLine{00128\ \ \ \ \ UInputAction*\ \mbox{\hyperlink{class_a_player_character_a5e8d0e04633a2398c69c0aa1940f10be}{EmergencyRunAction}};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00131\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_player_character_a323d7f529fd4f2235ed09004b89f7f5a}{MovementSpeed}}\ =\ 200.0f;}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00135\ \ \ \ \ UPROPERTY(BlueprintReadWrite)}
+\DoxyCodeLine{00136\ \ \ \ \ FVector2D\ \mbox{\hyperlink{class_a_player_character_ab75fedbdc4d1f077b37c88f556b149a9}{MovementDirection}};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00139\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_a_player_character_ac4b72989ecdef24a5b16790cc56eb5dd}{CanMove}}\ =\ true;}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00143\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_a_player_character_a84bca6e8ebf0dac0cc416090f70b76a3}{CanShoot}}\ =\ true;}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00147\ \ \ \ \ UPROPERTY(EditAnywhere,\ BlueprintReadWrite)}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_a_player_character_a6adb52f8876e212534dfe01b9ad821c9}{ShootCooldownDurationInSeconds}}\ =\ 0.3f;}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{class_a_player_character_ab19145f67d736e3576c328c6ecc80b67}{APlayerCharacter}}();}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00154\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_aabd1d46483746c34c35da55d816d22f3}{BeginPlay}}()\ override;}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00158\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_aa004cab44548a13b86956fd2d922160a}{Tick}}(\textcolor{keywordtype}{float}\ DeltaTime)\ override;}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00162\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_a5699d8d499c0ae8364f2c599fae2c9c1}{SetupPlayerInputComponent}}(class\ UInputComponent*\ PlayerInputComponent)\ override;}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_a15b963b46b4b06ab473efde0478585e1}{MoveTriggered}}(const\ FInputActionValue\&\ Value);}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_a869e600d250a50b6adc7c8c476ac3625}{MoveCompleted}}(const\ FInputActionValue\&\ Value);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_a0f9c1a9278df6d4a495ae0bd527a1fab}{Shoot}}(const\ FInputActionValue\&\ Value);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_a32c6b5bf533496dbb3de3140b0640ef9}{Run}}(const\ FInputActionValue\&\ Value);}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_adb0ce54bfe331caccd464ff45937acfe}{OnShootCooldownTimerTimeout}}();}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00190\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_ac691d96fefd13e0683105e88bcb6b480}{OverlapBegin}}(UPrimitiveComponent*\ OverlappedComponent,\ AActor*\ OtherActor,\ UPrimitiveComponent*\ OtherComp,\ \textcolor{keywordtype}{int}\ OtherBodyIndex,\ \textcolor{keywordtype}{bool}\ FromSweep,\ const\ FHitResult\&\ SweepResult);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00195\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_a74c0a1e025937e2661d03e0f32efba5d}{OnEnemyKilled}}(AActor*\ KilledActor)\ override;}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00199\ \ \ \ \ TSharedPtr<\mbox{\hyperlink{class_subject}{Subject}}>\ \mbox{\hyperlink{class_a_player_character_ad438cca00eea9646b2a16a93c1e3c69a}{GetEnemySubject}}();}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_player_character_a391ead7eb16f7b73037a017fed4f4733}{SetEnemySubject}}(TSharedPtr<\mbox{\hyperlink{class_subject}{Subject}}>\ InSubject);}
+\DoxyCodeLine{00204\ \};}
 
 \end{DoxyCode}

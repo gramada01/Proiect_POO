@@ -112,6 +112,9 @@ $(function(){initNavTree('class_a_projectile.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 
+<p>A class that represents a projectile in the game.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_projectile_8h_source.html">Projectile.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for AProjectile:</div>
@@ -123,43 +126,60 @@ Inheritance diagram for AProjectile:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a357ee75c70b57439edc64b3ad0be61ee" id="r_a357ee75c70b57439edc64b3ad0be61ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a357ee75c70b57439edc64b3ad0be61ee">AProjectile</a> ()</td></tr>
+<tr class="memdesc:a357ee75c70b57439edc64b3ad0be61ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
 <tr class="separator:a357ee75c70b57439edc64b3ad0be61ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d0f5888f78073371d054efb319a4e2f" id="r_a0d0f5888f78073371d054efb319a4e2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d0f5888f78073371d054efb319a4e2f">AProjectile</a> (AActor *Who)</td></tr>
+<tr class="memdesc:a0d0f5888f78073371d054efb319a4e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with launcher.  <br /></td></tr>
 <tr class="separator:a0d0f5888f78073371d054efb319a4e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a735796a9fca0824e7409cb6bf43d8200" id="r_a735796a9fca0824e7409cb6bf43d8200"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a735796a9fca0824e7409cb6bf43d8200">BeginPlay</a> () override</td></tr>
+<tr class="memdesc:a735796a9fca0824e7409cb6bf43d8200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the game starts or when spawned.  <br /></td></tr>
 <tr class="separator:a735796a9fca0824e7409cb6bf43d8200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a538900d88f072783309cfffd743dfc8a" id="r_a538900d88f072783309cfffd743dfc8a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a538900d88f072783309cfffd743dfc8a">Tick</a> (float DeltaTime) override</td></tr>
+<tr class="memdesc:a538900d88f072783309cfffd743dfc8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called every frame.  <br /></td></tr>
 <tr class="separator:a538900d88f072783309cfffd743dfc8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01cddda28de4b211f2267dac5dc5268b" id="r_a01cddda28de4b211f2267dac5dc5268b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01cddda28de4b211f2267dac5dc5268b">Launch</a> (FVector2D Direction, float Speed, AActor *Launcher)</td></tr>
+<tr class="memdesc:a01cddda28de4b211f2267dac5dc5268b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Launches the projectile.  <br /></td></tr>
 <tr class="separator:a01cddda28de4b211f2267dac5dc5268b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9e765aad95dfe257235cf911f0ffc0b" id="r_ad9e765aad95dfe257235cf911f0ffc0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9e765aad95dfe257235cf911f0ffc0b">OnDeleteTimerTimeout</a> ()</td></tr>
+<tr class="memdesc:ad9e765aad95dfe257235cf911f0ffc0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the delete timer times out.  <br /></td></tr>
 <tr class="separator:ad9e765aad95dfe257235cf911f0ffc0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a193a542aee95cf91ae5f6fd65716db97" id="r_a193a542aee95cf91ae5f6fd65716db97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a193a542aee95cf91ae5f6fd65716db97">OverlapBegin</a> (UPrimitiveComponent *OverlappedComponent, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult &amp;SweepRsult)</td></tr>
-<tr class="separator:a193a542aee95cf91ae5f6fd65716db97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bb83e393a3c01049bef8260a658c4e8" id="r_a4bb83e393a3c01049bef8260a658c4e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bb83e393a3c01049bef8260a658c4e8">OverlapBegin</a> (UPrimitiveComponent *OverlappedComponent, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult &amp;SweepResult)</td></tr>
+<tr class="memdesc:a4bb83e393a3c01049bef8260a658c4e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an overlap begins.  <br /></td></tr>
+<tr class="separator:a4bb83e393a3c01049bef8260a658c4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aecd7cb0a47cd83de4752f3852eefdb20" id="r_aecd7cb0a47cd83de4752f3852eefdb20"><td class="memItemLeft" align="right" valign="top">AActor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecd7cb0a47cd83de4752f3852eefdb20">WhoLaunchedMe</a> = nullptr</td></tr>
+<tr class="memdesc:aecd7cb0a47cd83de4752f3852eefdb20"><td class="mdescLeft">&#160;</td><td class="mdescRight">The actor who launched the projectile.  <br /></td></tr>
 <tr class="separator:aecd7cb0a47cd83de4752f3852eefdb20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a711b38a801cb5c43f43441db4aa26f88" id="r_a711b38a801cb5c43f43441db4aa26f88"><td class="memItemLeft" align="right" valign="top">UCapsuleComponent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a711b38a801cb5c43f43441db4aa26f88">CapsuleComp</a></td></tr>
+<tr class="memdesc:a711b38a801cb5c43f43441db4aa26f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">The capsule component of the projectile.  <br /></td></tr>
 <tr class="separator:a711b38a801cb5c43f43441db4aa26f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72914970a99f504f762480d130847710" id="r_a72914970a99f504f762480d130847710"><td class="memItemLeft" align="right" valign="top">UPaperSpriteComponent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72914970a99f504f762480d130847710">ProjectileSprite</a></td></tr>
+<tr class="memdesc:a72914970a99f504f762480d130847710"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sprite component of the projectile.  <br /></td></tr>
 <tr class="separator:a72914970a99f504f762480d130847710"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85f66b5116e9e18eab354efff6854a76" id="r_a85f66b5116e9e18eab354efff6854a76"><td class="memItemLeft" align="right" valign="top">FVector2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85f66b5116e9e18eab354efff6854a76">MovementDirection</a></td></tr>
+<tr class="memdesc:a85f66b5116e9e18eab354efff6854a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">The movement direction of the projectile.  <br /></td></tr>
 <tr class="separator:a85f66b5116e9e18eab354efff6854a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77a8587001b4ec23a3b0335ee5374ec8" id="r_a77a8587001b4ec23a3b0335ee5374ec8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77a8587001b4ec23a3b0335ee5374ec8">MovementSpeed</a> = 300.0f</td></tr>
+<tr class="memdesc:a77a8587001b4ec23a3b0335ee5374ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The movement speed of the projectile.  <br /></td></tr>
 <tr class="separator:a77a8587001b4ec23a3b0335ee5374ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4f575ec8547903f163b52003c2292b9" id="r_ae4f575ec8547903f163b52003c2292b9"><td class="memItemLeft" align="right" valign="top">FVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4f575ec8547903f163b52003c2292b9">Rotation</a></td></tr>
+<tr class="memdesc:ae4f575ec8547903f163b52003c2292b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rotation of the projectile.  <br /></td></tr>
 <tr class="separator:ae4f575ec8547903f163b52003c2292b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5da046ab568de6bf1659c3d5a9a8ecf6" id="r_a5da046ab568de6bf1659c3d5a9a8ecf6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5da046ab568de6bf1659c3d5a9a8ecf6">IsLaunched</a> = false</td></tr>
+<tr class="memdesc:a5da046ab568de6bf1659c3d5a9a8ecf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the projectile is launched.  <br /></td></tr>
 <tr class="separator:a5da046ab568de6bf1659c3d5a9a8ecf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a0caeb7840b6ca2483bca902bd9f82f5b" id="r_a0caeb7840b6ca2483bca902bd9f82f5b"><td class="memItemLeft" align="right" valign="top">FTimerHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0caeb7840b6ca2483bca902bd9f82f5b">DeleteTimer</a></td></tr>
+<tr class="memdesc:a0caeb7840b6ca2483bca902bd9f82f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer handle for deleting the projectile.  <br /></td></tr>
 <tr class="separator:a0caeb7840b6ca2483bca902bd9f82f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class that represents a projectile in the game. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a357ee75c70b57439edc64b3ad0be61ee" name="a357ee75c70b57439edc64b3ad0be61ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a357ee75c70b57439edc64b3ad0be61ee">&#9670;&#160;</a></span>AProjectile() <span class="overload">[1/2]</span></h2>
 
@@ -174,6 +194,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Default constructor. </p>
 
 </div>
 </div>
@@ -199,6 +221,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructor with launcher. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Who</td><td>The actor who launched the projectile. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -226,6 +256,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called when the game starts or when spawned. </p>
+
 </div>
 </div>
 <a id="a01cddda28de4b211f2267dac5dc5268b" name="a01cddda28de4b211f2267dac5dc5268b"></a>
@@ -252,6 +284,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Launches the projectile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Direction</td><td>The direction to launch the projectile. </td></tr>
+    <tr><td class="paramname">Speed</td><td>The speed to launch the projectile. </td></tr>
+    <tr><td class="paramname">Launcher</td><td>The actor who launched the projectile. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ad9e765aad95dfe257235cf911f0ffc0b" name="ad9e765aad95dfe257235cf911f0ffc0b"></a>
@@ -269,10 +311,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Called when the delete timer times out. </p>
+
 </div>
 </div>
-<a id="a193a542aee95cf91ae5f6fd65716db97" name="a193a542aee95cf91ae5f6fd65716db97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a193a542aee95cf91ae5f6fd65716db97">&#9670;&#160;</a></span>OverlapBegin()</h2>
+<a id="a4bb83e393a3c01049bef8260a658c4e8" name="a4bb83e393a3c01049bef8260a658c4e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bb83e393a3c01049bef8260a658c4e8">&#9670;&#160;</a></span>OverlapBegin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,10 +349,23 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const FHitResult &amp;</td>          <td class="paramname"><span class="paramname"><em>SweepRsult</em></span>&#160;)</td>
+          <td class="paramtype">const FHitResult &amp;</td>          <td class="paramname"><span class="paramname"><em>SweepResult</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Called when an overlap begins. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">OverlappedComponent</td><td>The component that was overlapped. </td></tr>
+    <tr><td class="paramname">OtherActor</td><td>The other actor involved in the overlap. </td></tr>
+    <tr><td class="paramname">OtherComp</td><td>The other component involved in the overlap. </td></tr>
+    <tr><td class="paramname">OtherBodyIndex</td><td>The body index of the other component. </td></tr>
+    <tr><td class="paramname">FromSweep</td><td>Whether the overlap was from a sweep. </td></tr>
+    <tr><td class="paramname">SweepResult</td><td>The result of the sweep. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -335,6 +392,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called every frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DeltaTime</td><td>The time elapsed since the last frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -349,6 +414,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The capsule component of the projectile. </p>
 
 </div>
 </div>
@@ -372,6 +439,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Timer handle for deleting the projectile. </p>
+
 </div>
 </div>
 <a id="a5da046ab568de6bf1659c3d5a9a8ecf6" name="a5da046ab568de6bf1659c3d5a9a8ecf6"></a>
@@ -385,6 +454,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Indicates whether the projectile is launched. </p>
 
 </div>
 </div>
@@ -400,6 +471,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The movement direction of the projectile. </p>
+
 </div>
 </div>
 <a id="a77a8587001b4ec23a3b0335ee5374ec8" name="a77a8587001b4ec23a3b0335ee5374ec8"></a>
@@ -413,6 +486,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The movement speed of the projectile. </p>
 
 </div>
 </div>
@@ -428,6 +503,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The sprite component of the projectile. </p>
+
 </div>
 </div>
 <a id="ae4f575ec8547903f163b52003c2292b9" name="ae4f575ec8547903f163b52003c2292b9"></a>
@@ -442,6 +519,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The rotation of the projectile. </p>
+
 </div>
 </div>
 <a id="aecd7cb0a47cd83de4752f3852eefdb20" name="aecd7cb0a47cd83de4752f3852eefdb20"></a>
@@ -455,6 +534,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The actor who launched the projectile. </p>
 
 </div>
 </div>

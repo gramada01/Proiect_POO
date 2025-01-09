@@ -1,12 +1,14 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+/// @file Observer.cpp
+/// @brief This file contains the implementation of the Observer class methods.
 
 #include "Observer.h"
 
+/// @brief Default constructor.
 Observer::Observer()
 {
 }
 
+/// @brief Destructor.
 Observer::~Observer()
 {
 }

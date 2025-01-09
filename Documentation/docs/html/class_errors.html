@@ -111,6 +111,9 @@ $(function(){initNavTree('class_errors.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 
+<p>Base class for custom errors in the <a class="el" href="class_zelda.html">Zelda</a> project.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_errors_8h_source.html">Errors.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Errors:</div>
@@ -118,29 +121,36 @@ Inheritance diagram for Errors:</div>
  <div class="center">
   <img src="class_errors.png" usemap="#Errors_map" alt=""/>
   <map id="Errors_map" name="Errors_map">
-<area href="class_err_actor_not_exist.html" alt="ErrActorNotExist" shape="rect" coords="0,112,106,136"/>
-<area href="class_err_actor_type.html" alt="ErrActorType" shape="rect" coords="116,112,222,136"/>
-<area href="class_err_no_launcher.html" alt="ErrNoLauncher" shape="rect" coords="232,112,338,136"/>
+<area href="class_err_actor_not_exist.html" title="Error class for non-existent actor errors." alt="ErrActorNotExist" shape="rect" coords="0,112,106,136"/>
+<area href="class_err_actor_type.html" title="Error class for invalid actor type errors." alt="ErrActorType" shape="rect" coords="116,112,222,136"/>
+<area href="class_err_no_launcher.html" title="Error class for missing launcher errors." alt="ErrNoLauncher" shape="rect" coords="232,112,338,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa266bfe6d658cd3e169b18277b902e56" id="r_aa266bfe6d658cd3e169b18277b902e56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa266bfe6d658cd3e169b18277b902e56">Errors</a> ()</td></tr>
+<tr class="memdesc:aa266bfe6d658cd3e169b18277b902e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
 <tr class="separator:aa266bfe6d658cd3e169b18277b902e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee5ec5a7e0529c560e165adc5093fc87" id="r_aee5ec5a7e0529c560e165adc5093fc87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee5ec5a7e0529c560e165adc5093fc87">Errors</a> (std::string msg)</td></tr>
+<tr class="memdesc:aee5ec5a7e0529c560e165adc5093fc87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with a custom message.  <br /></td></tr>
 <tr class="separator:aee5ec5a7e0529c560e165adc5093fc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7e127294d7af8814b4141eb82cdf80e" id="r_ae7e127294d7af8814b4141eb82cdf80e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7e127294d7af8814b4141eb82cdf80e">~Errors</a> ()</td></tr>
+<tr class="memdesc:ae7e127294d7af8814b4141eb82cdf80e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="separator:ae7e127294d7af8814b4141eb82cdf80e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afed158318501890c617c04a9ec2aa9f4" id="r_afed158318501890c617c04a9ec2aa9f4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afed158318501890c617c04a9ec2aa9f4">get_message</a> ()</td></tr>
+<tr class="memdesc:afed158318501890c617c04a9ec2aa9f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the error message.  <br /></td></tr>
 <tr class="separator:afed158318501890c617c04a9ec2aa9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a501df66cf01ec7aaeaa0fe297937563f" id="r_a501df66cf01ec7aaeaa0fe297937563f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a501df66cf01ec7aaeaa0fe297937563f">message</a> = &quot;No Launcher!!!&quot;</td></tr>
+<tr class="memdesc:a501df66cf01ec7aaeaa0fe297937563f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The error message.  <br /></td></tr>
 <tr class="separator:a501df66cf01ec7aaeaa0fe297937563f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base class for custom errors in the <a class="el" href="class_zelda.html">Zelda</a> project. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa266bfe6d658cd3e169b18277b902e56" name="aa266bfe6d658cd3e169b18277b902e56"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa266bfe6d658cd3e169b18277b902e56">&#9670;&#160;</a></span>Errors() <span class="overload">[1/2]</span></h2>
 
@@ -155,6 +165,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Default constructor. </p>
 
 </div>
 </div>
@@ -173,6 +185,14 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor with a custom message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>The custom error message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae7e127294d7af8814b4141eb82cdf80e" name="ae7e127294d7af8814b4141eb82cdf80e"></a>
@@ -189,6 +209,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destructor. </p>
 
 </div>
 </div>
@@ -216,6 +238,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Gets the error message. </p>
+<dl class="section return"><dt>Returns</dt><dd>The error message. </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -238,6 +263,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The error message. </p>
 
 </div>
 </div>

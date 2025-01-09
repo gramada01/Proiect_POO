@@ -2,6 +2,11 @@
 \hypertarget{class_a_obstacle}{}\label{class_a_obstacle}\index{AObstacle@{AObstacle}}
 
 
+A class that represents an obstacle in the game.  
+
+
+
+
 {\ttfamily \#include $<$Obstacle.\+h$>$}
 
 Inheritance diagram for AObstacle\+:\begin{figure}[H]
@@ -14,25 +19,28 @@ Inheritance diagram for AObstacle\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_a_obstacle_a27b59c9d989163408cb02ab52d82f482}{AObstacle}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_obstacle_a6476e839e425d2c8f49befbb6565d9fe}{Begin\+Play}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the game starts or when spawned. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_obstacle_af8bf5085986e4e0adeae8092c3dab5bd}{Tick}} (float Delta\+Time) override
-\item 
-void \mbox{\hyperlink{class_a_obstacle_a4b561f58c583e8946cdde5105b78e20c}{Overlap\+Begin}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool From\+Sweep, const FHit\+Result \&Sweep\+Rsult)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Called every frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_obstacle_aec2bc46fd55993ff1a49b1ea09c1b9d4}{Overlap\+Begin}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool From\+Sweep, const FHit\+Result \&Sweep\+Result)
+\begin{DoxyCompactList}\small\item\em Called when an overlap begins. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 UCapsule\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_obstacle_a20f5b6b1bd7d6fbadb1c9481f8bdb61c}{Capsule\+Comp}}
-\item 
+\begin{DoxyCompactList}\small\item\em The capsule component of the obstacle. \end{DoxyCompactList}\item 
 UPaper\+Sprite\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_obstacle_a2ef2decf3e7e0c2984bd311a57a32fcb}{Obstacle\+Sprite}}
-\item 
+\begin{DoxyCompactList}\small\item\em The sprite component of the obstacle. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_a_my_game_mode}{AMy\+Game\+Mode}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_obstacle_a47b0330d101ccd16e5e3d0c55f9af50f}{My\+Game\+Mode}}
-\item 
+\begin{DoxyCompactList}\small\item\em The game mode instance. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_a_obstacle_a6055a7a819836edce1da89762b412937}{Is\+Wall}} = false
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Indicates whether the obstacle is a wall. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A class that represents an obstacle in the game. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_a_obstacle_a27b59c9d989163408cb02ab52d82f482}\index{AObstacle@{AObstacle}!AObstacle@{AObstacle}}
@@ -43,6 +51,10 @@ AObstacle\+::\+AObstacle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
+Default constructor. 
+
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_a_obstacle_a6476e839e425d2c8f49befbb6565d9fe}\index{AObstacle@{AObstacle}!BeginPlay@{BeginPlay}}
 \index{BeginPlay@{BeginPlay}!AObstacle@{AObstacle}}
@@ -50,18 +62,50 @@ AObstacle\+::\+AObstacle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 {\footnotesize\ttfamily \label{class_a_obstacle_a6476e839e425d2c8f49befbb6565d9fe} 
 void AObstacle\+::\+Begin\+Play (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
-\Hypertarget{class_a_obstacle_a4b561f58c583e8946cdde5105b78e20c}\index{AObstacle@{AObstacle}!OverlapBegin@{OverlapBegin}}
+
+
+Called when the game starts or when spawned. 
+
+\Hypertarget{class_a_obstacle_aec2bc46fd55993ff1a49b1ea09c1b9d4}\index{AObstacle@{AObstacle}!OverlapBegin@{OverlapBegin}}
 \index{OverlapBegin@{OverlapBegin}!AObstacle@{AObstacle}}
 \doxysubsubsection{\texorpdfstring{OverlapBegin()}{OverlapBegin()}}
-{\footnotesize\ttfamily \label{class_a_obstacle_a4b561f58c583e8946cdde5105b78e20c} 
-void AObstacle\+::\+Overlap\+Begin (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int32}]{Other\+Body\+Index}{, }\item[{bool}]{From\+Sweep}{, }\item[{const FHit\+Result \&}]{Sweep\+Rsult}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_a_obstacle_aec2bc46fd55993ff1a49b1ea09c1b9d4} 
+void AObstacle\+::\+Overlap\+Begin (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int32}]{Other\+Body\+Index}{, }\item[{bool}]{From\+Sweep}{, }\item[{const FHit\+Result \&}]{Sweep\+Result}{}\end{DoxyParamCaption})}
 
+
+
+Called when an overlap begins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Overlapped\+Component} & The component that was overlapped. \\
+\hline
+{\em Other\+Actor} & The other actor involved in the overlap. \\
+\hline
+{\em Other\+Comp} & The other component involved in the overlap. \\
+\hline
+{\em Other\+Body\+Index} & The body index of the other component. \\
+\hline
+{\em From\+Sweep} & Whether the overlap was from a sweep. \\
+\hline
+{\em Sweep\+Result} & The result of the sweep. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_a_obstacle_af8bf5085986e4e0adeae8092c3dab5bd}\index{AObstacle@{AObstacle}!Tick@{Tick}}
 \index{Tick@{Tick}!AObstacle@{AObstacle}}
 \doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
 {\footnotesize\ttfamily \label{class_a_obstacle_af8bf5085986e4e0adeae8092c3dab5bd} 
 void AObstacle\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Called every frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Time} & The time elapsed since the last frame. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}
@@ -71,11 +115,19 @@ void AObstacle\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time}{}\
 {\footnotesize\ttfamily \label{class_a_obstacle_a20f5b6b1bd7d6fbadb1c9481f8bdb61c} 
 UCapsule\+Component\texorpdfstring{$\ast$}{*} AObstacle\+::\+Capsule\+Comp}
 
+
+
+The capsule component of the obstacle. 
+
 \Hypertarget{class_a_obstacle_a6055a7a819836edce1da89762b412937}\index{AObstacle@{AObstacle}!IsWall@{IsWall}}
 \index{IsWall@{IsWall}!AObstacle@{AObstacle}}
 \doxysubsubsection{\texorpdfstring{IsWall}{IsWall}}
 {\footnotesize\ttfamily \label{class_a_obstacle_a6055a7a819836edce1da89762b412937} 
 bool AObstacle\+::\+Is\+Wall = false}
+
+
+
+Indicates whether the obstacle is a wall. 
 
 \Hypertarget{class_a_obstacle_a47b0330d101ccd16e5e3d0c55f9af50f}\index{AObstacle@{AObstacle}!MyGameMode@{MyGameMode}}
 \index{MyGameMode@{MyGameMode}!AObstacle@{AObstacle}}
@@ -83,11 +135,19 @@ bool AObstacle\+::\+Is\+Wall = false}
 {\footnotesize\ttfamily \label{class_a_obstacle_a47b0330d101ccd16e5e3d0c55f9af50f} 
 \mbox{\hyperlink{class_a_my_game_mode}{AMy\+Game\+Mode}}\texorpdfstring{$\ast$}{*} AObstacle\+::\+My\+Game\+Mode}
 
+
+
+The game mode instance. 
+
 \Hypertarget{class_a_obstacle_a2ef2decf3e7e0c2984bd311a57a32fcb}\index{AObstacle@{AObstacle}!ObstacleSprite@{ObstacleSprite}}
 \index{ObstacleSprite@{ObstacleSprite}!AObstacle@{AObstacle}}
 \doxysubsubsection{\texorpdfstring{ObstacleSprite}{ObstacleSprite}}
 {\footnotesize\ttfamily \label{class_a_obstacle_a2ef2decf3e7e0c2984bd311a57a32fcb} 
 UPaper\+Sprite\+Component\texorpdfstring{$\ast$}{*} AObstacle\+::\+Obstacle\+Sprite}
+
+
+
+The sprite component of the obstacle. 
 
 
 

@@ -107,93 +107,184 @@ $(function(){initNavTree('class_a_player_character.html',''); initResizable(true
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_a_player_character-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">APlayerCharacter Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class that represents the player character in the game.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_player_character_8h_source.html">PlayerCharacter.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for APlayerCharacter:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_a_player_character.png" alt=""/>
- </div></div>
+  <img src="class_a_player_character.png" usemap="#APlayerCharacter_map" alt=""/>
+  <map id="APlayerCharacter_map" name="APlayerCharacter_map">
+<area href="class_observer.html" title="A class that defines an interface for observing enemy kills." alt="Observer" shape="rect" coords="125,0,240,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:abb20f8e63afe591271c9f6d07ffb3c32" id="r_abb20f8e63afe591271c9f6d07ffb3c32"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb20f8e63afe591271c9f6d07ffb3c32">~APlayerCharacter</a> ()</td></tr>
+<tr class="memdesc:abb20f8e63afe591271c9f6d07ffb3c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="separator:abb20f8e63afe591271c9f6d07ffb3c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab19145f67d736e3576c328c6ecc80b67" id="r_ab19145f67d736e3576c328c6ecc80b67"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab19145f67d736e3576c328c6ecc80b67">APlayerCharacter</a> ()</td></tr>
+<tr class="memdesc:ab19145f67d736e3576c328c6ecc80b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
 <tr class="separator:ab19145f67d736e3576c328c6ecc80b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabd1d46483746c34c35da55d816d22f3" id="r_aabd1d46483746c34c35da55d816d22f3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabd1d46483746c34c35da55d816d22f3">BeginPlay</a> () override</td></tr>
+<tr class="memdesc:aabd1d46483746c34c35da55d816d22f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the game starts or when spawned.  <br /></td></tr>
 <tr class="separator:aabd1d46483746c34c35da55d816d22f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa004cab44548a13b86956fd2d922160a" id="r_aa004cab44548a13b86956fd2d922160a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa004cab44548a13b86956fd2d922160a">Tick</a> (float DeltaTime) override</td></tr>
+<tr class="memdesc:aa004cab44548a13b86956fd2d922160a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called every frame.  <br /></td></tr>
 <tr class="separator:aa004cab44548a13b86956fd2d922160a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5699d8d499c0ae8364f2c599fae2c9c1" id="r_a5699d8d499c0ae8364f2c599fae2c9c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5699d8d499c0ae8364f2c599fae2c9c1">SetupPlayerInputComponent</a> (class UInputComponent *PlayerInputComponent) override</td></tr>
+<tr class="memdesc:a5699d8d499c0ae8364f2c599fae2c9c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to bind functionality to input.  <br /></td></tr>
 <tr class="separator:a5699d8d499c0ae8364f2c599fae2c9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15b963b46b4b06ab473efde0478585e1" id="r_a15b963b46b4b06ab473efde0478585e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15b963b46b4b06ab473efde0478585e1">MoveTriggered</a> (const FInputActionValue &amp;Value)</td></tr>
+<tr class="memdesc:a15b963b46b4b06ab473efde0478585e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the move action is triggered.  <br /></td></tr>
 <tr class="separator:a15b963b46b4b06ab473efde0478585e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a869e600d250a50b6adc7c8c476ac3625" id="r_a869e600d250a50b6adc7c8c476ac3625"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a869e600d250a50b6adc7c8c476ac3625">MoveCompleted</a> (const FInputActionValue &amp;Value)</td></tr>
+<tr class="memdesc:a869e600d250a50b6adc7c8c476ac3625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the move action is completed.  <br /></td></tr>
 <tr class="separator:a869e600d250a50b6adc7c8c476ac3625"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f9c1a9278df6d4a495ae0bd527a1fab" id="r_a0f9c1a9278df6d4a495ae0bd527a1fab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f9c1a9278df6d4a495ae0bd527a1fab">Shoot</a> (const FInputActionValue &amp;Value)</td></tr>
+<tr class="memdesc:a0f9c1a9278df6d4a495ae0bd527a1fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shoots a projectile.  <br /></td></tr>
 <tr class="separator:a0f9c1a9278df6d4a495ae0bd527a1fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32c6b5bf533496dbb3de3140b0640ef9" id="r_a32c6b5bf533496dbb3de3140b0640ef9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32c6b5bf533496dbb3de3140b0640ef9">Run</a> (const FInputActionValue &amp;Value)</td></tr>
+<tr class="memdesc:a32c6b5bf533496dbb3de3140b0640ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs an emergency run.  <br /></td></tr>
 <tr class="separator:a32c6b5bf533496dbb3de3140b0640ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb0ce54bfe331caccd464ff45937acfe" id="r_adb0ce54bfe331caccd464ff45937acfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb0ce54bfe331caccd464ff45937acfe">OnShootCooldownTimerTimeout</a> ()</td></tr>
+<tr class="memdesc:adb0ce54bfe331caccd464ff45937acfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the shoot cooldown timer times out.  <br /></td></tr>
 <tr class="separator:adb0ce54bfe331caccd464ff45937acfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12baa20bb1936874e3186ea4992f51a2" id="r_a12baa20bb1936874e3186ea4992f51a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12baa20bb1936874e3186ea4992f51a2">OverlapBegin</a> (UPrimitiveComponent *OverlappedComponent, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult &amp;SweepRsult)</td></tr>
-<tr class="separator:a12baa20bb1936874e3186ea4992f51a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac691d96fefd13e0683105e88bcb6b480" id="r_ac691d96fefd13e0683105e88bcb6b480"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac691d96fefd13e0683105e88bcb6b480">OverlapBegin</a> (UPrimitiveComponent *OverlappedComponent, AActor *OtherActor, UPrimitiveComponent *OtherComp, int OtherBodyIndex, bool FromSweep, const FHitResult &amp;SweepResult)</td></tr>
+<tr class="memdesc:ac691d96fefd13e0683105e88bcb6b480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an overlap begins.  <br /></td></tr>
+<tr class="separator:ac691d96fefd13e0683105e88bcb6b480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74c0a1e025937e2661d03e0f32efba5d" id="r_a74c0a1e025937e2661d03e0f32efba5d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74c0a1e025937e2661d03e0f32efba5d">OnEnemyKilled</a> (AActor *KilledActor) override</td></tr>
+<tr class="memdesc:a74c0a1e025937e2661d03e0f32efba5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when an enemy is killed.  <br /></td></tr>
+<tr class="separator:a74c0a1e025937e2661d03e0f32efba5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad438cca00eea9646b2a16a93c1e3c69a" id="r_ad438cca00eea9646b2a16a93c1e3c69a"><td class="memItemLeft" align="right" valign="top">TSharedPtr&lt; <a class="el" href="class_subject.html">Subject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad438cca00eea9646b2a16a93c1e3c69a">GetEnemySubject</a> ()</td></tr>
+<tr class="memdesc:ad438cca00eea9646b2a16a93c1e3c69a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the enemy subject.  <br /></td></tr>
+<tr class="separator:ad438cca00eea9646b2a16a93c1e3c69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a391ead7eb16f7b73037a017fed4f4733" id="r_a391ead7eb16f7b73037a017fed4f4733"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a391ead7eb16f7b73037a017fed4f4733">SetEnemySubject</a> (TSharedPtr&lt; <a class="el" href="class_subject.html">Subject</a> &gt; InSubject)</td></tr>
+<tr class="memdesc:a391ead7eb16f7b73037a017fed4f4733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the enemy subject.  <br /></td></tr>
+<tr class="separator:a391ead7eb16f7b73037a017fed4f4733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_observer"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_observer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_observer.html">Observer</a></td></tr>
+<tr class="memitem:a19c43f80a38a332a6f694783df3c9835 inherit pub_methods_class_observer" id="r_a19c43f80a38a332a6f694783df3c9835"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_observer.html#a19c43f80a38a332a6f694783df3c9835">Observer</a> ()</td></tr>
+<tr class="memdesc:a19c43f80a38a332a6f694783df3c9835 inherit pub_methods_class_observer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
+<tr class="separator:a19c43f80a38a332a6f694783df3c9835 inherit pub_methods_class_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a450645e61c136826f09940a1334c7f34 inherit pub_methods_class_observer" id="r_a450645e61c136826f09940a1334c7f34"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_observer.html#a450645e61c136826f09940a1334c7f34">~Observer</a> ()</td></tr>
+<tr class="memdesc:a450645e61c136826f09940a1334c7f34 inherit pub_methods_class_observer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="separator:a450645e61c136826f09940a1334c7f34 inherit pub_methods_class_observer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a3c615efca87f1d2bae4f4e6370b15611" id="r_a3c615efca87f1d2bae4f4e6370b15611"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c615efca87f1d2bae4f4e6370b15611">Health</a> = 2.0f</td></tr>
+<tr class="memdesc:a3c615efca87f1d2bae4f4e6370b15611"><td class="mdescLeft">&#160;</td><td class="mdescRight">The health of the player character.  <br /></td></tr>
 <tr class="separator:a3c615efca87f1d2bae4f4e6370b15611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cb5bb704f0761d48ee3c8aa507af5da" id="r_a3cb5bb704f0761d48ee3c8aa507af5da"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cb5bb704f0761d48ee3c8aa507af5da">Damage</a> = 1.0f</td></tr>
+<tr class="memdesc:a3cb5bb704f0761d48ee3c8aa507af5da"><td class="mdescLeft">&#160;</td><td class="mdescRight">The damage dealt by the player character.  <br /></td></tr>
 <tr class="separator:a3cb5bb704f0761d48ee3c8aa507af5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a895c29020855affbc1331db59fa0c245" id="r_a895c29020855affbc1331db59fa0c245"><td class="memItemLeft" align="right" valign="top">UCapsuleComponent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a895c29020855affbc1331db59fa0c245">CapsuleComp</a></td></tr>
+<tr class="memdesc:a895c29020855affbc1331db59fa0c245"><td class="mdescLeft">&#160;</td><td class="mdescRight">The capsule component of the player character.  <br /></td></tr>
 <tr class="separator:a895c29020855affbc1331db59fa0c245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade64fd7fe1a70a74d0964a8d07ca70ae" id="r_ade64fd7fe1a70a74d0964a8d07ca70ae"><td class="memItemLeft" align="right" valign="top">USpringArmComponent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade64fd7fe1a70a74d0964a8d07ca70ae">SpringArm</a></td></tr>
+<tr class="memdesc:ade64fd7fe1a70a74d0964a8d07ca70ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">The spring arm component of the player character.  <br /></td></tr>
 <tr class="separator:ade64fd7fe1a70a74d0964a8d07ca70ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09a3ebd30ea8c1cb306cbf3b74ecfdef" id="r_a09a3ebd30ea8c1cb306cbf3b74ecfdef"><td class="memItemLeft" align="right" valign="top">UCameraComponent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09a3ebd30ea8c1cb306cbf3b74ecfdef">Camera</a></td></tr>
+<tr class="memdesc:a09a3ebd30ea8c1cb306cbf3b74ecfdef"><td class="mdescLeft">&#160;</td><td class="mdescRight">The camera component of the player character.  <br /></td></tr>
 <tr class="separator:a09a3ebd30ea8c1cb306cbf3b74ecfdef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0461cc6a0b1f2da63593f70f2158cab9" id="r_a0461cc6a0b1f2da63593f70f2158cab9"><td class="memItemLeft" align="right" valign="top">UPaperSpriteComponent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0461cc6a0b1f2da63593f70f2158cab9">ArcherSprite</a></td></tr>
+<tr class="memdesc:a0461cc6a0b1f2da63593f70f2158cab9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sprite component of the player character.  <br /></td></tr>
 <tr class="separator:a0461cc6a0b1f2da63593f70f2158cab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13a0fc411b439b2e0cb990742ae59142" id="r_a13a0fc411b439b2e0cb990742ae59142"><td class="memItemLeft" align="right" valign="top">USceneComponent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13a0fc411b439b2e0cb990742ae59142">BowParent</a></td></tr>
+<tr class="memdesc:a13a0fc411b439b2e0cb990742ae59142"><td class="mdescLeft">&#160;</td><td class="mdescRight">The bow parent component of the player character.  <br /></td></tr>
 <tr class="separator:a13a0fc411b439b2e0cb990742ae59142"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3165f87b0ad9a7b8fad0da2a6c4456d6" id="r_a3165f87b0ad9a7b8fad0da2a6c4456d6"><td class="memItemLeft" align="right" valign="top">UPaperSpriteComponent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3165f87b0ad9a7b8fad0da2a6c4456d6">BowSprite</a></td></tr>
+<tr class="memdesc:a3165f87b0ad9a7b8fad0da2a6c4456d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The bow sprite component of the player character.  <br /></td></tr>
 <tr class="separator:a3165f87b0ad9a7b8fad0da2a6c4456d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8d950dc0b236f39d69a5cdb70644266" id="r_ab8d950dc0b236f39d69a5cdb70644266"><td class="memItemLeft" align="right" valign="top">USceneComponent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8d950dc0b236f39d69a5cdb70644266">ArrowSpawnPosition</a></td></tr>
+<tr class="memdesc:ab8d950dc0b236f39d69a5cdb70644266"><td class="mdescLeft">&#160;</td><td class="mdescRight">The arrow spawn position component of the player character.  <br /></td></tr>
 <tr class="separator:ab8d950dc0b236f39d69a5cdb70644266"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab336af7aab955e2791f566c39f2b438e" id="r_ab336af7aab955e2791f566c39f2b438e"><td class="memItemLeft" align="right" valign="top">UInputMappingContext *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab336af7aab955e2791f566c39f2b438e">InputMappingContext</a></td></tr>
+<tr class="memdesc:ab336af7aab955e2791f566c39f2b438e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The input mapping context.  <br /></td></tr>
 <tr class="separator:ab336af7aab955e2791f566c39f2b438e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04b9d51ea846b538c381a0bd53f37c92" id="r_a04b9d51ea846b538c381a0bd53f37c92"><td class="memItemLeft" align="right" valign="top">UInputAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04b9d51ea846b538c381a0bd53f37c92">MoveAction</a></td></tr>
+<tr class="memdesc:a04b9d51ea846b538c381a0bd53f37c92"><td class="mdescLeft">&#160;</td><td class="mdescRight">The move action input.  <br /></td></tr>
 <tr class="separator:a04b9d51ea846b538c381a0bd53f37c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c4e209ff6fa042bec1ae28794e348c7" id="r_a2c4e209ff6fa042bec1ae28794e348c7"><td class="memItemLeft" align="right" valign="top">UInputAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c4e209ff6fa042bec1ae28794e348c7">ShootAction</a></td></tr>
+<tr class="memdesc:a2c4e209ff6fa042bec1ae28794e348c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The shoot action input.  <br /></td></tr>
 <tr class="separator:a2c4e209ff6fa042bec1ae28794e348c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c28734b018c14467db3444955e83f7c" id="r_a0c28734b018c14467db3444955e83f7c"><td class="memItemLeft" align="right" valign="top">TSubclassOf&lt; <a class="el" href="class_a_projectile.html">AProjectile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c28734b018c14467db3444955e83f7c">ProjectileActorToSpawn</a></td></tr>
+<tr class="memdesc:a0c28734b018c14467db3444955e83f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The projectile actor to spawn.  <br /></td></tr>
 <tr class="separator:a0c28734b018c14467db3444955e83f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e8d0e04633a2398c69c0aa1940f10be" id="r_a5e8d0e04633a2398c69c0aa1940f10be"><td class="memItemLeft" align="right" valign="top">UInputAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e8d0e04633a2398c69c0aa1940f10be">EmergencyRunAction</a></td></tr>
+<tr class="memdesc:a5e8d0e04633a2398c69c0aa1940f10be"><td class="mdescLeft">&#160;</td><td class="mdescRight">The emergency run action input.  <br /></td></tr>
 <tr class="separator:a5e8d0e04633a2398c69c0aa1940f10be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a323d7f529fd4f2235ed09004b89f7f5a" id="r_a323d7f529fd4f2235ed09004b89f7f5a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a323d7f529fd4f2235ed09004b89f7f5a">MovementSpeed</a> = 200.0f</td></tr>
+<tr class="memdesc:a323d7f529fd4f2235ed09004b89f7f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The movement speed of the player character.  <br /></td></tr>
 <tr class="separator:a323d7f529fd4f2235ed09004b89f7f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab75fedbdc4d1f077b37c88f556b149a9" id="r_ab75fedbdc4d1f077b37c88f556b149a9"><td class="memItemLeft" align="right" valign="top">FVector2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab75fedbdc4d1f077b37c88f556b149a9">MovementDirection</a></td></tr>
+<tr class="memdesc:ab75fedbdc4d1f077b37c88f556b149a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The movement direction of the player character.  <br /></td></tr>
 <tr class="separator:ab75fedbdc4d1f077b37c88f556b149a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4b72989ecdef24a5b16790cc56eb5dd" id="r_ac4b72989ecdef24a5b16790cc56eb5dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4b72989ecdef24a5b16790cc56eb5dd">CanMove</a> = true</td></tr>
+<tr class="memdesc:ac4b72989ecdef24a5b16790cc56eb5dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the player character can move.  <br /></td></tr>
 <tr class="separator:ac4b72989ecdef24a5b16790cc56eb5dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84bca6e8ebf0dac0cc416090f70b76a3" id="r_a84bca6e8ebf0dac0cc416090f70b76a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84bca6e8ebf0dac0cc416090f70b76a3">CanShoot</a> = true</td></tr>
+<tr class="memdesc:a84bca6e8ebf0dac0cc416090f70b76a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the player character can shoot.  <br /></td></tr>
 <tr class="separator:a84bca6e8ebf0dac0cc416090f70b76a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6adb52f8876e212534dfe01b9ad821c9" id="r_a6adb52f8876e212534dfe01b9ad821c9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6adb52f8876e212534dfe01b9ad821c9">ShootCooldownDurationInSeconds</a> = 0.3f</td></tr>
+<tr class="memdesc:a6adb52f8876e212534dfe01b9ad821c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The shoot cooldown duration in seconds.  <br /></td></tr>
 <tr class="separator:a6adb52f8876e212534dfe01b9ad821c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ab4324af7795a53dca1799383e412311b" id="r_ab4324af7795a53dca1799383e412311b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_emergency_run.html">EmergencyRun</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4324af7795a53dca1799383e412311b">_runner</a></td></tr>
+<tr class="memdesc:ab4324af7795a53dca1799383e412311b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The emergency run instance.  <br /></td></tr>
 <tr class="separator:ab4324af7795a53dca1799383e412311b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a856fa13ebbf8c3c4f8b6d21de3b1de42" id="r_a856fa13ebbf8c3c4f8b6d21de3b1de42"><td class="memItemLeft" align="right" valign="top">FTimerHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a856fa13ebbf8c3c4f8b6d21de3b1de42">ShootCooldownTimer</a></td></tr>
+<tr class="memdesc:a856fa13ebbf8c3c4f8b6d21de3b1de42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer handle for shoot cooldown.  <br /></td></tr>
 <tr class="separator:a856fa13ebbf8c3c4f8b6d21de3b1de42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c00abe69f9493fd62e227cdd96d9324" id="r_a0c00abe69f9493fd62e227cdd96d9324"><td class="memItemLeft" align="right" valign="top">FRotator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c00abe69f9493fd62e227cdd96d9324">rotation</a></td></tr>
+<tr class="memdesc:a0c00abe69f9493fd62e227cdd96d9324"><td class="mdescLeft">&#160;</td><td class="mdescRight">The rotation of the player character.  <br /></td></tr>
 <tr class="separator:a0c00abe69f9493fd62e227cdd96d9324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6abcead90d0716b9d6f00bc471d8e2bf" id="r_a6abcead90d0716b9d6f00bc471d8e2bf"><td class="memItemLeft" align="right" valign="top">TSharedPtr&lt; <a class="el" href="class_subject.html">Subject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6abcead90d0716b9d6f00bc471d8e2bf">EnemySubject</a></td></tr>
+<tr class="memdesc:a6abcead90d0716b9d6f00bc471d8e2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The enemy subject associated with the player character.  <br /></td></tr>
+<tr class="separator:a6abcead90d0716b9d6f00bc471d8e2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a5358cccda8e1202d565022bb65cb1b60" id="r_a5358cccda8e1202d565022bb65cb1b60"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5358cccda8e1202d565022bb65cb1b60">kills</a> = 0</td></tr>
+<tr class="memdesc:a5358cccda8e1202d565022bb65cb1b60"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of kills by the player.  <br /></td></tr>
+<tr class="separator:a5358cccda8e1202d565022bb65cb1b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaab650ff731ffb8c488ce8783d0dc21" id="r_afaab650ff731ffb8c488ce8783d0dc21"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaab650ff731ffb8c488ce8783d0dc21">score</a> = 0</td></tr>
+<tr class="memdesc:afaab650ff731ffb8c488ce8783d0dc21"><td class="mdescLeft">&#160;</td><td class="mdescRight">The score of the player.  <br /></td></tr>
+<tr class="separator:afaab650ff731ffb8c488ce8783d0dc21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class that represents the player character in the game. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abb20f8e63afe591271c9f6d07ffb3c32" name="abb20f8e63afe591271c9f6d07ffb3c32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb20f8e63afe591271c9f6d07ffb3c32">&#9670;&#160;</a></span>~APlayerCharacter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">APlayerCharacter::~APlayerCharacter </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
 <a id="ab19145f67d736e3576c328c6ecc80b67" name="ab19145f67d736e3576c328c6ecc80b67"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab19145f67d736e3576c328c6ecc80b67">&#9670;&#160;</a></span>APlayerCharacter()</h2>
 
@@ -208,6 +299,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Default constructor. </p>
 
 </div>
 </div>
@@ -235,6 +328,28 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called when the game starts or when spawned. </p>
+
+</div>
+</div>
+<a id="ad438cca00eea9646b2a16a93c1e3c69a" name="ad438cca00eea9646b2a16a93c1e3c69a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad438cca00eea9646b2a16a93c1e3c69a">&#9670;&#160;</a></span>GetEnemySubject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSharedPtr&lt; <a class="el" href="class_subject.html">Subject</a> &gt; APlayerCharacter::GetEnemySubject </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the enemy subject. </p>
+<dl class="section return"><dt>Returns</dt><dd>The enemy subject. </dd></dl>
+
 </div>
 </div>
 <a id="a869e600d250a50b6adc7c8c476ac3625" name="a869e600d250a50b6adc7c8c476ac3625"></a>
@@ -251,6 +366,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Called when the move action is completed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Value</td><td>The input action value. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -269,6 +392,49 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Called when the move action is triggered. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Value</td><td>The input action value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a74c0a1e025937e2661d03e0f32efba5d" name="a74c0a1e025937e2661d03e0f32efba5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74c0a1e025937e2661d03e0f32efba5d">&#9670;&#160;</a></span>OnEnemyKilled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void APlayerCharacter::OnEnemyKilled </td>
+          <td>(</td>
+          <td class="paramtype">AActor *</td>          <td class="paramname"><span class="paramname"><em>KilledActor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when an enemy is killed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">KilledActor</td><td>The actor that was killed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_observer.html#ad81edf4bc04bf80449e73abfed4458ed">Observer</a>.</p>
+
 </div>
 </div>
 <a id="adb0ce54bfe331caccd464ff45937acfe" name="adb0ce54bfe331caccd464ff45937acfe"></a>
@@ -286,10 +452,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Called when the shoot cooldown timer times out. </p>
+
 </div>
 </div>
-<a id="a12baa20bb1936874e3186ea4992f51a2" name="a12baa20bb1936874e3186ea4992f51a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12baa20bb1936874e3186ea4992f51a2">&#9670;&#160;</a></span>OverlapBegin()</h2>
+<a id="ac691d96fefd13e0683105e88bcb6b480" name="ac691d96fefd13e0683105e88bcb6b480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac691d96fefd13e0683105e88bcb6b480">&#9670;&#160;</a></span>OverlapBegin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -312,7 +480,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int32</td>          <td class="paramname"><span class="paramname"><em>OtherBodyIndex</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>OtherBodyIndex</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -322,10 +490,23 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const FHitResult &amp;</td>          <td class="paramname"><span class="paramname"><em>SweepRsult</em></span>&#160;)</td>
+          <td class="paramtype">const FHitResult &amp;</td>          <td class="paramname"><span class="paramname"><em>SweepResult</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Called when an overlap begins. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">OverlappedComponent</td><td>The component that was overlapped. </td></tr>
+    <tr><td class="paramname">OtherActor</td><td>The other actor involved in the overlap. </td></tr>
+    <tr><td class="paramname">OtherComp</td><td>The other component involved in the overlap. </td></tr>
+    <tr><td class="paramname">OtherBodyIndex</td><td>The body index of the other component. </td></tr>
+    <tr><td class="paramname">FromSweep</td><td>Whether the overlap was from a sweep. </td></tr>
+    <tr><td class="paramname">SweepResult</td><td>The result of the sweep. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -343,6 +524,39 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Performs an emergency run. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Value</td><td>The input action value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a391ead7eb16f7b73037a017fed4f4733" name="a391ead7eb16f7b73037a017fed4f4733"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a391ead7eb16f7b73037a017fed4f4733">&#9670;&#160;</a></span>SetEnemySubject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void APlayerCharacter::SetEnemySubject </td>
+          <td>(</td>
+          <td class="paramtype">TSharedPtr&lt; <a class="el" href="class_subject.html">Subject</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>InSubject</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the enemy subject. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">InSubject</td><td>The enemy subject to set. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -369,6 +583,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called to bind functionality to input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PlayerInputComponent</td><td>The input component to bind functionality to. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a0f9c1a9278df6d4a495ae0bd527a1fab" name="a0f9c1a9278df6d4a495ae0bd527a1fab"></a>
@@ -385,6 +607,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Shoots a projectile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Value</td><td>The input action value. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -411,6 +641,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called every frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DeltaTime</td><td>The time elapsed since the last frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -434,6 +672,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The emergency run instance. </p>
+
 </div>
 </div>
 <a id="a0461cc6a0b1f2da63593f70f2158cab9" name="a0461cc6a0b1f2da63593f70f2158cab9"></a>
@@ -447,6 +687,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The sprite component of the player character. </p>
 
 </div>
 </div>
@@ -462,6 +704,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The arrow spawn position component of the player character. </p>
+
 </div>
 </div>
 <a id="a13a0fc411b439b2e0cb990742ae59142" name="a13a0fc411b439b2e0cb990742ae59142"></a>
@@ -475,6 +719,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The bow parent component of the player character. </p>
 
 </div>
 </div>
@@ -490,6 +736,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The bow sprite component of the player character. </p>
+
 </div>
 </div>
 <a id="a09a3ebd30ea8c1cb306cbf3b74ecfdef" name="a09a3ebd30ea8c1cb306cbf3b74ecfdef"></a>
@@ -503,6 +751,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The camera component of the player character. </p>
 
 </div>
 </div>
@@ -518,6 +768,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Indicates whether the player character can move. </p>
+
 </div>
 </div>
 <a id="a84bca6e8ebf0dac0cc416090f70b76a3" name="a84bca6e8ebf0dac0cc416090f70b76a3"></a>
@@ -531,6 +783,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Indicates whether the player character can shoot. </p>
 
 </div>
 </div>
@@ -546,6 +800,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The capsule component of the player character. </p>
+
 </div>
 </div>
 <a id="a3cb5bb704f0761d48ee3c8aa507af5da" name="a3cb5bb704f0761d48ee3c8aa507af5da"></a>
@@ -559,6 +815,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The damage dealt by the player character. </p>
 
 </div>
 </div>
@@ -574,6 +832,32 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The emergency run action input. </p>
+
+</div>
+</div>
+<a id="a6abcead90d0716b9d6f00bc471d8e2bf" name="a6abcead90d0716b9d6f00bc471d8e2bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6abcead90d0716b9d6f00bc471d8e2bf">&#9670;&#160;</a></span>EnemySubject</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSharedPtr&lt;<a class="el" href="class_subject.html">Subject</a>&gt; APlayerCharacter::EnemySubject</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The enemy subject associated with the player character. </p>
+
 </div>
 </div>
 <a id="a3c615efca87f1d2bae4f4e6370b15611" name="a3c615efca87f1d2bae4f4e6370b15611"></a>
@@ -587,6 +871,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The health of the player character. </p>
 
 </div>
 </div>
@@ -602,6 +888,32 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The input mapping context. </p>
+
+</div>
+</div>
+<a id="a5358cccda8e1202d565022bb65cb1b60" name="a5358cccda8e1202d565022bb65cb1b60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5358cccda8e1202d565022bb65cb1b60">&#9670;&#160;</a></span>kills</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int APlayerCharacter::kills = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The number of kills by the player. </p>
+
 </div>
 </div>
 <a id="a04b9d51ea846b538c381a0bd53f37c92" name="a04b9d51ea846b538c381a0bd53f37c92"></a>
@@ -615,6 +927,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The move action input. </p>
 
 </div>
 </div>
@@ -630,6 +944,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The movement direction of the player character. </p>
+
 </div>
 </div>
 <a id="a323d7f529fd4f2235ed09004b89f7f5a" name="a323d7f529fd4f2235ed09004b89f7f5a"></a>
@@ -644,6 +960,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The movement speed of the player character. </p>
+
 </div>
 </div>
 <a id="a0c28734b018c14467db3444955e83f7c" name="a0c28734b018c14467db3444955e83f7c"></a>
@@ -657,6 +975,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The projectile actor to spawn. </p>
 
 </div>
 </div>
@@ -680,6 +1000,32 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The rotation of the player character. </p>
+
+</div>
+</div>
+<a id="afaab650ff731ffb8c488ce8783d0dc21" name="afaab650ff731ffb8c488ce8783d0dc21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaab650ff731ffb8c488ce8783d0dc21">&#9670;&#160;</a></span>score</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int APlayerCharacter::score = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The score of the player. </p>
+
 </div>
 </div>
 <a id="a2c4e209ff6fa042bec1ae28794e348c7" name="a2c4e209ff6fa042bec1ae28794e348c7"></a>
@@ -694,6 +1040,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The shoot action input. </p>
+
 </div>
 </div>
 <a id="a6adb52f8876e212534dfe01b9ad821c9" name="a6adb52f8876e212534dfe01b9ad821c9"></a>
@@ -707,6 +1055,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The shoot cooldown duration in seconds. </p>
 
 </div>
 </div>
@@ -730,6 +1080,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Timer handle for shoot cooldown. </p>
+
 </div>
 </div>
 <a id="ade64fd7fe1a70a74d0964a8d07ca70ae" name="ade64fd7fe1a70a74d0964a8d07ca70ae"></a>
@@ -743,6 +1095,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The spring arm component of the player character. </p>
 
 </div>
 </div>

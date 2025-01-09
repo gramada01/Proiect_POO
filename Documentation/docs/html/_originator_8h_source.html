@@ -106,23 +106,31 @@ $(function(){initNavTree('_originator_8h_source.html',''); initResizable(true); 
   <div class="headertitle"><div class="title">Originator.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_originator_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;UObject/NoExportTypes.h&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;Originator.generated.h&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>UCLASS()</div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_u_originator.html">   13</a></span>class ZELDA_API <a class="code hl_class" href="class_u_originator.html">UOriginator</a> : public UObject</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    GENERATED_BODY()</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
+<a href="_originator_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;UObject/NoExportTypes.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_memento_8h.html">Memento.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Originator.generated.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>UCLASS()</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_u_originator.html">   14</a></span>class ZELDA_API <a class="code hl_class" href="class_u_originator.html">UOriginator</a> : public UObject</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_class" href="class_u_memento.html">UMemento</a>* <a class="code hl_function" href="class_u_originator.html#ad07552630af5c6c1a826329168b5f74c">CreateMemento</a>(APawn* PlayerPawn, int32 PlayerKills);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_originator.html#ab915d135fb7140177efbbc211abdf68c">RestoreFromMemento</a>(<a class="code hl_class" href="class_u_memento.html">UMemento</a>* Memento, APawn* PlayerPawn, int32&amp; PlayerKills);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
 </div>
-<div class="ttc" id="aclass_u_originator_html"><div class="ttname"><a href="class_u_originator.html">UOriginator</a></div><div class="ttdef"><b>Definition</b> Originator.h:14</div></div>
+<div class="ttc" id="a_memento_8h_html"><div class="ttname"><a href="_memento_8h.html">Memento.h</a></div><div class="ttdoc">This file contains the declaration of the UMemento class which is used to store the state of the game...</div></div>
+<div class="ttc" id="aclass_u_memento_html"><div class="ttname"><a href="class_u_memento.html">UMemento</a></div><div class="ttdoc">A class that represents a memento used to store the state of the game.</div><div class="ttdef"><b>Definition</b> Memento.h:14</div></div>
+<div class="ttc" id="aclass_u_originator_html"><div class="ttname"><a href="class_u_originator.html">UOriginator</a></div><div class="ttdoc">A class that is responsible for creating and restoring mementos.</div><div class="ttdef"><b>Definition</b> Originator.h:15</div></div>
+<div class="ttc" id="aclass_u_originator_html_ab915d135fb7140177efbbc211abdf68c"><div class="ttname"><a href="class_u_originator.html#ab915d135fb7140177efbbc211abdf68c">UOriginator::RestoreFromMemento</a></div><div class="ttdeci">void RestoreFromMemento(UMemento *Memento, APawn *PlayerPawn, int32 &amp;PlayerKills)</div><div class="ttdoc">Restores the game state from a memento.</div><div class="ttdef"><b>Definition</b> Originator.cpp:23</div></div>
+<div class="ttc" id="aclass_u_originator_html_ad07552630af5c6c1a826329168b5f74c"><div class="ttname"><a href="class_u_originator.html#ad07552630af5c6c1a826329168b5f74c">UOriginator::CreateMemento</a></div><div class="ttdeci">UMemento * CreateMemento(APawn *PlayerPawn, int32 PlayerKills)</div><div class="ttdoc">Creates a memento of the current game state.</div><div class="ttdef"><b>Definition</b> Originator.cpp:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

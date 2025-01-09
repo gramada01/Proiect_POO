@@ -29,8 +29,14 @@ struct Z_Construct_UClass_AGhoul_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/// @class AGhoul\n/// @brief A class that represents a ghoul enemy in the game.\n" },
+#endif
 		{ "IncludePath", "Ghoul.h" },
 		{ "ModuleRelativePath", "Ghoul.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "@class AGhoul\n@brief A class that represents a ghoul enemy in the game." },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -79,10 +85,10 @@ AGhoul::~AGhoul() {}
 struct Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AGhoul, AGhoul::StaticClass, TEXT("AGhoul"), &Z_Registration_Info_UClass_AGhoul, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGhoul), 1366121537U) },
+		{ Z_Construct_UClass_AGhoul, AGhoul::StaticClass, TEXT("AGhoul"), &Z_Registration_Info_UClass_AGhoul, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGhoul), 1574659541U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_2497227669(TEXT("/Script/Zelda"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_378335025(TEXT("/Script/Zelda"),
 	Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Ghoul_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

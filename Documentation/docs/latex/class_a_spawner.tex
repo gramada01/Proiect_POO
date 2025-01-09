@@ -2,6 +2,11 @@
 \hypertarget{class_a_spawner}{}\label{class_a_spawner}\index{ASpawner@{ASpawner}}
 
 
+A class that is responsible for spawning enemies in the game.  
+
+
+
+
 {\ttfamily \#include $<$Spawner.\+h$>$}
 
 Inheritance diagram for ASpawner\+:\begin{figure}[H]
@@ -14,42 +19,45 @@ Inheritance diagram for ASpawner\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_a_spawner_a6ce089adb38189612d96db67621babbf}{ASpawner}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_spawner_ad2f3ec4c7fbfea9a302fc43959192aea}{Begin\+Play}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Called when the game starts or when spawned. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_a_spawner_a6f67b0457c83789137281750054ff4d8}{Tick}} (float Delta\+Time) override
-\item 
-void \mbox{\hyperlink{class_a_spawner_a82fb7649962480b2f7f4f1856b3ddcae}{Overlap\+Begin}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool From\+Sweep, const FHit\+Result \&Sweep\+Rsult)
-\item 
+\begin{DoxyCompactList}\small\item\em Called every frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_spawner_ab70577014ee6d81670e6303fb4964468}{Overlap\+Begin}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool From\+Sweep, const FHit\+Result \&Sweep\+Result)
+\begin{DoxyCompactList}\small\item\em Called when an overlap begins. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_spawner_a0af198c0471e37bdfa495fe3a991fd5e}{On\+Spawn\+Cooldown\+Timer\+Timeout}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Called when the spawn cooldown timer times out. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 UCapsule\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_spawner_af9f1528eb25b89aadce2c09858bd3a10}{Capsule\+Comp}}
-\item 
+\begin{DoxyCompactList}\small\item\em The capsule component of the spawner. \end{DoxyCompactList}\item 
 UPaper\+Sprite\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_spawner_a671434dec25274eab384523ae05d654b}{Spawner\+Sprite}}
-\item 
+\begin{DoxyCompactList}\small\item\em The sprite component of the spawner. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_a_spawner_a914f0d48b2826a6855a2e61e150ce6f0}{Number\+Of\+Enemies\+To\+Spawn}} = 3
-\item 
+\begin{DoxyCompactList}\small\item\em The number of enemies to spawn. \end{DoxyCompactList}\item 
 TSubclass\+Of$<$ \mbox{\hyperlink{class_a_enemy}{AEnemy}} $>$ \mbox{\hyperlink{class_a_spawner_ab1327bd7e90fd5aecaad27e9810fbb15}{Enemy\+To\+Spawn}}
-\item 
+\begin{DoxyCompactList}\small\item\em The enemy class to spawn. \end{DoxyCompactList}\item 
 UScene\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_spawner_aa9b1ba67880fee6f133042c5dcf2719c}{Enemy\+Spawn\+Position}}
-\item 
+\begin{DoxyCompactList}\small\item\em The enemy spawn position component. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_a_spawner_a3e1bdd651b14825e1885afe003dc3d47}{Can\+Spawn}} = false
-\item 
+\begin{DoxyCompactList}\small\item\em Indicates whether the spawner can spawn enemies. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_a_spawner_a7529712b5fa841507ff6a778be9e38b8}{Is\+Spawned}} = false
-\item 
+\begin{DoxyCompactList}\small\item\em Indicates whether the spawner has spawned enemies. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_a_spawner_a655e8d758aaaf9348265e08daf69e2cc}{Spawn\+Cooldown\+Duration\+In\+Seconds}} = 10.\+0f
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The spawn cooldown duration in seconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 FTimer\+Handle \mbox{\hyperlink{class_a_spawner_ac56e406c7d83de14ce84ec03bd62e571}{Spawn\+Cooldown\+Timer}}
-\item 
+\begin{DoxyCompactList}\small\item\em Timer handle for spawn cooldown. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_a_spawner_a71e8ae72d6f7a8af7ef38133cc1fe823}{Overlapped}} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Number of times the spawner has been overlapped. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A class that is responsible for spawning enemies in the game. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_a_spawner_a6ce089adb38189612d96db67621babbf}\index{ASpawner@{ASpawner}!ASpawner@{ASpawner}}
@@ -60,6 +68,10 @@ ASpawner\+::\+ASpawner (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
+Default constructor. 
+
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_a_spawner_ad2f3ec4c7fbfea9a302fc43959192aea}\index{ASpawner@{ASpawner}!BeginPlay@{BeginPlay}}
 \index{BeginPlay@{BeginPlay}!ASpawner@{ASpawner}}
@@ -67,24 +79,60 @@ ASpawner\+::\+ASpawner (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 {\footnotesize\ttfamily \label{class_a_spawner_ad2f3ec4c7fbfea9a302fc43959192aea} 
 void ASpawner\+::\+Begin\+Play (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
 
+
+
+Called when the game starts or when spawned. 
+
 \Hypertarget{class_a_spawner_a0af198c0471e37bdfa495fe3a991fd5e}\index{ASpawner@{ASpawner}!OnSpawnCooldownTimerTimeout@{OnSpawnCooldownTimerTimeout}}
 \index{OnSpawnCooldownTimerTimeout@{OnSpawnCooldownTimerTimeout}!ASpawner@{ASpawner}}
 \doxysubsubsection{\texorpdfstring{OnSpawnCooldownTimerTimeout()}{OnSpawnCooldownTimerTimeout()}}
 {\footnotesize\ttfamily \label{class_a_spawner_a0af198c0471e37bdfa495fe3a991fd5e} 
 void ASpawner\+::\+On\+Spawn\+Cooldown\+Timer\+Timeout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-\Hypertarget{class_a_spawner_a82fb7649962480b2f7f4f1856b3ddcae}\index{ASpawner@{ASpawner}!OverlapBegin@{OverlapBegin}}
+
+
+Called when the spawn cooldown timer times out. 
+
+\Hypertarget{class_a_spawner_ab70577014ee6d81670e6303fb4964468}\index{ASpawner@{ASpawner}!OverlapBegin@{OverlapBegin}}
 \index{OverlapBegin@{OverlapBegin}!ASpawner@{ASpawner}}
 \doxysubsubsection{\texorpdfstring{OverlapBegin()}{OverlapBegin()}}
-{\footnotesize\ttfamily \label{class_a_spawner_a82fb7649962480b2f7f4f1856b3ddcae} 
-void ASpawner\+::\+Overlap\+Begin (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int32}]{Other\+Body\+Index}{, }\item[{bool}]{From\+Sweep}{, }\item[{const FHit\+Result \&}]{Sweep\+Rsult}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_a_spawner_ab70577014ee6d81670e6303fb4964468} 
+void ASpawner\+::\+Overlap\+Begin (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int32}]{Other\+Body\+Index}{, }\item[{bool}]{From\+Sweep}{, }\item[{const FHit\+Result \&}]{Sweep\+Result}{}\end{DoxyParamCaption})}
 
+
+
+Called when an overlap begins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Overlapped\+Component} & The component that was overlapped. \\
+\hline
+{\em Other\+Actor} & The other actor involved in the overlap. \\
+\hline
+{\em Other\+Comp} & The other component involved in the overlap. \\
+\hline
+{\em Other\+Body\+Index} & The body index of the other component. \\
+\hline
+{\em From\+Sweep} & Whether the overlap was from a sweep. \\
+\hline
+{\em Sweep\+Result} & The result of the sweep. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_a_spawner_a6f67b0457c83789137281750054ff4d8}\index{ASpawner@{ASpawner}!Tick@{Tick}}
 \index{Tick@{Tick}!ASpawner@{ASpawner}}
 \doxysubsubsection{\texorpdfstring{Tick()}{Tick()}}
 {\footnotesize\ttfamily \label{class_a_spawner_a6f67b0457c83789137281750054ff4d8} 
 void ASpawner\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Called every frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Time} & The time elapsed since the last frame. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}
@@ -94,11 +142,19 @@ void ASpawner\+::\+Tick (\begin{DoxyParamCaption}\item[{float}]{Delta\+Time}{}\e
 {\footnotesize\ttfamily \label{class_a_spawner_a3e1bdd651b14825e1885afe003dc3d47} 
 bool ASpawner\+::\+Can\+Spawn = false}
 
+
+
+Indicates whether the spawner can spawn enemies. 
+
 \Hypertarget{class_a_spawner_af9f1528eb25b89aadce2c09858bd3a10}\index{ASpawner@{ASpawner}!CapsuleComp@{CapsuleComp}}
 \index{CapsuleComp@{CapsuleComp}!ASpawner@{ASpawner}}
 \doxysubsubsection{\texorpdfstring{CapsuleComp}{CapsuleComp}}
 {\footnotesize\ttfamily \label{class_a_spawner_af9f1528eb25b89aadce2c09858bd3a10} 
 UCapsule\+Component\texorpdfstring{$\ast$}{*} ASpawner\+::\+Capsule\+Comp}
+
+
+
+The capsule component of the spawner. 
 
 \Hypertarget{class_a_spawner_aa9b1ba67880fee6f133042c5dcf2719c}\index{ASpawner@{ASpawner}!EnemySpawnPosition@{EnemySpawnPosition}}
 \index{EnemySpawnPosition@{EnemySpawnPosition}!ASpawner@{ASpawner}}
@@ -106,11 +162,19 @@ UCapsule\+Component\texorpdfstring{$\ast$}{*} ASpawner\+::\+Capsule\+Comp}
 {\footnotesize\ttfamily \label{class_a_spawner_aa9b1ba67880fee6f133042c5dcf2719c} 
 UScene\+Component\texorpdfstring{$\ast$}{*} ASpawner\+::\+Enemy\+Spawn\+Position}
 
+
+
+The enemy spawn position component. 
+
 \Hypertarget{class_a_spawner_ab1327bd7e90fd5aecaad27e9810fbb15}\index{ASpawner@{ASpawner}!EnemyToSpawn@{EnemyToSpawn}}
 \index{EnemyToSpawn@{EnemyToSpawn}!ASpawner@{ASpawner}}
 \doxysubsubsection{\texorpdfstring{EnemyToSpawn}{EnemyToSpawn}}
 {\footnotesize\ttfamily \label{class_a_spawner_ab1327bd7e90fd5aecaad27e9810fbb15} 
 TSubclass\+Of$<$\mbox{\hyperlink{class_a_enemy}{AEnemy}}$>$ ASpawner\+::\+Enemy\+To\+Spawn}
+
+
+
+The enemy class to spawn. 
 
 \Hypertarget{class_a_spawner_a7529712b5fa841507ff6a778be9e38b8}\index{ASpawner@{ASpawner}!IsSpawned@{IsSpawned}}
 \index{IsSpawned@{IsSpawned}!ASpawner@{ASpawner}}
@@ -118,11 +182,19 @@ TSubclass\+Of$<$\mbox{\hyperlink{class_a_enemy}{AEnemy}}$>$ ASpawner\+::\+Enemy\
 {\footnotesize\ttfamily \label{class_a_spawner_a7529712b5fa841507ff6a778be9e38b8} 
 bool ASpawner\+::\+Is\+Spawned = false}
 
+
+
+Indicates whether the spawner has spawned enemies. 
+
 \Hypertarget{class_a_spawner_a914f0d48b2826a6855a2e61e150ce6f0}\index{ASpawner@{ASpawner}!NumberOfEnemiesToSpawn@{NumberOfEnemiesToSpawn}}
 \index{NumberOfEnemiesToSpawn@{NumberOfEnemiesToSpawn}!ASpawner@{ASpawner}}
 \doxysubsubsection{\texorpdfstring{NumberOfEnemiesToSpawn}{NumberOfEnemiesToSpawn}}
 {\footnotesize\ttfamily \label{class_a_spawner_a914f0d48b2826a6855a2e61e150ce6f0} 
 int ASpawner\+::\+Number\+Of\+Enemies\+To\+Spawn = 3}
+
+
+
+The number of enemies to spawn. 
 
 \Hypertarget{class_a_spawner_a71e8ae72d6f7a8af7ef38133cc1fe823}\index{ASpawner@{ASpawner}!Overlapped@{Overlapped}}
 \index{Overlapped@{Overlapped}!ASpawner@{ASpawner}}
@@ -130,11 +202,19 @@ int ASpawner\+::\+Number\+Of\+Enemies\+To\+Spawn = 3}
 {\footnotesize\ttfamily \label{class_a_spawner_a71e8ae72d6f7a8af7ef38133cc1fe823} 
 int ASpawner\+::\+Overlapped = 0\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Number of times the spawner has been overlapped. 
+
 \Hypertarget{class_a_spawner_a655e8d758aaaf9348265e08daf69e2cc}\index{ASpawner@{ASpawner}!SpawnCooldownDurationInSeconds@{SpawnCooldownDurationInSeconds}}
 \index{SpawnCooldownDurationInSeconds@{SpawnCooldownDurationInSeconds}!ASpawner@{ASpawner}}
 \doxysubsubsection{\texorpdfstring{SpawnCooldownDurationInSeconds}{SpawnCooldownDurationInSeconds}}
 {\footnotesize\ttfamily \label{class_a_spawner_a655e8d758aaaf9348265e08daf69e2cc} 
 float ASpawner\+::\+Spawn\+Cooldown\+Duration\+In\+Seconds = 10.\+0f}
+
+
+
+The spawn cooldown duration in seconds. 
 
 \Hypertarget{class_a_spawner_ac56e406c7d83de14ce84ec03bd62e571}\index{ASpawner@{ASpawner}!SpawnCooldownTimer@{SpawnCooldownTimer}}
 \index{SpawnCooldownTimer@{SpawnCooldownTimer}!ASpawner@{ASpawner}}
@@ -142,11 +222,19 @@ float ASpawner\+::\+Spawn\+Cooldown\+Duration\+In\+Seconds = 10.\+0f}
 {\footnotesize\ttfamily \label{class_a_spawner_ac56e406c7d83de14ce84ec03bd62e571} 
 FTimer\+Handle ASpawner\+::\+Spawn\+Cooldown\+Timer\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Timer handle for spawn cooldown. 
+
 \Hypertarget{class_a_spawner_a671434dec25274eab384523ae05d654b}\index{ASpawner@{ASpawner}!SpawnerSprite@{SpawnerSprite}}
 \index{SpawnerSprite@{SpawnerSprite}!ASpawner@{ASpawner}}
 \doxysubsubsection{\texorpdfstring{SpawnerSprite}{SpawnerSprite}}
 {\footnotesize\ttfamily \label{class_a_spawner_a671434dec25274eab384523ae05d654b} 
 UPaper\+Sprite\+Component\texorpdfstring{$\ast$}{*} ASpawner\+::\+Spawner\+Sprite}
+
+
+
+The sprite component of the spawner. 
 
 
 

@@ -35,11 +35,17 @@ struct Z_Construct_UFunction_ASpawner_OverlapBegin_Statics
 		UPrimitiveComponent* OtherComp;
 		int32 OtherBodyIndex;
 		bool FromSweep;
-		FHitResult SweepRsult;
+		FHitResult SweepResult;
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/// @brief Called when an overlap begins.\n/// @param OverlappedComponent The component that was overlapped.\n/// @param OtherActor The other actor involved in the overlap.\n/// @param OtherComp The other component involved in the overlap.\n/// @param OtherBodyIndex The body index of the other component.\n/// @param FromSweep Whether the overlap was from a sweep.\n/// @param SweepResult The result of the sweep.\n" },
+#endif
 		{ "ModuleRelativePath", "Spawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "@brief Called when an overlap begins.\n@param OverlappedComponent The component that was overlapped.\n@param OtherActor The other actor involved in the overlap.\n@param OtherComp The other component involved in the overlap.\n@param OtherBodyIndex The body index of the other component.\n@param FromSweep Whether the overlap was from a sweep.\n@param SweepResult The result of the sweep." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OverlappedComponent_MetaData[] = {
 		{ "EditInline", "true" },
@@ -47,7 +53,7 @@ struct Z_Construct_UFunction_ASpawner_OverlapBegin_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OtherComp_MetaData[] = {
 		{ "EditInline", "true" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SweepRsult_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SweepResult_MetaData[] = {
 		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
@@ -57,7 +63,7 @@ struct Z_Construct_UFunction_ASpawner_OverlapBegin_Statics
 	static const UECodeGen_Private::FIntPropertyParams NewProp_OtherBodyIndex;
 	static void NewProp_FromSweep_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_FromSweep;
-	static const UECodeGen_Private::FStructPropertyParams NewProp_SweepRsult;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_SweepResult;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
@@ -70,14 +76,14 @@ void Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::NewProp_FromSweep_SetB
 	((Spawner_eventOverlapBegin_Parms*)Obj)->FromSweep = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::NewProp_FromSweep = { "FromSweep", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(Spawner_eventOverlapBegin_Parms), &Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::NewProp_FromSweep_SetBit, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::NewProp_SweepRsult = { "SweepRsult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Spawner_eventOverlapBegin_Parms, SweepRsult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepRsult_MetaData), NewProp_SweepRsult_MetaData) }; // 4100991306
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Spawner_eventOverlapBegin_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SweepResult_MetaData), NewProp_SweepResult_MetaData) }; // 4100991306
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::NewProp_OverlappedComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::NewProp_OtherActor,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::NewProp_OtherComp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::NewProp_OtherBodyIndex,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::NewProp_FromSweep,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::NewProp_SweepRsult,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::NewProp_SweepResult,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::PropPointers) < 2048);
 const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASpawner, nullptr, "OverlapBegin", nullptr, nullptr, Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::PropPointers), sizeof(Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::Spawner_eventOverlapBegin_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASpawner_OverlapBegin_Statics::Function_MetaDataParams) };
@@ -98,10 +104,10 @@ DEFINE_FUNCTION(ASpawner::execOverlapBegin)
 	P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComp);
 	P_GET_PROPERTY(FIntProperty,Z_Param_OtherBodyIndex);
 	P_GET_UBOOL(Z_Param_FromSweep);
-	P_GET_STRUCT_REF(FHitResult,Z_Param_Out_SweepRsult);
+	P_GET_STRUCT_REF(FHitResult,Z_Param_Out_SweepResult);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->OverlapBegin(Z_Param_OverlappedComponent,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_FromSweep,Z_Param_Out_SweepRsult);
+	P_THIS->OverlapBegin(Z_Param_OverlappedComponent,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_FromSweep,Z_Param_Out_SweepResult);
 	P_NATIVE_END;
 }
 // End Class ASpawner Function OverlapBegin
@@ -124,43 +130,97 @@ struct Z_Construct_UClass_ASpawner_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/// @class ASpawner\n/// @brief A class that is responsible for spawning enemies in the game.\n" },
+#endif
 		{ "IncludePath", "Spawner.h" },
 		{ "ModuleRelativePath", "Spawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "@class ASpawner\n@brief A class that is responsible for spawning enemies in the game." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CapsuleComp_MetaData[] = {
 		{ "Category", "Spawner" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/// The capsule component of the spawner.\n" },
+#endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Spawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The capsule component of the spawner." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SpawnerSprite_MetaData[] = {
 		{ "Category", "Spawner" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/// The sprite component of the spawner.\n" },
+#endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Spawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The sprite component of the spawner." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_NumberOfEnemiesToSpawn_MetaData[] = {
 		{ "Category", "Spawner" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/// The number of enemies to spawn.\n" },
+#endif
 		{ "ModuleRelativePath", "Spawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The number of enemies to spawn." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EnemyToSpawn_MetaData[] = {
 		{ "Category", "Spawner" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/// The enemy class to spawn.\n" },
+#endif
 		{ "ModuleRelativePath", "Spawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The enemy class to spawn." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EnemySpawnPosition_MetaData[] = {
 		{ "Category", "Spawner" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/// The enemy spawn position component.\n" },
+#endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Spawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The enemy spawn position component." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CanSpawn_MetaData[] = {
 		{ "Category", "Spawner" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/// Indicates whether the spawner can spawn enemies.\n" },
+#endif
 		{ "ModuleRelativePath", "Spawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Indicates whether the spawner can spawn enemies." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IsSpawned_MetaData[] = {
 		{ "Category", "Spawner" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/// Indicates whether the spawner has spawned enemies.\n" },
+#endif
 		{ "ModuleRelativePath", "Spawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Indicates whether the spawner has spawned enemies." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SpawnCooldownDurationInSeconds_MetaData[] = {
 		{ "Category", "Spawner" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/// The spawn cooldown duration in seconds.\n" },
+#endif
 		{ "ModuleRelativePath", "Spawner.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The spawn cooldown duration in seconds." },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CapsuleComp;
@@ -176,7 +236,7 @@ struct Z_Construct_UClass_ASpawner_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ASpawner_OverlapBegin, "OverlapBegin" }, // 396434951
+		{ &Z_Construct_UFunction_ASpawner_OverlapBegin, "OverlapBegin" }, // 4601869
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -251,10 +311,10 @@ ASpawner::~ASpawner() {}
 struct Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASpawner, ASpawner::StaticClass, TEXT("ASpawner"), &Z_Registration_Info_UClass_ASpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpawner), 2853906157U) },
+		{ Z_Construct_UClass_ASpawner, ASpawner::StaticClass, TEXT("ASpawner"), &Z_Registration_Info_UClass_ASpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpawner), 2810514895U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_1945615475(TEXT("/Script/Zelda"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_1846227829(TEXT("/Script/Zelda"),
 	Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Spawner_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

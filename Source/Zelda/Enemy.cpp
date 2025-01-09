@@ -1,12 +1,12 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+/// @file Enemy.cpp
+/// @brief This file contains the implementation of the AEnemy class methods.
 
 #include "Enemy.h"
 
-// Sets default values
+/// @brief Default constructor.
 AEnemy::AEnemy() : AActor{}
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	CapsuleComp = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CapsuleComp"));
@@ -21,32 +21,36 @@ AEnemy::AEnemy() : AActor{}
 	EnemySubject = MakeShared<Subject>();
 }
 
+/// @brief Destructor.
 AEnemy::~AEnemy()
 {
 	UE_LOG(LogTemp, Warning, TEXT("AEnemy destructor called"));
 }
 
+/// @brief Attacks the player.
 void AEnemy::attack()
 {
 	int lala = 21;
 }
 
-
+/// @brief Spawns the enemy and sets the player to chase.
+/// @param WhatToChase The player character to chase.
 void AEnemy::Spawn(APlayerCharacter* WhatToChase)
 {
 	playerToChase = WhatToChase;
 	chase = true;
 }
 
-// Called when the game starts or when spawned
+/// @brief Called when the game starts or when spawned.
 void AEnemy::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 	CapsuleComp->OnComponentBeginOverlap.AddDynamic(this, &AEnemy::OverlapBegin);
 }
 
-// Called every frame
+/// @brief Called every frame.
+/// @param DeltaTime The time elapsed since the last frame.
 void AEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -55,6 +59,8 @@ void AEnemy::Tick(float DeltaTime)
 	move(DeltaTime);
 }
 
+/// @brief Moves the enemy.
+/// @param DeltaTime The time elapsed since the last frame.
 void AEnemy::move(float DeltaTime)
 {
 	if (chase)
@@ -71,16 +77,21 @@ void AEnemy::move(float DeltaTime)
 				MovementDirection.Normalize();
 
 			FVector DistanceToMove = MovementDirection * speed * DeltaTime;
-			FVector NewLocation = mauiPosition + DistanceToMove;//FVector(DistanceToMove.X, 0.0f, DistanceToMove.Y);
+			FVector NewLocation = mauiPosition + DistanceToMove;
 			SetActorLocation(NewLocation);
 		}
 	}
 }
 
-void AEnemy::OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult& SweepRsult)
+/// @brief Called when an overlap begins.
+/// @param OverlappedComponent The component that was overlapped.
+/// @param OtherActor The other actor involved in the overlap.
+/// @param OtherComp The other component involved in the overlap.
+/// @param OtherBodyIndex The body index of the other component.
+/// @param FromSweep Whether the overlap was from a sweep.
+/// @param SweepResult The result of the sweep.
+void AEnemy::OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool FromSweep, const FHitResult& SweepResult)
 {
-
-
 	try
 	{
 		CheckforProjectileAndLauncher(OtherActor);
@@ -99,12 +110,12 @@ void AEnemy::OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* Othe
 	}
 }
 
+/// @brief Checks if the other actor is a projectile or launcher.
+/// @param OtherActor The other actor to check.
 void AEnemy::CheckforProjectileAndLauncher(AActor* OtherActor)
 {
 	if (OtherActor->IsA(AProjectile::StaticClass()))
 	{
-		/*	throw ErrActorType{"The colission was not with a projectile!!!"};*/
-
 		AProjectile* Projectile = Cast<AProjectile>(OtherActor);
 		if (Projectile->WhoLaunchedMe == nullptr)
 			throw ErrNoLauncher{ "Projectile does not have a launcher!!!ROGUE PROJECTILE!!!" };
@@ -118,12 +129,10 @@ void AEnemy::CheckforProjectileAndLauncher(AActor* OtherActor)
 
 		Health = Health - Player->Damage;
 		Projectile->Destroy();
-
 	}
-		
-	
 }
 
+/// @brief Checks if the enemy is dead.
 void AEnemy::CheckIfDead()
 {
 	if (Health <= 0.0f)
@@ -136,4 +145,5 @@ void AEnemy::CheckIfDead()
 		Destroy();
 	}
 }
+
 

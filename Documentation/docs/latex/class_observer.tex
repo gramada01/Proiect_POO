@@ -2,16 +2,32 @@
 \hypertarget{class_observer}{}\label{class_observer}\index{Observer@{Observer}}
 
 
+A class that defines an interface for observing enemy kills.  
+
+
+
+
 {\ttfamily \#include $<$Observer.\+h$>$}
 
+Inheritance diagram for Observer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_observer}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_observer_a19c43f80a38a332a6f694783df3c9835}{Observer}} ()
-\item 
-\mbox{\hyperlink{class_observer_a450645e61c136826f09940a1334c7f34}{\texorpdfstring{$\sim$}{\string~}\+Observer}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_observer_a450645e61c136826f09940a1334c7f34}{\texorpdfstring{$\sim$}{\string~}\+Observer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_observer_ad81edf4bc04bf80449e73abfed4458ed}{On\+Enemy\+Killed}} (AActor \texorpdfstring{$\ast$}{*}Killed\+Actor)=0
+\begin{DoxyCompactList}\small\item\em Called when an enemy is killed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A class that defines an interface for observing enemy kills. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_observer_a19c43f80a38a332a6f694783df3c9835}\index{Observer@{Observer}!Observer@{Observer}}
@@ -20,11 +36,41 @@
 {\footnotesize\ttfamily \label{class_observer_a19c43f80a38a332a6f694783df3c9835} 
 Observer\+::\+Observer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Default constructor. 
+
 \Hypertarget{class_observer_a450645e61c136826f09940a1334c7f34}\index{Observer@{Observer}!````~Observer@{\texorpdfstring{$\sim$}{\string~}Observer}}
 \index{````~Observer@{\texorpdfstring{$\sim$}{\string~}Observer}!Observer@{Observer}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Observer()}{\string~Observer()}}
 {\footnotesize\ttfamily \label{class_observer_a450645e61c136826f09940a1334c7f34} 
-Observer\+::\texorpdfstring{$\sim$}{\string~}\+Observer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+Observer\+::\texorpdfstring{$\sim$}{\string~}\+Observer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_observer_ad81edf4bc04bf80449e73abfed4458ed}\index{Observer@{Observer}!OnEnemyKilled@{OnEnemyKilled}}
+\index{OnEnemyKilled@{OnEnemyKilled}!Observer@{Observer}}
+\doxysubsubsection{\texorpdfstring{OnEnemyKilled()}{OnEnemyKilled()}}
+{\footnotesize\ttfamily \label{class_observer_ad81edf4bc04bf80449e73abfed4458ed} 
+virtual void Observer\+::\+On\+Enemy\+Killed (\begin{DoxyParamCaption}\item[{AActor \texorpdfstring{$\ast$}{*}}]{Killed\+Actor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Called when an enemy is killed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Killed\+Actor} & The actor that was killed. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_a_player_character_a74c0a1e025937e2661d03e0f32efba5d}{APlayer\+Character}}.
 
 
 

@@ -1,10 +1,11 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+/// @file MyHUD.cpp
+/// @brief This file contains the implementation of the AMyHUD class methods.
 
 #include "MyHUD.h"
 #include "Engine/Canvas.h"
 #include "Engine/Font.h"
 
+/// @brief Draws the HUD.
 void AMyHUD::DrawHUD()
 {
     Super::DrawHUD();
@@ -27,7 +28,9 @@ void AMyHUD::DrawHUD()
     }
 }
 
+/// @brief Sets the number of player kills.
+/// @param Kills The number of kills to set.
 void AMyHUD::SetPlayerKills(int Kills)
 {
-	PlayerKills = Kills;
+    PlayerKills = Kills;
 }

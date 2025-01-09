@@ -2,35 +2,43 @@
 \hypertarget{class_emergency_run}{}\label{class_emergency_run}\index{EmergencyRun@{EmergencyRun}}
 
 
+A class that handles the logic for emergency running.  
+
+
+
+
 {\ttfamily \#include $<$Emergency\+Run.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_emergency_run_ab9b40bb78db8b292cfba11b49eb16f82}{Emergency\+Run}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_emergency_run_ae392594c5c31d30c4149a30b25f11a43}{Emergency\+Run}} (APawn \texorpdfstring{$\ast$}{*}pawn, int speed, int steps)
-\item 
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_emergency_run_abd553fe90b38b632d44c78790f527e91}{do\+Step}} (float delta\+Time) const
-\item 
+\begin{DoxyCompactList}\small\item\em Performs a step in the emergency run. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_emergency_run_af5e329fa0634e88dae0501f3f274f3c8}{get\+Speed}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Gets the speed of the run. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_emergency_run_ac3b5e2df7a7dd234d1e7ccae7ab3a182}{start\+Running}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Starts the emergency run. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_emergency_run_a58689441a478f0899b62a86f76106e78}{is\+Running}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if the run is currently in progress. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_emergency_run_aa76c3b929baa7014024a2aa5a78af066}{\+\_\+speed}}
-\item 
+\begin{DoxyCompactList}\small\item\em The speed of the emergency run. \end{DoxyCompactList}\item 
 APawn \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_emergency_run_a9f3bbb177b4b3e036dbe4b29975864e3}{\+\_\+pawn}}
-\item 
+\begin{DoxyCompactList}\small\item\em The pawn that is running. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_emergency_run_a7909e4f810e9109f83a23565ecf6db02}{\+\_\+current\+Step}} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em The current step of the run. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_emergency_run_ab66984c636ee1f70cd5643dc705a20ac}{\+\_\+steps}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The total number of steps for the run. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A class that handles the logic for emergency running. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_emergency_run_ab9b40bb78db8b292cfba11b49eb16f82}\index{EmergencyRun@{EmergencyRun}!EmergencyRun@{EmergencyRun}}
@@ -38,6 +46,10 @@ int \mbox{\hyperlink{class_emergency_run_ab66984c636ee1f70cd5643dc705a20ac}{\+\_
 \doxysubsubsection{\texorpdfstring{EmergencyRun()}{EmergencyRun()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{class_emergency_run_ab9b40bb78db8b292cfba11b49eb16f82} 
 Emergency\+Run\+::\+Emergency\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
 
 \Hypertarget{class_emergency_run_ae392594c5c31d30c4149a30b25f11a43}\index{EmergencyRun@{EmergencyRun}!EmergencyRun@{EmergencyRun}}
 \index{EmergencyRun@{EmergencyRun}!EmergencyRun@{EmergencyRun}}
@@ -47,6 +59,19 @@ Emergency\+Run\+::\+Emergency\+Run (\begin{DoxyParamCaption}\item[{APawn \texorp
 
 
 
+Parameterized constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pawn} & The pawn that is running. \\
+\hline
+{\em speed} & The speed of the run. \\
+\hline
+{\em steps} & The total number of steps for the run. \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_emergency_run_abd553fe90b38b632d44c78790f527e91}\index{EmergencyRun@{EmergencyRun}!doStep@{doStep}}
 \index{doStep@{doStep}!EmergencyRun@{EmergencyRun}}
@@ -54,23 +79,52 @@ Emergency\+Run\+::\+Emergency\+Run (\begin{DoxyParamCaption}\item[{APawn \texorp
 {\footnotesize\ttfamily \label{class_emergency_run_abd553fe90b38b632d44c78790f527e91} 
 void Emergency\+Run\+::do\+Step (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption}) const}
 
+
+
+Performs a step in the emergency run. 
+
+Performs a step in the emergency run. Chooses a random direction and speed amplifier for the step and then does the step.
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & The time elapsed since the last step. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_emergency_run_af5e329fa0634e88dae0501f3f274f3c8}\index{EmergencyRun@{EmergencyRun}!getSpeed@{getSpeed}}
 \index{getSpeed@{getSpeed}!EmergencyRun@{EmergencyRun}}
 \doxysubsubsection{\texorpdfstring{getSpeed()}{getSpeed()}}
 {\footnotesize\ttfamily \label{class_emergency_run_af5e329fa0634e88dae0501f3f274f3c8} 
 int Emergency\+Run\+::get\+Speed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Gets the speed of the run. 
+
+\begin{DoxyReturn}{Returns}
+The speed of the run. 
+\end{DoxyReturn}
 \Hypertarget{class_emergency_run_a58689441a478f0899b62a86f76106e78}\index{EmergencyRun@{EmergencyRun}!isRunning@{isRunning}}
 \index{isRunning@{isRunning}!EmergencyRun@{EmergencyRun}}
 \doxysubsubsection{\texorpdfstring{isRunning()}{isRunning()}}
 {\footnotesize\ttfamily \label{class_emergency_run_a58689441a478f0899b62a86f76106e78} 
 bool Emergency\+Run\+::is\+Running (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Checks if the run is currently in progress. 
+
+\begin{DoxyReturn}{Returns}
+True if the run is in progress, false otherwise. 
+\end{DoxyReturn}
 \Hypertarget{class_emergency_run_ac3b5e2df7a7dd234d1e7ccae7ab3a182}\index{EmergencyRun@{EmergencyRun}!startRunning@{startRunning}}
 \index{startRunning@{startRunning}!EmergencyRun@{EmergencyRun}}
 \doxysubsubsection{\texorpdfstring{startRunning()}{startRunning()}}
 {\footnotesize\ttfamily \label{class_emergency_run_ac3b5e2df7a7dd234d1e7ccae7ab3a182} 
 void Emergency\+Run\+::start\+Running (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts the emergency run. 
 
 
 
@@ -81,11 +135,19 @@ void Emergency\+Run\+::start\+Running (\begin{DoxyParamCaption}{}{}\end{DoxyPara
 {\footnotesize\ttfamily \label{class_emergency_run_a7909e4f810e9109f83a23565ecf6db02} 
 int Emergency\+Run\+::\+\_\+current\+Step = 0\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
 
+
+
+The current step of the run. 
+
 \Hypertarget{class_emergency_run_a9f3bbb177b4b3e036dbe4b29975864e3}\index{EmergencyRun@{EmergencyRun}!\_pawn@{\_pawn}}
 \index{\_pawn@{\_pawn}!EmergencyRun@{EmergencyRun}}
 \doxysubsubsection{\texorpdfstring{\_pawn}{\_pawn}}
 {\footnotesize\ttfamily \label{class_emergency_run_a9f3bbb177b4b3e036dbe4b29975864e3} 
 APawn\texorpdfstring{$\ast$}{*} Emergency\+Run\+::\+\_\+pawn\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+The pawn that is running. 
 
 \Hypertarget{class_emergency_run_aa76c3b929baa7014024a2aa5a78af066}\index{EmergencyRun@{EmergencyRun}!\_speed@{\_speed}}
 \index{\_speed@{\_speed}!EmergencyRun@{EmergencyRun}}
@@ -93,11 +155,19 @@ APawn\texorpdfstring{$\ast$}{*} Emergency\+Run\+::\+\_\+pawn\hspace{0.3cm}{\ttfa
 {\footnotesize\ttfamily \label{class_emergency_run_aa76c3b929baa7014024a2aa5a78af066} 
 int Emergency\+Run\+::\+\_\+speed\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+The speed of the emergency run. 
+
 \Hypertarget{class_emergency_run_ab66984c636ee1f70cd5643dc705a20ac}\index{EmergencyRun@{EmergencyRun}!\_steps@{\_steps}}
 \index{\_steps@{\_steps}!EmergencyRun@{EmergencyRun}}
 \doxysubsubsection{\texorpdfstring{\_steps}{\_steps}}
 {\footnotesize\ttfamily \label{class_emergency_run_ab66984c636ee1f70cd5643dc705a20ac} 
 int Emergency\+Run\+::\+\_\+steps\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The total number of steps for the run. 
 
 
 

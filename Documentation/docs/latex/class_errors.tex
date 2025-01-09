@@ -2,6 +2,11 @@
 \hypertarget{class_errors}{}\label{class_errors}\index{Errors@{Errors}}
 
 
+Base class for custom errors in the \doxylink{class_zelda}{Zelda} project.  
+
+
+
+
 {\ttfamily \#include $<$Errors.\+h$>$}
 
 Inheritance diagram for Errors\+:\begin{figure}[H]
@@ -14,19 +19,22 @@ Inheritance diagram for Errors\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_errors_aa266bfe6d658cd3e169b18277b902e56}{Errors}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_errors_aee5ec5a7e0529c560e165adc5093fc87}{Errors}} (std\+::string msg)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor with a custom message. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_errors_ae7e127294d7af8814b4141eb82cdf80e}{\texorpdfstring{$\sim$}{\string~}\+Errors}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_errors_afed158318501890c617c04a9ec2aa9f4}{get\+\_\+message}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets the error message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\+::string \mbox{\hyperlink{class_errors_a501df66cf01ec7aaeaa0fe297937563f}{message}} = "{}No Launcher!!!"{}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The error message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Base class for custom errors in the \doxylink{class_zelda}{Zelda} project. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_errors_aa266bfe6d658cd3e169b18277b902e56}\index{Errors@{Errors}!Errors@{Errors}}
@@ -35,17 +43,34 @@ std\+::string \mbox{\hyperlink{class_errors_a501df66cf01ec7aaeaa0fe297937563f}{m
 {\footnotesize\ttfamily \label{class_errors_aa266bfe6d658cd3e169b18277b902e56} 
 Errors\+::\+Errors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Default constructor. 
+
 \Hypertarget{class_errors_aee5ec5a7e0529c560e165adc5093fc87}\index{Errors@{Errors}!Errors@{Errors}}
 \index{Errors@{Errors}!Errors@{Errors}}
 \doxysubsubsection{\texorpdfstring{Errors()}{Errors()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \label{class_errors_aee5ec5a7e0529c560e165adc5093fc87} 
 Errors\+::\+Errors (\begin{DoxyParamCaption}\item[{std\+::string}]{msg}{}\end{DoxyParamCaption})}
 
+
+
+Constructor with a custom message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The custom error message. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_errors_ae7e127294d7af8814b4141eb82cdf80e}\index{Errors@{Errors}!````~Errors@{\texorpdfstring{$\sim$}{\string~}Errors}}
 \index{````~Errors@{\texorpdfstring{$\sim$}{\string~}Errors}!Errors@{Errors}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Errors()}{\string~Errors()}}
 {\footnotesize\ttfamily \label{class_errors_ae7e127294d7af8814b4141eb82cdf80e} 
 Errors\+::\texorpdfstring{$\sim$}{\string~}\+Errors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor. 
 
 
 
@@ -58,12 +83,23 @@ std\+::string Errors\+::get\+\_\+message (\begin{DoxyParamCaption}{}{}\end{DoxyP
 
 
 
+Gets the error message. 
+
+\begin{DoxyReturn}{Returns}
+The error message. 
+\end{DoxyReturn}
+
+
 \doxysubsection{Member Data Documentation}
 \Hypertarget{class_errors_a501df66cf01ec7aaeaa0fe297937563f}\index{Errors@{Errors}!message@{message}}
 \index{message@{message}!Errors@{Errors}}
 \doxysubsubsection{\texorpdfstring{message}{message}}
 {\footnotesize\ttfamily \label{class_errors_a501df66cf01ec7aaeaa0fe297937563f} 
 std\+::string Errors\+::message = "{}No Launcher!!!"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The error message. 
 
 
 

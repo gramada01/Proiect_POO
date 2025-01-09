@@ -2,17 +2,29 @@
 \hypertarget{_subject_8h_source}{}\label{_subject_8h_source}\index{C:/Users/matei/OneDrive/Bureau/POO/Proiect\_POO/Source/Zelda/Subject.h@{C:/Users/matei/OneDrive/Bureau/POO/Proiect\_POO/Source/Zelda/Subject.h}}
 \mbox{\hyperlink{_subject_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }ZELDA\_API\ \mbox{\hyperlink{class_subject_ab468044832c824c6d6c2f46272655207}{Subject}}}
-\DoxyCodeLine{00011\ \{}
-\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_subject_ab468044832c824c6d6c2f46272655207}{Subject}}();}
-\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_subject_ab468044832c824c6d6c2f46272655207}{\string~Subject}}();}
-\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_observer_8h}{Observer.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }ZELDA\_API\ \mbox{\hyperlink{class_subject_ab468044832c824c6d6c2f46272655207}{Subject}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ std::vector<Observer*>\ \mbox{\hyperlink{class_subject_a39d24e695db0a792799b351dbebde992}{observers}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_subject_ab468044832c824c6d6c2f46272655207}{Subject}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_subject_ab468044832c824c6d6c2f46272655207}{\string~Subject}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_subject_a5e45ff51c8f2916c26e1409dbff97d0f}{Attach}}(\mbox{\hyperlink{class_observer}{Observer}}*\ observer);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_subject_a966ba14fc93df8419f0cef3eaa5b4b42}{Detach}}(\mbox{\hyperlink{class_observer}{Observer}}*\ observer);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_subject_aa62351e3ba63b05ade897044f96bda49}{Notify}}(AActor*\ KilledActor);}
+\DoxyCodeLine{00036\ \};}
 
 \end{DoxyCode}

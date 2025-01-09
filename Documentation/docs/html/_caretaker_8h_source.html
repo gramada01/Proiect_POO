@@ -106,23 +106,35 @@ $(function(){initNavTree('_caretaker_8h_source.html',''); initResizable(true); }
   <div class="headertitle"><div class="title">Caretaker.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_caretaker_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;UObject/NoExportTypes.h&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;Caretaker.generated.h&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>UCLASS()</div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_u_caretaker.html">   13</a></span>class ZELDA_API <a class="code hl_class" href="class_u_caretaker.html">UCaretaker</a> : public UObject</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    GENERATED_BODY()</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
+<a href="_caretaker_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;UObject/NoExportTypes.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_memento_8h.html">Memento.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Caretaker.generated.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>UCLASS()</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_u_caretaker.html">   16</a></span>class ZELDA_API <a class="code hl_class" href="class_u_caretaker.html">UCaretaker</a> : public UObject</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_caretaker.html#a7f2e5b25af72aa1369efd4fcee5e5536">SaveMemento</a>(<a class="code hl_class" href="class_u_memento.html">UMemento</a>* Memento);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_class" href="class_u_memento.html">UMemento</a>* <a class="code hl_function" href="class_u_caretaker.html#a828a54151336924efac704516c45ac72">LoadMemento</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    UPROPERTY()</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_u_caretaker.html#aabfb022ffc1c11eeb317a654c322c914">   34</a></span>    <a class="code hl_class" href="class_u_memento.html">UMemento</a>* <a class="code hl_variable" href="class_u_caretaker.html#aabfb022ffc1c11eeb317a654c322c914">SavedMemento</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
 </div>
-<div class="ttc" id="aclass_u_caretaker_html"><div class="ttname"><a href="class_u_caretaker.html">UCaretaker</a></div><div class="ttdef"><b>Definition</b> Caretaker.h:14</div></div>
+<div class="ttc" id="a_memento_8h_html"><div class="ttname"><a href="_memento_8h.html">Memento.h</a></div><div class="ttdoc">This file contains the declaration of the UMemento class which is used to store the state of the game...</div></div>
+<div class="ttc" id="aclass_u_caretaker_html"><div class="ttname"><a href="class_u_caretaker.html">UCaretaker</a></div><div class="ttdoc">A class that acts as a caretaker for mementos, allowing them to be saved and loaded.</div><div class="ttdef"><b>Definition</b> Caretaker.h:17</div></div>
+<div class="ttc" id="aclass_u_caretaker_html_a7f2e5b25af72aa1369efd4fcee5e5536"><div class="ttname"><a href="class_u_caretaker.html#a7f2e5b25af72aa1369efd4fcee5e5536">UCaretaker::SaveMemento</a></div><div class="ttdeci">void SaveMemento(UMemento *Memento)</div><div class="ttdoc">Saves a memento.</div><div class="ttdef"><b>Definition</b> Caretaker.cpp:8</div></div>
+<div class="ttc" id="aclass_u_caretaker_html_a828a54151336924efac704516c45ac72"><div class="ttname"><a href="class_u_caretaker.html#a828a54151336924efac704516c45ac72">UCaretaker::LoadMemento</a></div><div class="ttdeci">UMemento * LoadMemento()</div><div class="ttdoc">Loads the saved memento.</div><div class="ttdef"><b>Definition</b> Caretaker.cpp:15</div></div>
+<div class="ttc" id="aclass_u_caretaker_html_aabfb022ffc1c11eeb317a654c322c914"><div class="ttname"><a href="class_u_caretaker.html#aabfb022ffc1c11eeb317a654c322c914">UCaretaker::SavedMemento</a></div><div class="ttdeci">UMemento * SavedMemento</div><div class="ttdoc">The saved memento.</div><div class="ttdef"><b>Definition</b> Caretaker.h:34</div></div>
+<div class="ttc" id="aclass_u_memento_html"><div class="ttname"><a href="class_u_memento.html">UMemento</a></div><div class="ttdoc">A class that represents a memento used to store the state of the game.</div><div class="ttdef"><b>Definition</b> Memento.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

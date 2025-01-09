@@ -19,6 +19,7 @@ var hierarchy =
       [ "APlayerCharacter", "class_a_player_character.html", null ]
     ] ],
     [ "EmergencyRun", "class_emergency_run.html", null ],
+    [ "EnemyType< T >", "class_enemy_type.html", null ],
     [ "std::exception", null, [
       [ "Errors", "class_errors.html", [
         [ "ErrActorNotExist", "class_err_actor_not_exist.html", null ],
@@ -29,7 +30,9 @@ var hierarchy =
     [ "ModuleRules", null, [
       [ "Zelda", "class_zelda.html", null ]
     ] ],
-    [ "Observer", "class_observer.html", null ],
+    [ "Observer", "class_observer.html", [
+      [ "APlayerCharacter", "class_a_player_character.html", null ]
+    ] ],
     [ "Subject", "class_subject.html", null ],
     [ "UObject", null, [
       [ "UCaretaker", "class_u_caretaker.html", null ],

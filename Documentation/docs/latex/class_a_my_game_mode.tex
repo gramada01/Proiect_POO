@@ -2,6 +2,11 @@
 \hypertarget{class_a_my_game_mode}{}\label{class_a_my_game_mode}\index{AMyGameMode@{AMyGameMode}}
 
 
+A class that manages the game mode logic.  
+
+
+
+
 {\ttfamily \#include $<$My\+Game\+Mode.\+h$>$}
 
 Inheritance diagram for AMy\+Game\+Mode\+:\begin{figure}[H]
@@ -13,27 +18,101 @@ Inheritance diagram for AMy\+Game\+Mode\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_a_my_game_mode_a096f8cece8cf6f87a449be023c2a2a07}{AMy\+Game\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_my_game_mode_ab2c25c3d6318750c63010ac0faf2956e}{Reset\+Level}} (bool Is\+Win)
-\item 
+\begin{DoxyCompactList}\small\item\em Resets the level. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_my_game_mode_ac5ea3f1ab9b49cf9e530170ae3853af3}{On\+Reset\+Game\+Timer\+Time\+Out}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Called when the reset game timer times out. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_a_my_game_mode_aab567b3ecbb36aaefddd2508a75061da}{Begin\+Play}} () override
+\begin{DoxyCompactList}\small\item\em Called when the game starts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_my_game_mode_a9357e87e11a7e720f3276816cc63a085}{End\+Play}} (const EEnd\+Play\+Reason\+::\+Type End\+Play\+Reason)
+\begin{DoxyCompactList}\small\item\em Called when the game ends. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_my_game_mode_a454cd7a19f6015b37a84cf450d7fdd80}{Set\+Kills}} (int k)
+\begin{DoxyCompactList}\small\item\em Sets the number of player kills. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_my_game_mode_aba46a088b2498c74de91561e3b55a83a}{Save\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Saves the game state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_my_game_mode_a125a2a1fd997833d4219b81cbe48b821}{Load\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Loads the game state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{class_a_my_game_mode_aadf4609ec678c8b59b75b9a75718dee4}{Lose\+Reset\+Time}} = 1.\+0f
-\item 
-float \mbox{\hyperlink{class_a_my_game_mode_acb1edb4378a7cc236044606d40e22390}{Win\+Reset\+Time}} = 3.\+0f
-\item 
+\begin{DoxyCompactList}\small\item\em The time to reset the game after losing. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_a_my_game_mode_acb1edb4378a7cc236044606d40e22390}{Win\+Reset\+Time}} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em The time to reset the game after winning. \end{DoxyCompactList}\item 
 FTimer\+Handle \mbox{\hyperlink{class_a_my_game_mode_a97421eda2ab19b356ada80f7982fce9d}{Reset\+Game\+Timer}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Timer handle for resetting the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_a_my_game_mode_a9508b6837d2a3bfa6155384dde149e9b}{Player\+Kills}}
+\begin{DoxyCompactList}\small\item\em The number of player kills. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_a_my_h_u_d}{AMy\+HUD}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_my_game_mode_a0d9da622f72fb75aacdb139053f7c785}{My\+HUD}}
+\begin{DoxyCompactList}\small\item\em The HUD instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that manages the game mode logic. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_a_my_game_mode_a096f8cece8cf6f87a449be023c2a2a07}\index{AMyGameMode@{AMyGameMode}!AMyGameMode@{AMyGameMode}}
+\index{AMyGameMode@{AMyGameMode}!AMyGameMode@{AMyGameMode}}
+\doxysubsubsection{\texorpdfstring{AMyGameMode()}{AMyGameMode()}}
+{\footnotesize\ttfamily \label{class_a_my_game_mode_a096f8cece8cf6f87a449be023c2a2a07} 
+AMy\+Game\+Mode\+::\+AMy\+Game\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_a_my_game_mode_ac5ea3f1ab9b49cf9e530170ae3853af3}\index{AMyGameMode@{AMyGameMode}!OnResetGameTimerTimeOut@{OnResetGameTimerTimeOut}}
+\Hypertarget{class_a_my_game_mode_aab567b3ecbb36aaefddd2508a75061da}\index{AMyGameMode@{AMyGameMode}!BeginPlay@{BeginPlay}}
+\index{BeginPlay@{BeginPlay}!AMyGameMode@{AMyGameMode}}
+\doxysubsubsection{\texorpdfstring{BeginPlay()}{BeginPlay()}}
+{\footnotesize\ttfamily \label{class_a_my_game_mode_aab567b3ecbb36aaefddd2508a75061da} 
+void AMy\+Game\+Mode\+::\+Begin\+Play (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when the game starts. 
+
+\Hypertarget{class_a_my_game_mode_a9357e87e11a7e720f3276816cc63a085}\index{AMyGameMode@{AMyGameMode}!EndPlay@{EndPlay}}
+\index{EndPlay@{EndPlay}!AMyGameMode@{AMyGameMode}}
+\doxysubsubsection{\texorpdfstring{EndPlay()}{EndPlay()}}
+{\footnotesize\ttfamily \label{class_a_my_game_mode_a9357e87e11a7e720f3276816cc63a085} 
+void AMy\+Game\+Mode\+::\+End\+Play (\begin{DoxyParamCaption}\item[{const EEnd\+Play\+Reason\+::\+Type}]{End\+Play\+Reason}{}\end{DoxyParamCaption})}
+
+
+
+Called when the game ends. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em End\+Play\+Reason} & The reason the game ended. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_my_game_mode_a125a2a1fd997833d4219b81cbe48b821}\index{AMyGameMode@{AMyGameMode}!LoadGame@{LoadGame}}
+\index{LoadGame@{LoadGame}!AMyGameMode@{AMyGameMode}}
+\doxysubsubsection{\texorpdfstring{LoadGame()}{LoadGame()}}
+{\footnotesize\ttfamily \label{class_a_my_game_mode_a125a2a1fd997833d4219b81cbe48b821} 
+void AMy\+Game\+Mode\+::\+Load\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Loads the game state. 
+
+Loads the game state. This method loads the saved game state from the caretaker and restores it using the originator. \Hypertarget{class_a_my_game_mode_ac5ea3f1ab9b49cf9e530170ae3853af3}\index{AMyGameMode@{AMyGameMode}!OnResetGameTimerTimeOut@{OnResetGameTimerTimeOut}}
 \index{OnResetGameTimerTimeOut@{OnResetGameTimerTimeOut}!AMyGameMode@{AMyGameMode}}
 \doxysubsubsection{\texorpdfstring{OnResetGameTimerTimeOut()}{OnResetGameTimerTimeOut()}}
 {\footnotesize\ttfamily \label{class_a_my_game_mode_ac5ea3f1ab9b49cf9e530170ae3853af3} 
 void AMy\+Game\+Mode\+::\+On\+Reset\+Game\+Timer\+Time\+Out (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Called when the reset game timer times out. 
 
 \Hypertarget{class_a_my_game_mode_ab2c25c3d6318750c63010ac0faf2956e}\index{AMyGameMode@{AMyGameMode}!ResetLevel@{ResetLevel}}
 \index{ResetLevel@{ResetLevel}!AMyGameMode@{AMyGameMode}}
@@ -43,6 +122,40 @@ void AMy\+Game\+Mode\+::\+Reset\+Level (\begin{DoxyParamCaption}\item[{bool}]{Is
 
 
 
+Resets the level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Is\+Win} & Indicates whether the reset is due to a win. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_my_game_mode_aba46a088b2498c74de91561e3b55a83a}\index{AMyGameMode@{AMyGameMode}!SaveGame@{SaveGame}}
+\index{SaveGame@{SaveGame}!AMyGameMode@{AMyGameMode}}
+\doxysubsubsection{\texorpdfstring{SaveGame()}{SaveGame()}}
+{\footnotesize\ttfamily \label{class_a_my_game_mode_aba46a088b2498c74de91561e3b55a83a} 
+void AMy\+Game\+Mode\+::\+Save\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Saves the game state. 
+
+Saves the game state. This method creates a memento of the current game state and saves it using the caretaker. \Hypertarget{class_a_my_game_mode_a454cd7a19f6015b37a84cf450d7fdd80}\index{AMyGameMode@{AMyGameMode}!SetKills@{SetKills}}
+\index{SetKills@{SetKills}!AMyGameMode@{AMyGameMode}}
+\doxysubsubsection{\texorpdfstring{SetKills()}{SetKills()}}
+{\footnotesize\ttfamily \label{class_a_my_game_mode_a454cd7a19f6015b37a84cf450d7fdd80} 
+void AMy\+Game\+Mode\+::\+Set\+Kills (\begin{DoxyParamCaption}\item[{int}]{k}{}\end{DoxyParamCaption})}
+
+
+
+Sets the number of player kills. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The number of kills to set. \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Data Documentation}
 \Hypertarget{class_a_my_game_mode_aadf4609ec678c8b59b75b9a75718dee4}\index{AMyGameMode@{AMyGameMode}!LoseResetTime@{LoseResetTime}}
 \index{LoseResetTime@{LoseResetTime}!AMyGameMode@{AMyGameMode}}
@@ -50,17 +163,49 @@ void AMy\+Game\+Mode\+::\+Reset\+Level (\begin{DoxyParamCaption}\item[{bool}]{Is
 {\footnotesize\ttfamily \label{class_a_my_game_mode_aadf4609ec678c8b59b75b9a75718dee4} 
 float AMy\+Game\+Mode\+::\+Lose\+Reset\+Time = 1.\+0f}
 
+
+
+The time to reset the game after losing. 
+
+\Hypertarget{class_a_my_game_mode_a0d9da622f72fb75aacdb139053f7c785}\index{AMyGameMode@{AMyGameMode}!MyHUD@{MyHUD}}
+\index{MyHUD@{MyHUD}!AMyGameMode@{AMyGameMode}}
+\doxysubsubsection{\texorpdfstring{MyHUD}{MyHUD}}
+{\footnotesize\ttfamily \label{class_a_my_game_mode_a0d9da622f72fb75aacdb139053f7c785} 
+class \mbox{\hyperlink{class_a_my_h_u_d}{AMy\+HUD}}\texorpdfstring{$\ast$}{*} AMy\+Game\+Mode\+::\+My\+HUD\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The HUD instance. 
+
+\Hypertarget{class_a_my_game_mode_a9508b6837d2a3bfa6155384dde149e9b}\index{AMyGameMode@{AMyGameMode}!PlayerKills@{PlayerKills}}
+\index{PlayerKills@{PlayerKills}!AMyGameMode@{AMyGameMode}}
+\doxysubsubsection{\texorpdfstring{PlayerKills}{PlayerKills}}
+{\footnotesize\ttfamily \label{class_a_my_game_mode_a9508b6837d2a3bfa6155384dde149e9b} 
+int AMy\+Game\+Mode\+::\+Player\+Kills\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The number of player kills. 
+
 \Hypertarget{class_a_my_game_mode_a97421eda2ab19b356ada80f7982fce9d}\index{AMyGameMode@{AMyGameMode}!ResetGameTimer@{ResetGameTimer}}
 \index{ResetGameTimer@{ResetGameTimer}!AMyGameMode@{AMyGameMode}}
 \doxysubsubsection{\texorpdfstring{ResetGameTimer}{ResetGameTimer}}
 {\footnotesize\ttfamily \label{class_a_my_game_mode_a97421eda2ab19b356ada80f7982fce9d} 
 FTimer\+Handle AMy\+Game\+Mode\+::\+Reset\+Game\+Timer}
 
+
+
+Timer handle for resetting the game. 
+
 \Hypertarget{class_a_my_game_mode_acb1edb4378a7cc236044606d40e22390}\index{AMyGameMode@{AMyGameMode}!WinResetTime@{WinResetTime}}
 \index{WinResetTime@{WinResetTime}!AMyGameMode@{AMyGameMode}}
 \doxysubsubsection{\texorpdfstring{WinResetTime}{WinResetTime}}
 {\footnotesize\ttfamily \label{class_a_my_game_mode_acb1edb4378a7cc236044606d40e22390} 
-float AMy\+Game\+Mode\+::\+Win\+Reset\+Time = 3.\+0f}
+float AMy\+Game\+Mode\+::\+Win\+Reset\+Time = 1.\+0f}
+
+
+
+The time to reset the game after winning. 
 
 
 

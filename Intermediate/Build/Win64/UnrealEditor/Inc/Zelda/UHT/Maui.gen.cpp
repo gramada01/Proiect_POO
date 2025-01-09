@@ -29,8 +29,14 @@ struct Z_Construct_UClass_AMaui_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/// @class AMaui\n/// @brief A class that represents a Maui enemy in the game.\n" },
+#endif
 		{ "IncludePath", "Maui.h" },
 		{ "ModuleRelativePath", "Maui.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "@class AMaui\n@brief A class that represents a Maui enemy in the game." },
+#endif
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
@@ -79,10 +85,10 @@ AMaui::~AMaui() {}
 struct Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMaui, AMaui::StaticClass, TEXT("AMaui"), &Z_Registration_Info_UClass_AMaui, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMaui), 2043729506U) },
+		{ Z_Construct_UClass_AMaui, AMaui::StaticClass, TEXT("AMaui"), &Z_Registration_Info_UClass_AMaui, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMaui), 3256090199U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_1749347663(TEXT("/Script/Zelda"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_3239686150(TEXT("/Script/Zelda"),
 	Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Maui_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

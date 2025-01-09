@@ -106,44 +106,73 @@ $(function(){initNavTree('_my_game_mode_8h_source.html',''); initResizable(true)
   <div class="headertitle"><div class="title">MyGameMode.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_my_game_mode_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;GameFramework/GameModeBase.h&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<a href="_my_game_mode_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;GameFramework/GameModeBase.h&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Engine/TimerHandle.h&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_my_h_u_d_8h.html">MyHUD.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;MyGameMode.generated.h&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>UCLASS()</div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_a_my_game_mode.html">   17</a></span>class ZELDA_API <a class="code hl_class" href="class_a_my_game_mode.html">AMyGameMode</a> : public AGameModeBase</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    GENERATED_BODY()</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_a_my_game_mode.html#aadf4609ec678c8b59b75b9a75718dee4">   23</a></span>    float <a class="code hl_variable" href="class_a_my_game_mode.html#aadf4609ec678c8b59b75b9a75718dee4">LoseResetTime</a> = 1.0f;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite)</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_a_my_game_mode.html#acb1edb4378a7cc236044606d40e22390">   26</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_a_my_game_mode.html#acb1edb4378a7cc236044606d40e22390">WinResetTime</a> = 3.0f;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_a_my_game_mode.html#a97421eda2ab19b356ada80f7982fce9d">   28</a></span>    FTimerHandle <a class="code hl_variable" href="class_a_my_game_mode.html#a97421eda2ab19b356ada80f7982fce9d">ResetGameTimer</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_game_mode.html#ab2c25c3d6318750c63010ac0faf2956e">ResetLevel</a>(<span class="keywordtype">bool</span> IsWin);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_game_mode.html#ac5ea3f1ab9b49cf9e530170ae3853af3">OnResetGameTimerTimeOut</a>();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>UCLASS()</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_a_my_game_mode.html">   16</a></span>class ZELDA_API <a class="code hl_function" href="class_a_my_game_mode.html#a096f8cece8cf6f87a449be023c2a2a07">AMyGameMode</a> : public AGameModeBase</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_a_my_game_mode.html#a9508b6837d2a3bfa6155384dde149e9b">   21</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_a_my_game_mode.html#a9508b6837d2a3bfa6155384dde149e9b">PlayerKills</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_a_my_game_mode.html#a0d9da622f72fb75aacdb139053f7c785">   24</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_a_my_h_u_d.html">AMyHUD</a>* <a class="code hl_variable" href="class_a_my_game_mode.html#a0d9da622f72fb75aacdb139053f7c785">MyHUD</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_a_my_game_mode.html#a096f8cece8cf6f87a449be023c2a2a07">   28</a></span>    <a class="code hl_function" href="class_a_my_game_mode.html#a096f8cece8cf6f87a449be023c2a2a07">AMyGameMode</a>()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        HUDClass = AMyHUD::StaticClass();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    }</div>
 </div>
-<div class="ttc" id="aclass_a_my_game_mode_html"><div class="ttname"><a href="class_a_my_game_mode.html">AMyGameMode</a></div><div class="ttdef"><b>Definition</b> MyGameMode.h:18</div></div>
-<div class="ttc" id="aclass_a_my_game_mode_html_a97421eda2ab19b356ada80f7982fce9d"><div class="ttname"><a href="class_a_my_game_mode.html#a97421eda2ab19b356ada80f7982fce9d">AMyGameMode::ResetGameTimer</a></div><div class="ttdeci">FTimerHandle ResetGameTimer</div><div class="ttdef"><b>Definition</b> MyGameMode.h:28</div></div>
-<div class="ttc" id="aclass_a_my_game_mode_html_aadf4609ec678c8b59b75b9a75718dee4"><div class="ttname"><a href="class_a_my_game_mode.html#aadf4609ec678c8b59b75b9a75718dee4">AMyGameMode::LoseResetTime</a></div><div class="ttdeci">float LoseResetTime</div><div class="ttdef"><b>Definition</b> MyGameMode.h:23</div></div>
-<div class="ttc" id="aclass_a_my_game_mode_html_ab2c25c3d6318750c63010ac0faf2956e"><div class="ttname"><a href="class_a_my_game_mode.html#ab2c25c3d6318750c63010ac0faf2956e">AMyGameMode::ResetLevel</a></div><div class="ttdeci">void ResetLevel(bool IsWin)</div><div class="ttdef"><b>Definition</b> MyGameMode.cpp:7</div></div>
-<div class="ttc" id="aclass_a_my_game_mode_html_ac5ea3f1ab9b49cf9e530170ae3853af3"><div class="ttname"><a href="class_a_my_game_mode.html#ac5ea3f1ab9b49cf9e530170ae3853af3">AMyGameMode::OnResetGameTimerTimeOut</a></div><div class="ttdeci">void OnResetGameTimerTimeOut()</div><div class="ttdef"><b>Definition</b> MyGameMode.cpp:17</div></div>
-<div class="ttc" id="aclass_a_my_game_mode_html_acb1edb4378a7cc236044606d40e22390"><div class="ttname"><a href="class_a_my_game_mode.html#acb1edb4378a7cc236044606d40e22390">AMyGameMode::WinResetTime</a></div><div class="ttdeci">float WinResetTime</div><div class="ttdef"><b>Definition</b> MyGameMode.h:26</div></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_a_my_game_mode.html#aadf4609ec678c8b59b75b9a75718dee4">   35</a></span>    float <a class="code hl_variable" href="class_a_my_game_mode.html#aadf4609ec678c8b59b75b9a75718dee4">LoseResetTime</a> = 1.0f;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_a_my_game_mode.html#acb1edb4378a7cc236044606d40e22390">   39</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_a_my_game_mode.html#acb1edb4378a7cc236044606d40e22390">WinResetTime</a> = 1.0f;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_a_my_game_mode.html#a97421eda2ab19b356ada80f7982fce9d">   42</a></span>    FTimerHandle <a class="code hl_variable" href="class_a_my_game_mode.html#a97421eda2ab19b356ada80f7982fce9d">ResetGameTimer</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_game_mode.html#ab2c25c3d6318750c63010ac0faf2956e">ResetLevel</a>(<span class="keywordtype">bool</span> IsWin);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_game_mode.html#ac5ea3f1ab9b49cf9e530170ae3853af3">OnResetGameTimerTimeOut</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_game_mode.html#aab567b3ecbb36aaefddd2508a75061da">BeginPlay</a>() override;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_game_mode.html#a9357e87e11a7e720f3276816cc63a085">EndPlay</a>(const EEndPlayReason::Type EndPlayReason);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_game_mode.html#a454cd7a19f6015b37a84cf450d7fdd80">SetKills</a>(<span class="keywordtype">int</span> k);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_game_mode.html#aba46a088b2498c74de91561e3b55a83a">SaveGame</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_my_game_mode.html#a125a2a1fd997833d4219b81cbe48b821">LoadGame</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
+</div>
+<div class="ttc" id="a_my_h_u_d_8h_html"><div class="ttname"><a href="_my_h_u_d_8h.html">MyHUD.h</a></div><div class="ttdoc">This file contains the declaration of the AMyHUD class which manages the HUD display.</div></div>
+<div class="ttc" id="aclass_a_my_game_mode_html_a096f8cece8cf6f87a449be023c2a2a07"><div class="ttname"><a href="class_a_my_game_mode.html#a096f8cece8cf6f87a449be023c2a2a07">AMyGameMode::AMyGameMode</a></div><div class="ttdeci">AMyGameMode()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> MyGameMode.h:28</div></div>
+<div class="ttc" id="aclass_a_my_game_mode_html_a0d9da622f72fb75aacdb139053f7c785"><div class="ttname"><a href="class_a_my_game_mode.html#a0d9da622f72fb75aacdb139053f7c785">AMyGameMode::MyHUD</a></div><div class="ttdeci">class AMyHUD * MyHUD</div><div class="ttdoc">The HUD instance.</div><div class="ttdef"><b>Definition</b> MyGameMode.h:24</div></div>
+<div class="ttc" id="aclass_a_my_game_mode_html_a125a2a1fd997833d4219b81cbe48b821"><div class="ttname"><a href="class_a_my_game_mode.html#a125a2a1fd997833d4219b81cbe48b821">AMyGameMode::LoadGame</a></div><div class="ttdeci">void LoadGame()</div><div class="ttdoc">Loads the game state.</div><div class="ttdef"><b>Definition</b> MyGameMode.cpp:73</div></div>
+<div class="ttc" id="aclass_a_my_game_mode_html_a454cd7a19f6015b37a84cf450d7fdd80"><div class="ttname"><a href="class_a_my_game_mode.html#a454cd7a19f6015b37a84cf450d7fdd80">AMyGameMode::SetKills</a></div><div class="ttdeci">void SetKills(int k)</div><div class="ttdoc">Sets the number of player kills.</div><div class="ttdef"><b>Definition</b> MyGameMode.cpp:48</div></div>
+<div class="ttc" id="aclass_a_my_game_mode_html_a9357e87e11a7e720f3276816cc63a085"><div class="ttname"><a href="class_a_my_game_mode.html#a9357e87e11a7e720f3276816cc63a085">AMyGameMode::EndPlay</a></div><div class="ttdeci">void EndPlay(const EEndPlayReason::Type EndPlayReason)</div><div class="ttdoc">Called when the game ends.</div><div class="ttdef"><b>Definition</b> MyGameMode.cpp:40</div></div>
+<div class="ttc" id="aclass_a_my_game_mode_html_a9508b6837d2a3bfa6155384dde149e9b"><div class="ttname"><a href="class_a_my_game_mode.html#a9508b6837d2a3bfa6155384dde149e9b">AMyGameMode::PlayerKills</a></div><div class="ttdeci">int PlayerKills</div><div class="ttdoc">The number of player kills.</div><div class="ttdef"><b>Definition</b> MyGameMode.h:21</div></div>
+<div class="ttc" id="aclass_a_my_game_mode_html_a97421eda2ab19b356ada80f7982fce9d"><div class="ttname"><a href="class_a_my_game_mode.html#a97421eda2ab19b356ada80f7982fce9d">AMyGameMode::ResetGameTimer</a></div><div class="ttdeci">FTimerHandle ResetGameTimer</div><div class="ttdoc">Timer handle for resetting the game.</div><div class="ttdef"><b>Definition</b> MyGameMode.h:42</div></div>
+<div class="ttc" id="aclass_a_my_game_mode_html_aab567b3ecbb36aaefddd2508a75061da"><div class="ttname"><a href="class_a_my_game_mode.html#aab567b3ecbb36aaefddd2508a75061da">AMyGameMode::BeginPlay</a></div><div class="ttdeci">virtual void BeginPlay() override</div><div class="ttdoc">Called when the game starts.</div><div class="ttdef"><b>Definition</b> MyGameMode.cpp:29</div></div>
+<div class="ttc" id="aclass_a_my_game_mode_html_aadf4609ec678c8b59b75b9a75718dee4"><div class="ttname"><a href="class_a_my_game_mode.html#aadf4609ec678c8b59b75b9a75718dee4">AMyGameMode::LoseResetTime</a></div><div class="ttdeci">float LoseResetTime</div><div class="ttdoc">The time to reset the game after losing.</div><div class="ttdef"><b>Definition</b> MyGameMode.h:35</div></div>
+<div class="ttc" id="aclass_a_my_game_mode_html_ab2c25c3d6318750c63010ac0faf2956e"><div class="ttname"><a href="class_a_my_game_mode.html#ab2c25c3d6318750c63010ac0faf2956e">AMyGameMode::ResetLevel</a></div><div class="ttdeci">void ResetLevel(bool IsWin)</div><div class="ttdoc">Resets the level.</div><div class="ttdef"><b>Definition</b> MyGameMode.cpp:11</div></div>
+<div class="ttc" id="aclass_a_my_game_mode_html_aba46a088b2498c74de91561e3b55a83a"><div class="ttname"><a href="class_a_my_game_mode.html#aba46a088b2498c74de91561e3b55a83a">AMyGameMode::SaveGame</a></div><div class="ttdeci">void SaveGame()</div><div class="ttdoc">Saves the game state.</div><div class="ttdef"><b>Definition</b> MyGameMode.cpp:59</div></div>
+<div class="ttc" id="aclass_a_my_game_mode_html_ac5ea3f1ab9b49cf9e530170ae3853af3"><div class="ttname"><a href="class_a_my_game_mode.html#ac5ea3f1ab9b49cf9e530170ae3853af3">AMyGameMode::OnResetGameTimerTimeOut</a></div><div class="ttdeci">void OnResetGameTimerTimeOut()</div><div class="ttdoc">Called when the reset game timer times out.</div><div class="ttdef"><b>Definition</b> MyGameMode.cpp:22</div></div>
+<div class="ttc" id="aclass_a_my_game_mode_html_acb1edb4378a7cc236044606d40e22390"><div class="ttname"><a href="class_a_my_game_mode.html#acb1edb4378a7cc236044606d40e22390">AMyGameMode::WinResetTime</a></div><div class="ttdeci">float WinResetTime</div><div class="ttdoc">The time to reset the game after winning.</div><div class="ttdef"><b>Definition</b> MyGameMode.h:39</div></div>
+<div class="ttc" id="aclass_a_my_h_u_d_html"><div class="ttname"><a href="class_a_my_h_u_d.html">AMyHUD</a></div><div class="ttdoc">A class that manages the HUD display.</div><div class="ttdef"><b>Definition</b> MyHUD.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

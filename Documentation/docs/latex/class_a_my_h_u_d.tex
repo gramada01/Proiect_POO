@@ -2,6 +2,11 @@
 \hypertarget{class_a_my_h_u_d}{}\label{class_a_my_h_u_d}\index{AMyHUD@{AMyHUD}}
 
 
+A class that manages the HUD display.  
+
+
+
+
 {\ttfamily \#include $<$My\+HUD.\+h$>$}
 
 Inheritance diagram for AMy\+HUD\+:\begin{figure}[H]
@@ -10,8 +15,65 @@ Inheritance diagram for AMy\+HUD\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_a_my_h_u_d}
 \end{center}
 \end{figure}
-
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_my_h_u_d_8h}{My\+HUD.\+h}}\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{class_a_my_h_u_d_aff99a95091faca26e812c0e2dea2c20d}{Draw\+HUD}} () override
+\begin{DoxyCompactList}\small\item\em Draws the HUD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_my_h_u_d_a249485f7d0e9ed6d926a15a54287b7c9}{Set\+Player\+Kills}} (int Kills)
+\begin{DoxyCompactList}\small\item\em Sets the number of player kills. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_a_my_h_u_d_a5c00a995b96a1fde0a79b4f4915b1028}{Player\+Kills}}
+\begin{DoxyCompactList}\small\item\em The number of player kills. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that manages the HUD display. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_my_h_u_d_aff99a95091faca26e812c0e2dea2c20d}\index{AMyHUD@{AMyHUD}!DrawHUD@{DrawHUD}}
+\index{DrawHUD@{DrawHUD}!AMyHUD@{AMyHUD}}
+\doxysubsubsection{\texorpdfstring{DrawHUD()}{DrawHUD()}}
+{\footnotesize\ttfamily \label{class_a_my_h_u_d_aff99a95091faca26e812c0e2dea2c20d} 
+void AMy\+HUD\+::\+Draw\+HUD (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws the HUD. 
+
+\Hypertarget{class_a_my_h_u_d_a249485f7d0e9ed6d926a15a54287b7c9}\index{AMyHUD@{AMyHUD}!SetPlayerKills@{SetPlayerKills}}
+\index{SetPlayerKills@{SetPlayerKills}!AMyHUD@{AMyHUD}}
+\doxysubsubsection{\texorpdfstring{SetPlayerKills()}{SetPlayerKills()}}
+{\footnotesize\ttfamily \label{class_a_my_h_u_d_a249485f7d0e9ed6d926a15a54287b7c9} 
+void AMy\+HUD\+::\+Set\+Player\+Kills (\begin{DoxyParamCaption}\item[{int}]{Kills}{}\end{DoxyParamCaption})}
+
+
+
+Sets the number of player kills. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Kills} & The number of kills to set. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_a_my_h_u_d_a5c00a995b96a1fde0a79b4f4915b1028}\index{AMyHUD@{AMyHUD}!PlayerKills@{PlayerKills}}
+\index{PlayerKills@{PlayerKills}!AMyHUD@{AMyHUD}}
+\doxysubsubsection{\texorpdfstring{PlayerKills}{PlayerKills}}
+{\footnotesize\ttfamily \label{class_a_my_h_u_d_a5c00a995b96a1fde0a79b4f4915b1028} 
+int AMy\+HUD\+::\+Player\+Kills\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The number of player kills. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_my_h_u_d_8h}{My\+HUD.\+h}}\item 
+C\+:/\+Users/matei/\+One\+Drive/\+Bureau/\+POO/\+Proiect\+\_\+\+POO/\+Source/\+Zelda/\mbox{\hyperlink{_my_h_u_d_8cpp}{My\+HUD.\+cpp}}\end{DoxyCompactItemize}

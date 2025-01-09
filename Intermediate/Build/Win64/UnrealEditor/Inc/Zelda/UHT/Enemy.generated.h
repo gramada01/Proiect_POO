@@ -17,11 +17,11 @@ struct FHitResult;
 #endif
 #define ZELDA_Enemy_generated_h
 
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execOverlapBegin);
 
 
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_24_INCLASS_NO_PURE_DECLS \
+#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_26_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAEnemy(); \
 	friend struct Z_Construct_UClass_AEnemy_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(AEnemy)
 
 
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_24_ENHANCED_CONSTRUCTORS \
+#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_26_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AEnemy(AEnemy&&); \
@@ -38,17 +38,16 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AEnemy); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AEnemy); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AEnemy) \
-	NO_API virtual ~AEnemy();
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AEnemy)
 
 
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_21_PROLOG
-#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_24_GENERATED_BODY \
+#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_23_PROLOG
+#define FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_26_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_24_INCLASS_NO_PURE_DECLS \
-	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_24_ENHANCED_CONSTRUCTORS \
+	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_26_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_26_INCLASS_NO_PURE_DECLS \
+	FID_Users_matei_OneDrive_Bureau_POO_Proiect_POO_Source_Zelda_Enemy_h_26_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

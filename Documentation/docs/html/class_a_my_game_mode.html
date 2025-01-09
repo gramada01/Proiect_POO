@@ -106,10 +106,14 @@ $(function(){initNavTree('class_a_my_game_mode.html',''); initResizable(true); }
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_a_my_game_mode-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">AMyGameMode Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class that manages the game mode logic.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_my_game_mode_8h_source.html">MyGameMode.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -121,21 +125,155 @@ Inheritance diagram for AMyGameMode:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a096f8cece8cf6f87a449be023c2a2a07" id="r_a096f8cece8cf6f87a449be023c2a2a07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a096f8cece8cf6f87a449be023c2a2a07">AMyGameMode</a> ()</td></tr>
+<tr class="memdesc:a096f8cece8cf6f87a449be023c2a2a07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
+<tr class="separator:a096f8cece8cf6f87a449be023c2a2a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2c25c3d6318750c63010ac0faf2956e" id="r_ab2c25c3d6318750c63010ac0faf2956e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2c25c3d6318750c63010ac0faf2956e">ResetLevel</a> (bool IsWin)</td></tr>
+<tr class="memdesc:ab2c25c3d6318750c63010ac0faf2956e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the level.  <br /></td></tr>
 <tr class="separator:ab2c25c3d6318750c63010ac0faf2956e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5ea3f1ab9b49cf9e530170ae3853af3" id="r_ac5ea3f1ab9b49cf9e530170ae3853af3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5ea3f1ab9b49cf9e530170ae3853af3">OnResetGameTimerTimeOut</a> ()</td></tr>
+<tr class="memdesc:ac5ea3f1ab9b49cf9e530170ae3853af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the reset game timer times out.  <br /></td></tr>
 <tr class="separator:ac5ea3f1ab9b49cf9e530170ae3853af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab567b3ecbb36aaefddd2508a75061da" id="r_aab567b3ecbb36aaefddd2508a75061da"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab567b3ecbb36aaefddd2508a75061da">BeginPlay</a> () override</td></tr>
+<tr class="memdesc:aab567b3ecbb36aaefddd2508a75061da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the game starts.  <br /></td></tr>
+<tr class="separator:aab567b3ecbb36aaefddd2508a75061da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9357e87e11a7e720f3276816cc63a085" id="r_a9357e87e11a7e720f3276816cc63a085"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9357e87e11a7e720f3276816cc63a085">EndPlay</a> (const EEndPlayReason::Type EndPlayReason)</td></tr>
+<tr class="memdesc:a9357e87e11a7e720f3276816cc63a085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the game ends.  <br /></td></tr>
+<tr class="separator:a9357e87e11a7e720f3276816cc63a085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a454cd7a19f6015b37a84cf450d7fdd80" id="r_a454cd7a19f6015b37a84cf450d7fdd80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a454cd7a19f6015b37a84cf450d7fdd80">SetKills</a> (int k)</td></tr>
+<tr class="memdesc:a454cd7a19f6015b37a84cf450d7fdd80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the number of player kills.  <br /></td></tr>
+<tr class="separator:a454cd7a19f6015b37a84cf450d7fdd80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba46a088b2498c74de91561e3b55a83a" id="r_aba46a088b2498c74de91561e3b55a83a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba46a088b2498c74de91561e3b55a83a">SaveGame</a> ()</td></tr>
+<tr class="memdesc:aba46a088b2498c74de91561e3b55a83a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the game state.  <br /></td></tr>
+<tr class="separator:aba46a088b2498c74de91561e3b55a83a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a125a2a1fd997833d4219b81cbe48b821" id="r_a125a2a1fd997833d4219b81cbe48b821"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a125a2a1fd997833d4219b81cbe48b821">LoadGame</a> ()</td></tr>
+<tr class="memdesc:a125a2a1fd997833d4219b81cbe48b821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the game state.  <br /></td></tr>
+<tr class="separator:a125a2a1fd997833d4219b81cbe48b821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aadf4609ec678c8b59b75b9a75718dee4" id="r_aadf4609ec678c8b59b75b9a75718dee4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadf4609ec678c8b59b75b9a75718dee4">LoseResetTime</a> = 1.0f</td></tr>
+<tr class="memdesc:aadf4609ec678c8b59b75b9a75718dee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time to reset the game after losing.  <br /></td></tr>
 <tr class="separator:aadf4609ec678c8b59b75b9a75718dee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb1edb4378a7cc236044606d40e22390" id="r_acb1edb4378a7cc236044606d40e22390"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb1edb4378a7cc236044606d40e22390">WinResetTime</a> = 3.0f</td></tr>
+<tr class="memitem:acb1edb4378a7cc236044606d40e22390" id="r_acb1edb4378a7cc236044606d40e22390"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb1edb4378a7cc236044606d40e22390">WinResetTime</a> = 1.0f</td></tr>
+<tr class="memdesc:acb1edb4378a7cc236044606d40e22390"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time to reset the game after winning.  <br /></td></tr>
 <tr class="separator:acb1edb4378a7cc236044606d40e22390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97421eda2ab19b356ada80f7982fce9d" id="r_a97421eda2ab19b356ada80f7982fce9d"><td class="memItemLeft" align="right" valign="top">FTimerHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97421eda2ab19b356ada80f7982fce9d">ResetGameTimer</a></td></tr>
+<tr class="memdesc:a97421eda2ab19b356ada80f7982fce9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer handle for resetting the game.  <br /></td></tr>
 <tr class="separator:a97421eda2ab19b356ada80f7982fce9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9508b6837d2a3bfa6155384dde149e9b" id="r_a9508b6837d2a3bfa6155384dde149e9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9508b6837d2a3bfa6155384dde149e9b">PlayerKills</a></td></tr>
+<tr class="memdesc:a9508b6837d2a3bfa6155384dde149e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of player kills.  <br /></td></tr>
+<tr class="separator:a9508b6837d2a3bfa6155384dde149e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d9da622f72fb75aacdb139053f7c785" id="r_a0d9da622f72fb75aacdb139053f7c785"><td class="memItemLeft" align="right" valign="top">class <a class="el" href="class_a_my_h_u_d.html">AMyHUD</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d9da622f72fb75aacdb139053f7c785">MyHUD</a></td></tr>
+<tr class="memdesc:a0d9da622f72fb75aacdb139053f7c785"><td class="mdescLeft">&#160;</td><td class="mdescRight">The HUD instance.  <br /></td></tr>
+<tr class="separator:a0d9da622f72fb75aacdb139053f7c785"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class that manages the game mode logic. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a096f8cece8cf6f87a449be023c2a2a07" name="a096f8cece8cf6f87a449be023c2a2a07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a096f8cece8cf6f87a449be023c2a2a07">&#9670;&#160;</a></span>AMyGameMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AMyGameMode::AMyGameMode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aab567b3ecbb36aaefddd2508a75061da" name="aab567b3ecbb36aaefddd2508a75061da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab567b3ecbb36aaefddd2508a75061da">&#9670;&#160;</a></span>BeginPlay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AMyGameMode::BeginPlay </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when the game starts. </p>
+
+</div>
+</div>
+<a id="a9357e87e11a7e720f3276816cc63a085" name="a9357e87e11a7e720f3276816cc63a085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9357e87e11a7e720f3276816cc63a085">&#9670;&#160;</a></span>EndPlay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AMyGameMode::EndPlay </td>
+          <td>(</td>
+          <td class="paramtype">const EEndPlayReason::Type</td>          <td class="paramname"><span class="paramname"><em>EndPlayReason</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Called when the game ends. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">EndPlayReason</td><td>The reason the game ended. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a125a2a1fd997833d4219b81cbe48b821" name="a125a2a1fd997833d4219b81cbe48b821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a125a2a1fd997833d4219b81cbe48b821">&#9670;&#160;</a></span>LoadGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AMyGameMode::LoadGame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads the game state. </p>
+<p>Loads the game state. This method loads the saved game state from the caretaker and restores it using the originator. </p>
+
+</div>
+</div>
 <a id="ac5ea3f1ab9b49cf9e530170ae3853af3" name="ac5ea3f1ab9b49cf9e530170ae3853af3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac5ea3f1ab9b49cf9e530170ae3853af3">&#9670;&#160;</a></span>OnResetGameTimerTimeOut()</h2>
 
@@ -150,6 +288,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Called when the reset game timer times out. </p>
 
 </div>
 </div>
@@ -168,6 +308,59 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Resets the level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">IsWin</td><td>Indicates whether the reset is due to a win. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aba46a088b2498c74de91561e3b55a83a" name="aba46a088b2498c74de91561e3b55a83a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba46a088b2498c74de91561e3b55a83a">&#9670;&#160;</a></span>SaveGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AMyGameMode::SaveGame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves the game state. </p>
+<p>Saves the game state. This method creates a memento of the current game state and saves it using the caretaker. </p>
+
+</div>
+</div>
+<a id="a454cd7a19f6015b37a84cf450d7fdd80" name="a454cd7a19f6015b37a84cf450d7fdd80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a454cd7a19f6015b37a84cf450d7fdd80">&#9670;&#160;</a></span>SetKills()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AMyGameMode::SetKills </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>k</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the number of player kills. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>The number of kills to set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -183,6 +376,56 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The time to reset the game after losing. </p>
+
+</div>
+</div>
+<a id="a0d9da622f72fb75aacdb139053f7c785" name="a0d9da622f72fb75aacdb139053f7c785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d9da622f72fb75aacdb139053f7c785">&#9670;&#160;</a></span>MyHUD</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">class <a class="el" href="class_a_my_h_u_d.html">AMyHUD</a>* AMyGameMode::MyHUD</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The HUD instance. </p>
+
+</div>
+</div>
+<a id="a9508b6837d2a3bfa6155384dde149e9b" name="a9508b6837d2a3bfa6155384dde149e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9508b6837d2a3bfa6155384dde149e9b">&#9670;&#160;</a></span>PlayerKills</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int AMyGameMode::PlayerKills</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The number of player kills. </p>
+
 </div>
 </div>
 <a id="a97421eda2ab19b356ada80f7982fce9d" name="a97421eda2ab19b356ada80f7982fce9d"></a>
@@ -197,6 +440,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Timer handle for resetting the game. </p>
+
 </div>
 </div>
 <a id="acb1edb4378a7cc236044606d40e22390" name="acb1edb4378a7cc236044606d40e22390"></a>
@@ -206,10 +451,12 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float AMyGameMode::WinResetTime = 3.0f</td>
+          <td class="memname">float AMyGameMode::WinResetTime = 1.0f</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The time to reset the game after winning. </p>
 
 </div>
 </div>
