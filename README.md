@@ -20,12 +20,3 @@ A 2D top-down game that is a ripoff of the game "Legend of Zelda".
 
 ### Game Screenshot
 ![screenshot](https://github.com/user-attachments/assets/ec48e5a7-a3ff-4015-a6c4-58f753d48680)
-
-
-## Milestone #3
-
-#### Cerințe
-- [x] 2 șabloane de proiectare (design patterns)
-- [x] o clasă șablon cu sens; minim **2 instanțieri**
-- [x] preferabil și o funcție șablon (template) cu sens; minim 2 instanțieri
-- [x] tag de `git`: de exemplu `v0.3` sau `v1.0`
